@@ -31,8 +31,8 @@ function HowItWorks() {
                         </div>
                     </div>
                     <div className='text-center mt-5 md:mt-8 lg:mt-10'>
-                        <div className='text-lg md:text-xl lg:text-2xl poppins-semibold text-red-500'>Conform Your Order</div>
-                        <div className='mt-2 md:mt-3 lg:mt-4 poppins-regular text-stone-500 text-xs md:text-sm lg:text-base'>Conform your order on whatsapp and wait to delivery.</div>
+                        <div className='text-lg md:text-xl lg:text-2xl poppins-semibold text-red-500'>Confirm Your Order</div>
+                        <div className='mt-2 md:mt-3 lg:mt-4 poppins-regular text-stone-500 text-xs md:text-sm lg:text-base'>Conform your order on whatsapp and wait to delivery.Free delivery on orders above ₹100/-</div>
                     </div>
                 </div>
 
