@@ -42,9 +42,9 @@ function Navbar() {
             return `${index + 1}️⃣ ${dish.name} - ${dish.quantity} ${dish.quantity > 1 ? 'Pieces' : 'Piece'}`;
         }).join('\n');
 
-        const message = `Hello, I’d like to place an order:\n\n🛒 Order Details:\n${orderDetails}\n\n💰 Total Amount: ₹${totalAmount.toFixed(2)}\n\n📍 Delivery Address: ${address}\n👤 Name: ${name}\n\nHelpline No: +91 9060557296`;
+        const message = `Hello, I’d like to place an order:\n\n🛒 Order Details:\n${orderDetails}\n\n💰 Total Amount: ₹${totalAmount.toFixed(2)}\n\n📍 Delivery Address: ${address}\n👤 Name: ${name}\n\nHelpline No: +91 9650780199`;
 
-        const whatsappUrl = `https://wa.me/9060557296?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/7696482938?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
 
