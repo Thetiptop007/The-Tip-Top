@@ -41,7 +41,7 @@ function HowItWorks() {
                     <div className='flex justify-center items-center min-h-24 md:min-h-28 lg:min-h-32 poppins-medium'>
                         <div className='relative'>
                             <div className='w-24 md:w-32 lg:w-40 aspect-square rounded-full overflow-hidden shadow-xl shadow-stone-400 border-2 md:border-3 lg:border-4 border-stone-400'>
-                                <img src="	https://img.freepik.com/free-vector/set-different-…f99680c0e2e6412dc7b27750dd3e996251aa110d155&w=900" alt="dish" className='w-full h-full object-cover' />
+                                <img src="https://img.freepik.com/free-vector/cash-delivery-courier-client_23-2148788572.jpg?t=st=1741381415~exp=1741385015~hmac=2c6f19c2272e3a71de68d5cab81aea6fe8c57c7af26ef1143889c283edd1e5dd&w=1060" alt="dish" className='w-full h-full object-cover' />
                             </div>
                         </div>
                     </div>
