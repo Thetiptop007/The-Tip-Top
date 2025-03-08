@@ -98,7 +98,7 @@ function Navbar() {
                                 placeholder="Enter your delivery address"
                             />
                         </div>
-                        <div className='text-center poppins-medium text-stone-500 mt-5 text-sm'>Free Order Delivery On Above <span className='bg-red-200 px-1 rounded-sm border border-red-300'>Rs. 100/-</span></div>
+                        <div className='text-center poppins-medium text-stone-500 mt-5 text-sm'>Free Order Delivery On Order Above <span className='bg-red-200 px-1 rounded-sm border border-red-300'>Rs. 100/-</span></div>
                         <div className='mt-8 text-white poppins-medium flex justify-between items-center sticky md:static bottom-0 bg-stone-50 md:bg-transparent shadow-lg md:shadow-none shadow-stone-600 border md:border-none border-stone-300 rounded-2xl p-3 md:px-0 text-sm md:text-base'>
                             <div
                                 className='bg-red-400 text-white px-4 md:px-6 rounded-tl-lg rounded-bl-3xl rounded-tr-3xl rounded-br-lg hover:bg-red-500 transition-all duration-300 cursor-pointer py-3'
