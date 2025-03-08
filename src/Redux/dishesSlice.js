@@ -17,6 +17,16 @@ const dishesSlice = createSlice({
       }
     },
     removeDish: (state, action) => {
+      const existingDish = state.dishes.find(dish => dish.id === action.payload.id);
+      if (existingDish) {
+        if (existingDish.quantity > 1) {
+          existingDish.quantity -= 1;
+        } else {
+          state.dishes = state.dishes.filter(dish => dish.id !== action.payload.id);
+        }
+      }
+    },
+    deleteDish: (state, action) => {
       state.dishes = state.dishes.filter(dish => dish.id !== action.payload.id);
     },
     updateDish: (state, action) => {
@@ -28,6 +38,6 @@ const dishesSlice = createSlice({
   },
 });
 
-export const { addDish, removeDish, updateDish } = dishesSlice.actions;
+export const { addDish, removeDish, deleteDish, updateDish } = dishesSlice.actions;
 
 export default dishesSlice.reducer;
