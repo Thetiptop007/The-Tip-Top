@@ -9,7 +9,7 @@
             "price": 200,
             "description": "Spicy grilled chicken marinated in yogurt and spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "6PC"
+            "plateQuantity": "6PC"
         },
         {
             "id": 2,
@@ -20,7 +20,7 @@
             "price": 400,
             "description": "Spicy grilled chicken marinated in yogurt and spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 3,
@@ -31,7 +31,7 @@
             "price": 250,
             "description": "Chicken marinated in Afghani spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "6PC"
+            "plateQuantity": "6PC"
         },
         {
             "id": 4,
@@ -42,7 +42,7 @@
             "price": 480,
             "description": "Chicken marinated in Afghani spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 5,
@@ -53,7 +53,7 @@
             "price": 150,
             "description": "Chicken seekh kebab.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "6PC"
+            "plateQuantity": "6PC"
         },
         {
             "id": 6,
@@ -64,7 +64,7 @@
             "price": 280,
             "description": "Chicken seekh kebab.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 7,
@@ -75,7 +75,7 @@
             "price": 240,
             "description": "Paneer tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "4PC"
+            "plateQuantity": "4PC"
         },
         {
             "id": 8,
@@ -86,7 +86,7 @@
             "price": 460,
             "description": "Paneer tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 9,
@@ -97,7 +97,7 @@
             "price": 200,
             "description": "Mushroom tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 10,
@@ -108,7 +108,7 @@
             "price": 300,
             "description": "Mushroom tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 11,
@@ -119,7 +119,7 @@
             "price": 260,
             "description": "Chicken tikka marinated in creamy spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "6PC"
+            "plateQuantity": "6PC"
         },
         {
             "id": 12,
@@ -130,7 +130,7 @@
             "price": 500,
             "description": "Chicken tikka marinated in creamy spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 13,
@@ -141,7 +141,7 @@
             "price": 240,
             "description": "Chicken tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "4PC"
+            "plateQuantity": "4PC"
         },
         {
             "id": 14,
@@ -152,7 +152,7 @@
             "price": 480,
             "description": "Chicken tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 15,
@@ -163,7 +163,7 @@
             "price": 250,
             "description": "Paneer tikka marinated in achar spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "4PC"
+            "plateQuantity": "4PC"
         },
         {
             "id": 16,
@@ -174,7 +174,7 @@
             "price": 480,
             "description": "Paneer tikka marinated in achar spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 17,
@@ -185,7 +185,7 @@
             "price": 120,
             "description": "Tandoori chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 18,
@@ -196,7 +196,7 @@
             "price": 220,
             "description": "Tandoori chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 19,
@@ -207,7 +207,7 @@
             "price": 120,
             "description": "Irani chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 20,
@@ -218,7 +218,7 @@
             "price": 220,
             "description": "Irani chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 21,
@@ -229,7 +229,7 @@
             "price": 120,
             "description": "Pudina chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 22,
@@ -240,7 +240,7 @@
             "price": 220,
             "description": "Pudina chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 23,
@@ -251,7 +251,7 @@
             "price": 140,
             "description": "Afghani chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 24,
@@ -262,7 +262,7 @@
             "price": 260,
             "description": "Afghani chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 25,
@@ -273,7 +273,7 @@
             "price": 130,
             "description": "Achari chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 26,
@@ -284,7 +284,7 @@
             "price": 260,
             "description": "Achari chaap marinated in spices.",
             "categories": ["Tandoori Snacks", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 27,
@@ -295,7 +295,7 @@
             "price": 250,
             "description": "Fish tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 28,
@@ -306,7 +306,7 @@
             "price": 500,
             "description": "Fish tikka marinated in spices.",
             "categories": ["Tandoori Snacks", "Non-Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 29,
@@ -317,7 +317,7 @@
             "price": 110,
             "description": "Aromatic chicken dum biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 30,
@@ -328,7 +328,7 @@
             "price": 150,
             "description": "Aromatic chicken dum biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 31,
@@ -339,7 +339,7 @@
             "price": 130,
             "description": "Roasted chicken biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 32,
@@ -350,7 +350,7 @@
             "price": 180,
             "description": "Roasted chicken biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 33,
@@ -361,7 +361,7 @@
             "price": 120,
             "description": "Fry chicken biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 34,
@@ -372,7 +372,7 @@
             "price": 180,
             "description": "Fry chicken biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 35,
@@ -383,7 +383,7 @@
             "price": 90,
             "description": "Egg biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 36,
@@ -394,7 +394,7 @@
             "price": 130,
             "description": "Egg biryani.",
             "categories": ["Biryani", "Non-Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 37,
@@ -405,7 +405,7 @@
             "price": 80,
             "description": "Vegetable biryani.",
             "categories": ["Biryani", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 38,
@@ -416,7 +416,7 @@
             "price": 120,
             "description": "Vegetable biryani.",
             "categories": ["Biryani", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 39,
@@ -467,7 +467,7 @@
             "price": 250,
             "description": "Garlic chicken marinated in spices.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 44,
@@ -478,7 +478,7 @@
             "price": 250,
             "description": "Crispy chicken marinated in spices.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 45,
@@ -489,7 +489,7 @@
             "price": 250,
             "description": "Spicy chilli chicken.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 46,
@@ -500,7 +500,7 @@
             "price": 300,
             "description": "Honey lemon chicken marinated in spices.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 47,
@@ -511,7 +511,7 @@
             "price": 300,
             "description": "Chicken shami kebab marinated in spices.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 48,
@@ -522,7 +522,7 @@
             "price": 150,
             "description": "Spicy chilli paneer.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 49,
@@ -533,7 +533,7 @@
             "price": 250,
             "description": "Spicy chilli paneer.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 50,
@@ -544,7 +544,7 @@
             "price": 150,
             "description": "Spicy chilli mushroom.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 51,
@@ -555,7 +555,7 @@
             "price": 250,
             "description": "Spicy chilli mushroom.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 52,
@@ -566,7 +566,7 @@
             "price": 250,
             "description": "Chicken manchurian.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 53,
@@ -577,7 +577,7 @@
             "price": 480,
             "description": "Chicken manchurian.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 54,
@@ -588,7 +588,7 @@
             "price": 140,
             "description": "Vegetable manchurian.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "8PC"
+            "plateQuantity": "8PC"
         },
         {
             "id": 55,
@@ -599,7 +599,7 @@
             "price": 240,
             "description": "Vegetable manchurian.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "12PC"
+            "plateQuantity": "12PC"
         },
         {
             "id": 56,
@@ -690,7 +690,7 @@
             "price": 150,
             "description": "Crispy veg.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 65,
@@ -701,7 +701,7 @@
             "price": 150,
             "description": "Paneer pakora.",
             "categories": ["Chinese Snacks", "Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 66,
@@ -722,7 +722,7 @@
             "price": 150,
             "description": "Chicken pakora.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "10PC"
+            "plateQuantity": "10PC"
         },
         {
             "id": 68,
@@ -743,7 +743,7 @@
             "price": 250,
             "description": "Chicken lollipop.",
             "categories": ["Chinese Snacks", "Non-Vegetarian"],
-            "quantity": "6PC"
+            "plateQuantity": "6PC"
         },
         {
             "id": 70,
@@ -1214,7 +1214,7 @@
             "price": 120,
             "description": "Palak chaap.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 117,
@@ -1225,7 +1225,7 @@
             "price": 180,
             "description": "Palak chaap.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 118,
@@ -1236,7 +1236,7 @@
             "price": 120,
             "description": "Chaap masala.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 119,
@@ -1247,7 +1247,7 @@
             "price": 180,
             "description": "Chaap masala.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 120,
@@ -1258,7 +1258,7 @@
             "price": 130,
             "description": "Chaap korma.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 121,
@@ -1269,7 +1269,7 @@
             "price": 180,
             "description": "Chaap korma.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 122,
@@ -1280,7 +1280,7 @@
             "price": 130,
             "description": "Kadhai chaap.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 123,
@@ -1291,7 +1291,7 @@
             "price": 180,
             "description": "Kadhai chaap.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 124,
@@ -1302,7 +1302,7 @@
             "price": 120,
             "description": "Chaap do pyaza.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 125,
@@ -1313,7 +1313,7 @@
             "price": 180,
             "description": "Chaap do pyaza.",
             "categories": ["Chaap Gravy Items", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 126,
@@ -1384,7 +1384,7 @@
             "price": 150,
             "description": "Paneer tikka masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 133,
@@ -1395,7 +1395,7 @@
             "price": 300,
             "description": "Paneer tikka masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 134,
@@ -1406,7 +1406,7 @@
             "price": 110,
             "description": "Kadhai paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 135,
@@ -1417,7 +1417,7 @@
             "price": 160,
             "description": "Kadhai paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 136,
@@ -1428,7 +1428,7 @@
             "price": 210,
             "description": "Kadhai paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 137,
@@ -1439,7 +1439,7 @@
             "price": 100,
             "description": "Shahi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 138,
@@ -1450,7 +1450,7 @@
             "price": 140,
             "description": "Shahi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 139,
@@ -1461,7 +1461,7 @@
             "price": 200,
             "description": "Shahi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 140,
@@ -1472,7 +1472,7 @@
             "price": 100,
             "description": "Paneer do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 141,
@@ -1483,7 +1483,7 @@
             "price": 150,
             "description": "Paneer do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 142,
@@ -1494,7 +1494,7 @@
             "price": 210,
             "description": "Paneer do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 143,
@@ -1505,7 +1505,7 @@
             "price": 100,
             "description": "Handi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 144,
@@ -1516,7 +1516,7 @@
             "price": 150,
             "description": "Handi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 145,
@@ -1527,7 +1527,7 @@
             "price": 210,
             "description": "Handi paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 146,
@@ -1538,7 +1538,7 @@
             "price": 100,
             "description": "Mutter paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 147,
@@ -1549,7 +1549,7 @@
             "price": 150,
             "description": "Mutter paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 148,
@@ -1560,7 +1560,7 @@
             "price": 210,
             "description": "Mutter paneer.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 149,
@@ -1571,7 +1571,7 @@
             "price": 110,
             "description": "Paneer butter masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 150,
@@ -1582,7 +1582,7 @@
             "price": 150,
             "description": "Paneer butter masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 151,
@@ -1593,7 +1593,7 @@
             "price": 210,
             "description": "Paneer butter masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 152,
@@ -1604,7 +1604,7 @@
             "price": 110,
             "description": "Paneer korma.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 153,
@@ -1615,7 +1615,7 @@
             "price": 150,
             "description": "Paneer korma.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 154,
@@ -1626,7 +1626,7 @@
             "price": 210,
             "description": "Paneer korma.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 155,
@@ -1637,7 +1637,7 @@
             "price": 90,
             "description": "Mutter mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 156,
@@ -1648,7 +1648,7 @@
             "price": 130,
             "description": "Mutter mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 157,
@@ -1659,7 +1659,7 @@
             "price": 200,
             "description": "Mutter mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 158,
@@ -1670,7 +1670,7 @@
             "price": 100,
             "description": "Mushroom do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 159,
@@ -1681,7 +1681,7 @@
             "price": 140,
             "description": "Mushroom do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 160,
@@ -1692,7 +1692,7 @@
             "price": 210,
             "description": "Mushroom do pyaza.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 161,
@@ -1703,7 +1703,7 @@
             "price": 80,
             "description": "Aloo bhujiya.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 162,
@@ -1714,7 +1714,7 @@
             "price": 120,
             "description": "Aloo bhujiya.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 163,
@@ -1725,7 +1725,7 @@
             "price": 70,
             "description": "Arhar dal fry.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 164,
@@ -1736,7 +1736,7 @@
             "price": 120,
             "description": "Arhar dal fry.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 165,
@@ -1747,7 +1747,7 @@
             "price": 80,
             "description": "Arhar dal tadka spicy.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 166,
@@ -1758,7 +1758,7 @@
             "price": 130,
             "description": "Arhar dal tadka spicy.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 167,
@@ -1769,7 +1769,7 @@
             "price": 90,
             "description": "Dal makhni.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 168,
@@ -1780,7 +1780,7 @@
             "price": 150,
             "description": "Dal makhni.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 169,
@@ -1791,7 +1791,7 @@
             "price": 140,
             "description": "Paneer bhurji masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 170,
@@ -1802,7 +1802,7 @@
             "price": 280,
             "description": "Paneer bhurji masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 171,
@@ -1813,7 +1813,7 @@
             "price": 50,
             "description": "Egg bhurji.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 172,
@@ -1824,7 +1824,7 @@
             "price": 90,
             "description": "Egg bhurji.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 173,
@@ -1835,7 +1835,7 @@
             "price": 150,
             "description": "Chilli paneer gravy.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 174,
@@ -1846,7 +1846,7 @@
             "price": 250,
             "description": "Chilli paneer gravy.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 175,
@@ -1857,7 +1857,7 @@
             "price": 80,
             "description": "Mix veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 176,
@@ -1868,7 +1868,7 @@
             "price": 110,
             "description": "Mix veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 177,
@@ -1879,7 +1879,7 @@
             "price": 180,
             "description": "Mix veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 178,
@@ -1890,7 +1890,7 @@
             "price": 90,
             "description": "Kadhai veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 179,
@@ -1901,7 +1901,7 @@
             "price": 120,
             "description": "Kadhai veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 180,
@@ -1912,7 +1912,7 @@
             "price": 200,
             "description": "Kadhai veg.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 181,
@@ -1923,7 +1923,7 @@
             "price": 90,
             "description": "Kadhai mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 182,
@@ -1934,7 +1934,7 @@
             "price": 130,
             "description": "Kadhai mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 183,
@@ -1945,7 +1945,7 @@
             "price": 220,
             "description": "Kadhai mushroom.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 184,
@@ -1956,7 +1956,7 @@
             "price": 100,
             "description": "Bhindi masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Qtr"
+            "plateQuantity": "Qtr"
         },
         {
             "id": 185,
@@ -1967,7 +1967,7 @@
             "price": 140,
             "description": "Bhindi masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Half"
+            "plateQuantity": "Half"
         },
         {
             "id": 186,
@@ -1978,7 +1978,7 @@
             "price": 200,
             "description": "Bhindi masala.",
             "categories": ["Main Course Veg", "Vegetarian"],
-            "quantity": "Full"
+            "plateQuantity": "Full"
         },
         {
             "id": 187,
@@ -1989,7 +1989,7 @@
             "price": 130,
             "description": "Chicken curry.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 188,
@@ -2000,7 +2000,7 @@
             "price": 230,
             "description": "Chicken curry.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 189,
@@ -2011,7 +2011,7 @@
             "price": 400,
             "description": "Chicken curry.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 190,
@@ -2022,7 +2022,7 @@
             "price": 140,
             "description": "Chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 191,
@@ -2033,7 +2033,7 @@
             "price": 230,
             "description": "Chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 192,
@@ -2044,7 +2044,7 @@
             "price": 450,
             "description": "Chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 193,
@@ -2055,7 +2055,7 @@
             "price": 140,
             "description": "Chicken korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 194,
@@ -2066,7 +2066,7 @@
             "price": 230,
             "description": "Chicken korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 195,
@@ -2077,7 +2077,7 @@
             "price": 450,
             "description": "Chicken korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 196,
@@ -2088,7 +2088,7 @@
             "price": 140,
             "description": "Butter chicken.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 197,
@@ -2099,7 +2099,7 @@
             "price": 230,
             "description": "Butter chicken.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 198,
@@ -2110,7 +2110,7 @@
             "price": 500,
             "description": "Butter chicken.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 199,
@@ -2121,7 +2121,7 @@
             "price": 140,
             "description": "Butter chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 200,
@@ -2132,7 +2132,7 @@
             "price": 230,
             "description": "Butter chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 201,
@@ -2143,7 +2143,7 @@
             "price": 450,
             "description": "Butter chicken masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 202,
@@ -2154,7 +2154,7 @@
             "price": 140,
             "description": "Chicken do pyaza.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 203,
@@ -2165,7 +2165,7 @@
             "price": 230,
             "description": "Chicken do pyaza.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 204,
@@ -2176,7 +2176,7 @@
             "price": 450,
             "description": "Chicken do pyaza.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 205,
@@ -2187,7 +2187,7 @@
             "price": 140,
             "description": "Chicken bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 206,
@@ -2198,7 +2198,7 @@
             "price": 230,
             "description": "Chicken bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 207,
@@ -2209,7 +2209,7 @@
             "price": 450,
             "description": "Chicken bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 208,
@@ -2220,7 +2220,7 @@
             "price": 140,
             "description": "Chicken bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 209,
@@ -2231,7 +2231,7 @@
             "price": 230,
             "description": "Chicken bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 210,
@@ -2242,7 +2242,7 @@
             "price": 450,
             "description": "Chicken bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 211,
@@ -2253,7 +2253,7 @@
             "price": 140,
             "description": "Chicken tikka masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 212,
@@ -2264,7 +2264,7 @@
             "price": 230,
             "description": "Chicken tikka masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 213,
@@ -2275,7 +2275,7 @@
             "price": 450,
             "description": "Chicken tikka masala.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 214,
@@ -2286,7 +2286,7 @@
             "price": 140,
             "description": "Chicken tikka korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 215,
@@ -2297,7 +2297,7 @@
             "price": 230,
             "description": "Chicken tikka korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 216,
@@ -2308,7 +2308,7 @@
             "price": 450,
             "description": "Chicken tikka korma.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 217,
@@ -2319,7 +2319,7 @@
             "price": 140,
             "description": "Chicken tikka bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 218,
@@ -2330,7 +2330,7 @@
             "price": 230,
             "description": "Chicken tikka bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 219,
@@ -2341,7 +2341,7 @@
             "price": 450,
             "description": "Chicken tikka bharta.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 220,
@@ -2352,7 +2352,7 @@
             "price": 140,
             "description": "Chicken tikka bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 221,
@@ -2363,7 +2363,7 @@
             "price": 230,
             "description": "Chicken tikka bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "8PCS"
+            "plateQuantity": "8PCS"
         },
         {
             "id": 222,
@@ -2374,7 +2374,7 @@
             "price": 450,
             "description": "Chicken tikka bhurji.",
             "categories": ["Main Course Non-Veg", "Non-Vegetarian"],
-            "quantity": "16PCS"
+            "plateQuantity": "16PCS"
         },
         {
             "id": 223,
@@ -2385,7 +2385,7 @@
             "price": 30,
             "description": "Plain raita.",
             "categories": ["Raita"],
-            "quantity": "Small"
+            "plateQuantity": "Small"
         },
         {
             "id": 224,
@@ -2396,7 +2396,7 @@
             "price": 50,
             "description": "Plain raita.",
             "categories": ["Raita"],
-            "quantity": "Large"
+            "plateQuantity": "Large"
         },
         {
             "id": 225,
@@ -2407,7 +2407,7 @@
             "price": 40,
             "description": "Boondi raita.",
             "categories": ["Raita"],
-            "quantity": "Small"
+            "plateQuantity": "Small"
         },
         {
             "id": 226,
@@ -2418,7 +2418,7 @@
             "price": 80,
             "description": "Boondi raita.",
             "categories": ["Raita"],
-            "quantity": "Large"
+            "plateQuantity": "Large"
         },
         {
             "id": 227,
@@ -2429,7 +2429,7 @@
             "price": 50,
             "description": "Veg raita.",
             "categories": ["Raita"],
-            "quantity": "Small"
+            "plateQuantity": "Small"
         },
         {
             "id": 228,
@@ -2440,7 +2440,7 @@
             "price": 80,
             "description": "Veg raita.",
             "categories": ["Raita"],
-            "quantity": "Large"
+            "plateQuantity": "Large"
         },
         {
             "id": 229,
@@ -2451,7 +2451,7 @@
             "price": 50,
             "description": "Cucumber raita.",
             "categories": ["Raita"],
-            "quantity": "Small"
+            "plateQuantity": "Small"
         },
         {
             "id": 230,
@@ -2462,7 +2462,7 @@
             "price": 80,
             "description": "Cucumber raita.",
             "categories": ["Raita"],
-            "quantity": "Large"
+            "plateQuantity": "Large"
         },
         {
             "id": 231,
@@ -2473,7 +2473,7 @@
             "price": 70,
             "description": "Egg curry.",
             "categories": ["Egg Dishes"],
-            "quantity": "2PCS"
+            "plateQuantity": "2PCS"
         },
         {
             "id": 232,
@@ -2484,7 +2484,7 @@
             "price": 140,
             "description": "Egg curry.",
             "categories": ["Egg Dishes"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 233,
@@ -2495,7 +2495,7 @@
             "price": 80,
             "description": "Egg masala.",
             "categories": ["Egg Dishes"],
-            "quantity": "2PCS"
+            "plateQuantity": "2PCS"
         },
         {
             "id": 234,
@@ -2506,7 +2506,7 @@
             "price": 160,
             "description": "Egg masala.",
             "categories": ["Egg Dishes"],
-            "quantity": "4PCS"
+            "plateQuantity": "4PCS"
         },
         {
             "id": 235,
