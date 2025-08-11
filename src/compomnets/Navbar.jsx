@@ -10,6 +10,7 @@ function Navbar() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [address, setAddress] = useState('');
     const [name, setName] = useState('');
+    const [selectedLocation, setSelectedLocation] = useState('');
     const addedDishes = useSelector((state) => state.dishes.dishes);
 
     useEffect(() => {
@@ -32,8 +33,8 @@ function Navbar() {
     const totalItems = addedDishes.reduce((total, dish) => total + dish.quantity, 0);
 
     const handleConfirmOrder = () => {
-        if (!address || !name) {
-            toast.error('Both name and delivery address are required');
+        if (!address || !name || !selectedLocation) {
+            toast.error('Name, location, and delivery address are all required');
             return;
         }
 
@@ -44,7 +45,7 @@ function Navbar() {
             return `${index + 1}️⃣ ${dish.name} ${plateQuantityDetail} - ${dish.quantity} ${dish.quantity > 1 ? 'Pieces' : 'Piece'} ${priceDetail}`;
         }).join('\n');
 
-        const message = `Hello, I’d like to place an order:\n\n🛒 Order Details:\n${orderDetails}\n\n💰 Total Amount: ₹${totalAmount.toFixed(2)}\n\n📍 Delivery Address: ${address}\n👤 Name: ${name}\n\nHelpline No: +91 9650780199`;
+        const message = `Hello, I'd like to place an order:\n\n🛒 Order Details:\n${orderDetails}\n\n💰 Total Amount: ₹${totalAmount.toFixed(2)}\n\n📍 Location: ${selectedLocation}\n📍 Delivery Address: ${address}\n👤 Name: ${name}\n\nHelpline No: +91 9650780199`;
 
         const whatsappUrl = `https://wa.me/7696482938?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
@@ -87,6 +88,21 @@ function Navbar() {
                                 className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm outline-stone-600 outline-1'
                                 placeholder="Enter your name"
                             />
+                        </div>
+                        <div className='mt-8'>
+                            <label htmlFor="location" className='block font-medium text-gray-700 poppins-regular'>Location</label>
+                            <select
+                                id="location"
+                                name="location"
+                                value={selectedLocation}
+                                onChange={(e) => setSelectedLocation(e.target.value)}
+                                className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm outline-stone-600 outline-1 bg-white'
+                            >
+                                <option value='' disabled>Select Location</option>
+                                <option value='Law Gate'>Law Gate</option>
+                                <option value='Green Valley'>Green Valley</option>
+                                <option value='Butani'>Butani</option>
+                            </select>
                         </div>
                         <div className='mt-8'>
                             <label htmlFor="address" className='block font-medium text-gray-700 poppins-regular'>Delivery Address</label>
