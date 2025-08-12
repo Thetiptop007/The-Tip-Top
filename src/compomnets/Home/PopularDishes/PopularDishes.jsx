@@ -4,8 +4,9 @@ import data from '../../../data2.json'
 import { Link } from 'react-router-dom'
 
 function PopularDishes() {
-    // Get the first three dishes
-    const topDishes = data?.dishes?.slice(0, 3)
+    // Get specific popular dishes: Shahi Paneer (ID 22), Tandoori Chicken (ID 174), Chicken Dum Biryani (ID 202)
+    const popularDishIds = [22, 174, 202];
+    const topDishes = data?.dishes?.filter(dish => popularDishIds.includes(dish.id))
 
     return (
         <div className='flex flex-col text-center items-center px-4 md:px-20 lg:px-40'>
