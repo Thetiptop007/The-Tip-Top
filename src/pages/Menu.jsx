@@ -28,7 +28,7 @@ function Menu() {
   }, [searchQuery]);
 
   const categories = [
-    'All', 'Tandoori Snacks', 'Non-Vegetarian', 'Vegetarian', 'Biryani', 'Rice Dishes', 'Chinese Snacks', 'Shakes', 'Cold Drinks', 'Soup', 'Thali', 'Main Course Veg', 'Main Course Non-Veg', 'Raita', 'Egg Dishes', 'Breads', 'Chaap Gravy Items', 'Veg Combo', 'Non-Veg Combo', 'Paneer Dishes', 'Vegetarian Curries'
+    'All', 'Tandoori Snacks', 'Non-Vegetarian', 'Vegetarian', 'Biryani', 'Rice Dishes', 'Chinese Snacks',  'Soup', 'Thali', 'Main Course Veg', 'Main Course Non-Veg', 'Raita', 'Egg Dishes', 'Breads', 'Chaap Gravy Items', 'Veg Combo', 'Non-Veg Combo', 
   ];
 
   const filteredDishes = data.dishes.filter(dish => {
