@@ -1,4 +1,3 @@
-
 {
   "dishes": [
     {
@@ -315,7 +314,7 @@
       "image": "https://media.istockphoto.com/id/967265826/photo/indian-food-or-indian-curry-in-a-copper-brass-serving-bowl.jpg?s=2048x2048&w=is&k=20&c=Smjo2teAr1ccBuqcdLprGjVixBHB19BNDEJtXQq7PRQ=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 150,
+      "price": 180,
       "description": "A royal and creamy paneer dish cooked in a rich gravy of nuts, onions, and spices.",
       "categories": [
         "Main Course Veg",
@@ -329,7 +328,7 @@
       "image": "https://media.istockphoto.com/id/967265826/photo/indian-food-or-indian-curry-in-a-copper-brass-serving-bowl.jpg?s=2048x2048&w=is&k=20&c=Smjo2teAr1ccBuqcdLprGjVixBHB19BNDEJtXQq7PRQ=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 220,
+      "price": 210,
       "description": "A royal and creamy paneer dish cooked in a rich gravy of nuts, onions, and spices.",
       "categories": [
         "Main Course Veg",
@@ -357,7 +356,7 @@
       "image": "https://media.istockphoto.com/id/968505648/photo/indian-food-or-indian-curry-in-a-copper-brass-serving-bowl-with-bread-or-roti.jpg?s=2048x2048&w=is&k=20&c=Qcy_znnfnM9zMsiskBEma3RZ6xr6YukE5vxizrg-Avc=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 160,
+      "price": 180,
       "description": "A delicious paneer preparation with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Veg",
@@ -371,7 +370,7 @@
       "image": "https://media.istockphoto.com/id/968505648/photo/indian-food-or-indian-curry-in-a-copper-brass-serving-bowl-with-bread-or-roti.jpg?s=2048x2048&w=is&k=20&c=Qcy_znnfnM9zMsiskBEma3RZ6xr6YukE5vxizrg-Avc=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 220,
+      "price": 230,
       "description": "A delicious paneer preparation with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Veg",
@@ -385,7 +384,7 @@
       "image": "https://media.istockphoto.com/id/1066284066/photo/indian-thaali-meal.jpg?s=2048x2048&w=is&k=20&c=BILGryEM82gX9nbc2nGRjeHBMEofJ9bXvp1q4Bcta7k=",
       "rating": 4.7,
       "reviews": 2100,
-      "price": 110,
+      "price": 100,
       "description": "Paneer cooked in a traditional handi, resulting in a rich and aromatic curry.",
       "categories": [
         "Main Course Veg",
@@ -399,7 +398,7 @@
       "image": "https://media.istockphoto.com/id/1066284066/photo/indian-thaali-meal.jpg?s=2048x2048&w=is&k=20&c=BILGryEM82gX9nbc2nGRjeHBMEofJ9bXvp1q4Bcta7k=",
       "rating": 4.7,
       "reviews": 2100,
-      "price": 160,
+      "price": 180,
       "description": "Paneer cooked in a traditional handi, resulting in a rich and aromatic curry.",
       "categories": [
         "Main Course Veg",
@@ -441,7 +440,7 @@
       "image": "https://media.istockphoto.com/id/477840571/photo/mutter-paneer-in-metal-bowl.jpg?s=2048x2048&w=is&k=20&c=lpbnLOCElsbeUNP89DGOkbEmI0p56yVwlCJ1dCJXuWg=",
       "rating": 4.5,
       "reviews": 1700,
-      "price": 160,
+      "price": 180,
       "description": "A classic North Indian dish of paneer and peas in a spiced tomato-based gravy.",
       "categories": [
         "Main Course Veg",
@@ -483,7 +482,7 @@
       "image": "https://media.istockphoto.com/id/1266587014/photo/indian-vegetarian-cuisine-kadai-paneer-on-white-background.jpg?s=2048x2048&w=is&k=20&c=fyr07r02lai0uu5iVU-yj2t6lINIoVQdrT2B8i2ah4w=",
       "rating": 4.8,
       "reviews": 2500,
-      "price": 160,
+      "price": 180,
       "description": "A rich and creamy curry made with paneer, spices, onions, tomatoes, cashews, and butter.",
       "categories": [
         "Main Course Veg",
@@ -525,7 +524,7 @@
       "image": "https://media.istockphoto.com/id/1447764790/photo/paneer-chicken-masala-or-murgh-makhani-served-in-a-karahi-isolated-on-grey-background-top.jpg?s=2048x2048&w=is&k=20&c=zunddyeOgtLjaVSLxSwsS7bdynxAVp-XgqVire7c7Is=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 160,
+      "price": 180,
       "description": "Paneer simmered in a fragrant and delicious kurma gravy.",
       "categories": [
         "Main Course Veg",
@@ -581,7 +580,7 @@
       "image": "https://media.istockphoto.com/id/1437535969/photo/mushroom-pickle.jpg?s=2048x2048&w=is&k=20&c=Cu0a7HSwxsICdEjwtCKQroNz-yEGal4Qs_j88Uzk8bo=",
       "rating": 4.4,
       "reviews": 1500,
-      "price": 220,
+      "price": 210,
       "description": "A delicious combination of mushrooms and peas in a savory gravy.",
       "categories": [
         "Main Course Veg",
@@ -623,7 +622,7 @@
       "image": "https://media.istockphoto.com/id/1253618657/photo/indian-style-mushroom-chickpea-curry-in-red-sauce.jpg?s=2048x2048&w=is&k=20&c=nHxTY7avgndKWhcFom7GClku0ov-YkMmLPGyvKQzx3A=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 230,
+      "price": 220,
       "description": "A flavorful dish featuring button mushrooms cooked with lightly caramelized onions, tomatoes and ground spices.",
       "categories": [
         "Main Course Veg",
@@ -637,7 +636,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/aloo-gobhi.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.3,
       "reviews": 1300,
-      "price": 80,
+      "price": 100,
       "description": "A popular Indian dish made with potatoes and cauliflower cooked with spices.",
       "categories": [
         "Main Course Veg",
@@ -651,7 +650,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/aloo-gobhi.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.3,
       "reviews": 1300,
-      "price": 130,
+      "price": 150,
       "description": "A popular Indian dish made with potatoes and cauliflower cooked with spices.",
       "categories": [
         "Main Course Veg",
@@ -665,7 +664,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/aloo-gobhi.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.3,
       "reviews": 1300,
-      "price": 180,
+      "price": 210,
       "description": "A popular Indian dish made with potatoes and cauliflower cooked with spices.",
       "categories": [
         "Main Course Veg",
@@ -707,7 +706,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/aloo-jeera.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.2,
       "reviews": 1100,
-      "price": 180,
+      "price": 190,
       "description": "A simple yet delicious dish of potatoes flavored with cumin seeds.",
       "categories": [
         "Main Course Veg",
@@ -744,20 +743,6 @@
       "plateQuantity": "Full"
     },
     {
-      "id": 54,
-      "name": "Aloo Bhujia",
-      "image": "https://media.istockphoto.com/id/1253618657/photo/indian-style-mushroom-chickpea-curry-in-red-sauce.jpg?s=2048x2048&w=is&k=20&c=nHxTY7avgndKWhcFom7GClku0ov-YkMmLPGyvKQzx3A=",
-      "rating": 4.1,
-      "reviews": 1000,
-      "price": 180,
-      "description": "A crispy and savory potato snack seasoned with various spices.",
-      "categories": [
-        "Main Course Veg",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
-    },
-    {
       "id": 55,
       "name": "Arhar Dal Fry",
       "image": "https://media.istockphoto.com/id/585307114/photo/arhar-daal.jpg?s=2048x2048&w=is&k=20&c=Mg_5IdSDpSb7pUFvgUBjhoP8dnrmBL__NK0Ki_Ung14=",
@@ -786,26 +771,12 @@
       "plateQuantity": "Full"
     },
     {
-      "id": 57,
-      "name": "Arhar Dal Fry",
-      "image": "https://media.istockphoto.com/id/585307114/photo/arhar-daal.jpg?s=2048x2048&w=is&k=20&c=Mg_5IdSDpSb7pUFvgUBjhoP8dnrmBL__NK0Ki_Ung14=",
-      "rating": 4.4,
-      "reviews": 1400,
-      "price": 180,
-      "description": "A comforting and popular Indian lentil dish made from pigeon pea lentils.",
-      "categories": [
-        "Main Course Veg",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
-    },
-    {
       "id": 58,
       "name": "Arhar Dal Tadka Spicy",
       "image": "https://media.istockphoto.com/id/1225951711/photo/portion-of-yellow-dal-tadka-in-black-bowl-isolated.jpg?s=2048x2048&w=is&k=20&c=z6tom5-CphVFLEXdn4j3HMM4cIRXCrYnOqomK8jSHJ0=",
       "rating": 4.5,
       "reviews": 1500,
-      "price": 80,
+      "price": 90,
       "description": "A spicy version of the classic dal fry, tempered with aromatic spices.",
       "categories": [
         "Main Course Veg",
@@ -819,21 +790,7 @@
       "image": "https://media.istockphoto.com/id/1225951711/photo/portion-of-yellow-dal-tadka-in-black-bowl-isolated.jpg?s=2048x2048&w=is&k=20&c=z6tom5-CphVFLEXdn4j3HMM4cIRXCrYnOqomK8jSHJ0=",
       "rating": 4.5,
       "reviews": 1500,
-      "price": 130,
-      "description": "A spicy version of the classic dal fry, tempered with aromatic spices.",
-      "categories": [
-        "Main Course Veg",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
-    },
-    {
-      "id": 60,
-      "name": "Arhar Dal Tadka Spicy",
-      "image": "https://media.istockphoto.com/id/1225951711/photo/portion-of-yellow-dal-tadka-in-black-bowl-isolated.jpg?s=2048x2048&w=is&k=20&c=z6tom5-CphVFLEXdn4j3HMM4cIRXCrYnOqomK8jSHJ0=",
-      "rating": 4.5,
-      "reviews": 1500,
-      "price": 180,
+      "price": 140,
       "description": "A spicy version of the classic dal fry, tempered with aromatic spices.",
       "categories": [
         "Main Course Veg",
@@ -847,7 +804,7 @@
       "image": "https://media.istockphoto.com/id/531241066/photo/dal-makhani-or-dal-makhani-or-daal-makhni.jpg?s=2048x2048&w=is&k=20&c=h3kYJYhhXTYD_skqyK3604MRAcJXVi_on_Vt3-x6Co0=",
       "rating": 4.7,
       "reviews": 2300,
-      "price": 100,
+      "price": 110,
       "description": "A popular North Indian dish where whole black lentils & red kidney beans are slow cooked with spices, butter & cream.",
       "categories": [
         "Main Course Veg",
@@ -861,21 +818,7 @@
       "image": "https://media.istockphoto.com/id/531241066/photo/dal-makhani-or-dal-makhani-or-daal-makhni.jpg?s=2048x2048&w=is&k=20&c=h3kYJYhhXTYD_skqyK3604MRAcJXVi_on_Vt3-x6Co0=",
       "rating": 4.7,
       "reviews": 2300,
-      "price": 150,
-      "description": "A popular North Indian dish where whole black lentils & red kidney beans are slow cooked with spices, butter & cream.",
-      "categories": [
-        "Main Course Veg",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
-    },
-    {
-      "id": 63,
-      "name": "Dal Makhni",
-      "image": "https://media.istockphoto.com/id/531241066/photo/dal-makhani-or-dal-makhani-or-daal-makhni.jpg?s=2048x2048&w=is&k=20&c=h3kYJYhhXTYD_skqyK3604MRAcJXVi_on_Vt3-x6Co0=",
-      "rating": 4.7,
-      "reviews": 2300,
-      "price": 200,
+      "price": 190,
       "description": "A popular North Indian dish where whole black lentils & red kidney beans are slow cooked with spices, butter & cream.",
       "categories": [
         "Main Course Veg",
@@ -889,7 +832,7 @@
       "image": "https://media.istockphoto.com/id/1822388520/photo/paneer-bhurji.jpg?s=2048x2048&w=is&k=20&c=KTf29o1RmegO5w_5eRFBjxoqezKguGy5Y2ZnqtnCO3o=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 160,
+      "price": 150,
       "description": "Spiced and scrambled paneer, a delicious and quick vegetarian dish.",
       "categories": [
         "Main Course Veg",
@@ -903,7 +846,7 @@
       "image": "https://media.istockphoto.com/id/1822388520/photo/paneer-bhurji.jpg?s=2048x2048&w=is&k=20&c=KTf29o1RmegO5w_5eRFBjxoqezKguGy5Y2ZnqtnCO3o=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 220,
+      "price": 290,
       "description": "Spiced and scrambled paneer, a delicious and quick vegetarian dish.",
       "categories": [
         "Main Course Veg",
@@ -917,7 +860,7 @@
       "image": "https://media.istockphoto.com/id/545271318/photo/egg-anda-bhurji-or-spicy-scrambled-eggs-and-bread.jpg?s=2048x2048&w=is&k=20&c=rhejSSorBDJQVWnSb3XZYLDu7vwpAyfMJajdiI4bm9M=",
       "rating": 4.5,
       "reviews": 1700,
-      "price": 160,
+      "price": 50,
       "description": "Indian dish of spiced scrambled eggs.",
       "categories": [
         "Main Course Veg",
@@ -931,7 +874,7 @@
       "image": "https://media.istockphoto.com/id/545271318/photo/egg-anda-bhurji-or-spicy-scrambled-eggs-and-bread.jpg?s=2048x2048&w=is&k=20&c=rhejSSorBDJQVWnSb3XZYLDu7vwpAyfMJajdiI4bm9M=",
       "rating": 4.5,
       "reviews": 1700,
-      "price": 220,
+      "price": 100,
       "description": "Indian dish of spiced scrambled eggs.",
       "categories": [
         "Main Course Veg",
@@ -959,7 +902,7 @@
       "image": "https://media.istockphoto.com/id/1325271813/photo/green-peas-or-matar-paneer-curry.jpg?s=2048x2048&w=is&k=20&c=KJN1V4pxWjTlJRenb0BrOmwCm1heCROBjUHr0FfUat4=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 250,
+      "price": 260,
       "description": "A popular Indo-Chinese dish of paneer cooked in a spicy and tangy gravy.",
       "categories": [
         "Main Course Veg",
@@ -987,7 +930,7 @@
       "image": "https://media.istockphoto.com/id/1200812166/photo/vegetarian-masala-mix-veg-with-indian-cottage-cheese.jpg?s=2048x2048&w=is&k=20&c=LP6NERHFwoVqA2Tlu5CVqnDEeynHY0rujc5QQQmxk-o=",
       "rating": 4.3,
       "reviews": 1300,
-      "price": 130,
+      "price": 120,
       "description": "A healthy and flavorful dish made with a variety of fresh vegetables.",
       "categories": [
         "Main Course Veg",
@@ -1001,7 +944,7 @@
       "image": "https://media.istockphoto.com/id/1200812166/photo/vegetarian-masala-mix-veg-with-indian-cottage-cheese.jpg?s=2048x2048&w=is&k=20&c=LP6NERHFwoVqA2Tlu5CVqnDEeynHY0rujc5QQQmxk-o=",
       "rating": 4.3,
       "reviews": 1300,
-      "price": 180,
+      "price": 190,
       "description": "A healthy and flavorful dish made with a variety of fresh vegetables.",
       "categories": [
         "Main Course Veg",
@@ -1015,7 +958,7 @@
       "image": "https://media.istockphoto.com/id/1474367205/photo/paneer-lababdar.jpg?s=2048x2048&w=is&k=20&c=XoZZOj1qOB981ft7dTk-C_MLHtixAKRZkfyiQ1dd-eg=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 100,
+      "price": 90,
       "description": "Mixed vegetables cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Veg",
@@ -1029,7 +972,7 @@
       "image": "https://media.istockphoto.com/id/1474367205/photo/paneer-lababdar.jpg?s=2048x2048&w=is&k=20&c=XoZZOj1qOB981ft7dTk-C_MLHtixAKRZkfyiQ1dd-eg=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 150,
+      "price": 130,
       "description": "Mixed vegetables cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Veg",
@@ -1043,7 +986,7 @@
       "image": "https://media.istockphoto.com/id/1474367205/photo/paneer-lababdar.jpg?s=2048x2048&w=is&k=20&c=XoZZOj1qOB981ft7dTk-C_MLHtixAKRZkfyiQ1dd-eg=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 200,
+      "price": 210,
       "description": "Mixed vegetables cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Veg",
@@ -1057,7 +1000,7 @@
       "image": "https://media.istockphoto.com/id/1846026792/photo/kalan-curry-mushroom-curry-south-indian-style-button-mushroom-masala.jpg?s=2048x2048&w=is&k=20&c=vOls8kRi8JDwPA844bPPzjTN8VHBDOh-kBYOd3F1Tak=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 100,
+      "price": 90,
       "description": "Mushrooms cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Veg",
@@ -1071,7 +1014,7 @@
       "image": "https://media.istockphoto.com/id/1846026792/photo/kalan-curry-mushroom-curry-south-indian-style-button-mushroom-masala.jpg?s=2048x2048&w=is&k=20&c=vOls8kRi8JDwPA844bPPzjTN8VHBDOh-kBYOd3F1Tak=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 160,
+      "price": 140,
       "description": "Mushrooms cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Veg",
@@ -1099,7 +1042,7 @@
       "image": "https://media.istockphoto.com/id/1319624024/photo/bharwa-masala-bhindi-or-stuffed-okra.jpg?s=2048x2048&w=is&k=20&c=qQWwNCj3eyHFkqu2RrWVhEmP4mXwBV4mJZ-QSlHamAE=",
       "rating": 4.4,
       "reviews": 1500,
-      "price": 100,
+      "price": 80,
       "description": "A staple Indian dish made with okra, whole and ground spices, herbs, onions & tomatoes.",
       "categories": [
         "Main Course Veg",
@@ -1113,7 +1056,7 @@
       "image": "https://media.istockphoto.com/id/1319624024/photo/bharwa-masala-bhindi-or-stuffed-okra.jpg?s=2048x2048&w=is&k=20&c=qQWwNCj3eyHFkqu2RrWVhEmP4mXwBV4mJZ-QSlHamAE=",
       "rating": 4.4,
       "reviews": 1500,
-      "price": 160,
+      "price": 150,
       "description": "A staple Indian dish made with okra, whole and ground spices, herbs, onions & tomatoes.",
       "categories": [
         "Main Course Veg",
@@ -1127,7 +1070,7 @@
       "image": "https://media.istockphoto.com/id/1319624024/photo/bharwa-masala-bhindi-or-stuffed-okra.jpg?s=2048x2048&w=is&k=20&c=qQWwNCj3eyHFkqu2RrWVhEmP4mXwBV4mJZ-QSlHamAE=",
       "rating": 4.4,
       "reviews": 1500,
-      "price": 230,
+      "price": 220,
       "description": "A staple Indian dish made with okra, whole and ground spices, herbs, onions & tomatoes.",
       "categories": [
         "Main Course Veg",
@@ -1141,7 +1084,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/bhindi-do-pyaza.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 100,
+      "price": 110,
       "description": "A delicious preparation of okra with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Veg",
@@ -1155,7 +1098,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/bhindi-do-pyaza.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 160,
+      "price": 150,
       "description": "A delicious preparation of okra with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Veg",
@@ -1169,7 +1112,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/bhindi-do-pyaza.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 230,
+      "price": 220,
       "description": "A delicious preparation of okra with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Veg",
@@ -1239,7 +1182,7 @@
       "image": "https://media.istockphoto.com/id/1188693633/photo/palak-paneer.jpg?s=612x612&w=0&k=20&c_0_gL9-z7_iJdW3Qy_v1f8o_F-0oWbZ_wZq_d-3qG8dA=",
       "rating": 4.7,
       "reviews": 2100,
-      "price": 160,
+      "price": 180,
       "description": "A classic curried dish from North Indian cuisine made with fresh spinach, onions, spices, paneer and herbs.",
       "categories": [
         "Main Course Veg",
@@ -1295,7 +1238,7 @@
       "image": "https://media.istockphoto.com/id/1280147779/photo/chicken-curry-iftari.jpg?s=2048x2048&w=is&k=20&c=9XFo5d8spOgEEgjyEpGRuOJ3uoW5ll0Wsz17o5X7_Cc=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 460,
+      "price": 410,
       "description": "A classic chicken curry with a flavorful blend of spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1337,7 +1280,7 @@
       "image": "https://media.istockphoto.com/id/1692099342/photo/masala-chicken-curry-top-view-non-veg-food.jpg?s=2048x2048&w=is&k=20&c=f9S4f589gLlyoF05-87zumCAC63BmnFmqzqRowkjtPQ=",
       "rating": 4.7,
       "reviews": 2200,
-      "price": 460,
+      "price": 480,
       "description": "Chicken cooked in a rich and spicy onion-tomato gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1421,7 +1364,7 @@
       "image": "https://media.istockphoto.com/id/639390540/photo/indian-butter-chicken.jpg?s=2048x2048&w=is&k=20&c=U_t-jEbSS9NOuCXjcm3zLT4JS631JVyMUHDumPZ1DbI=",
       "rating": 4.8,
       "reviews": 2800,
-      "price": 460,
+      "price": 510,
       "description": "A world-famous Indian dish of chicken in a mildly spiced tomato sauce.",
       "categories": [
         "Main Course Non-Veg",
@@ -1463,7 +1406,7 @@
       "image": "https://media.istockphoto.com/id/1281326171/photo/butter-chicken.jpg?s=2048x2048&w=is&k=20&c=U1pUHrCD6bBPRhGq7p4ByKNopPTGowGsrypPF7qSqAE=",
       "rating": 4.8,
       "reviews": 2700,
-      "price": 460,
+      "price": 480,
       "description": "A spicier and more aromatic version of the classic butter chicken.",
       "categories": [
         "Main Course Non-Veg",
@@ -1505,7 +1448,7 @@
       "image": "https://media.istockphoto.com/id/1437335836/photo/closeup-shot-of-a-chicken-do-pyaza-an-indian-dish.jpg?s=2048x2048&w=is&k=20&c=90imKr_u2geImKBsQ586IcjUkd4otp9dEUKqIfeg5Cc=",
       "rating": 4.6,
       "reviews": 2100,
-      "price": 460,
+      "price": 430,
       "description": "A delicious preparation of chicken with a generous amount of onions in a spiced gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1519,7 +1462,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.7,
       "reviews": 2400,
-      "price": 160,
+      "price": 140,
       "description": "Chicken cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1533,7 +1476,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.7,
       "reviews": 2400,
-      "price": 260,
+      "price": 240,
       "description": "Chicken cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1547,7 +1490,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.7,
       "reviews": 2400,
-      "price": 510,
+      "price": 440,
       "description": "Chicken cooked with bell peppers and onions in a spicy, flavorful gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1561,7 +1504,7 @@
       "image": "https://media.istockphoto.com/id/925172814/photo/korean-fried-chicken.jpg?s=2048x2048&w=is&k=20&c=7jx6OXAV_DqwlfdOOtsMUtKU_fKdvkwBk2Dg4O3jjtA=",
       "rating": 4.7,
       "reviews": 2300,
-      "price": 160,
+      "price": 150,
       "description": "A unique chicken curry where chicken pieces are cooked in a chicken mince gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1575,7 +1518,7 @@
       "image": "https://media.istockphoto.com/id/925172814/photo/korean-fried-chicken.jpg?s=2048x2048&w=is&k=20&c=7jx6OXAV_DqwlfdOOtsMUtKU_fKdvkwBk2Dg4O3jjtA=",
       "rating": 4.7,
       "reviews": 2300,
-      "price": 260,
+      "price": 280,
       "description": "A unique chicken curry where chicken pieces are cooked in a chicken mince gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1603,7 +1546,7 @@
       "image": "https://media.istockphoto.com/id/1332533458/photo/homemade-chicken-fried-rice-at-the-top-views.jpg?s=2048x2048&w=is&k=20&c=LkOj6r802pmRe29fOw9twKD2E2muqsPiqitCfv1-2Do=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 130,
+      "price": 140,
       "description": "A semi-dry chicken dish cooked on a flat griddle (tawa) with a blend of spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1631,7 +1574,7 @@
       "image": "https://media.istockphoto.com/id/1332533458/photo/homemade-chicken-fried-rice-at-the-top-views.jpg?s=2048x2048&w=is&k=20&c=LkOj6r802pmRe29fOw9twKD2E2muqsPiqitCfv1-2Do=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 460,
+      "price": 480,
       "description": "A semi-dry chicken dish cooked on a flat griddle (tawa) with a blend of spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1673,7 +1616,7 @@
       "image": "https://media.istockphoto.com/id/1246401760/photo/nasi-goreng-indonesian-chicken-fried-rice-on-black-plate-indonesian-cuisine-dish-balinese.jpg?s=2048x2048&w=is&k=20&c=ljXTzZ-AJYksLNUC1R3oNwo6LXjuUh4aMha7wDO8wc0=",
       "rating": 4.7,
       "reviews": 2200,
-      "price": 460,
+      "price": 440,
       "description": "Chicken cooked in a traditional handi, resulting in a rich and aromatic curry.",
       "categories": [
         "Main Course Non-Veg",
@@ -1687,7 +1630,7 @@
       "image": "https://media.istockphoto.com/id/1202675674/photo/chicken-tikka.jpg?s=2048x2048&w=is&k=20&c=QMjG6L39rPwlEsPQoiJxnoIJ9w8m2BjInmg29yjF7jM=",
       "rating": 4.8,
       "reviews": 2600,
-      "price": 170,
+      "price": 160,
       "description": "A world-famous dish of grilled chicken tikka in a spicy gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1715,7 +1658,7 @@
       "image": "https://media.istockphoto.com/id/1202675674/photo/chicken-tikka.jpg?s=2048x2048&w=is&k=20&c=QMjG6L39rPwlEsPQoiJxnoIJ9w8m2BjInmg29yjF7jM=",
       "rating": 4.8,
       "reviews": 2600,
-      "price": 490,
+      "price": 480,
       "description": "A world-famous dish of grilled chicken tikka in a spicy gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1729,7 +1672,7 @@
       "image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 160,
+      "price": 150,
       "description": "Minced chicken cooked with a blend of aromatic spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1743,7 +1686,7 @@
       "image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 260,
+      "price": 270,
       "description": "Minced chicken cooked with a blend of aromatic spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1757,7 +1700,7 @@
       "image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
       "rating": 4.6,
       "reviews": 2000,
-      "price": 490,
+      "price": 480,
       "description": "Minced chicken cooked with a blend of aromatic spices.",
       "categories": [
         "Main Course Non-Veg",
@@ -1771,7 +1714,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.5,
       "reviews": 1800,
-      "price": 160,
+      "price": 150,
       "description": "Minced chicken meatballs cooked in a rich and flavorful gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1785,7 +1728,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.5,
       "reviews": 1800,
-      "price": 260,
+      "price": 280,
       "description": "Minced chicken meatballs cooked in a rich and flavorful gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1813,7 +1756,7 @@
       "image": "https://media.istockphoto.com/id/1091602054/photo/szechuan-chicken-which-is-a-popular-indo-chinese-non-vegetarian-recipe-served-in-a-plate-with.jpg?s=2048x2048&w=is&k=20&c=nMfN3otQO4tUKsCfhhKaSkCDvngaJBndB47oLaxbSwk=",
       "rating": 4.6,
       "reviews": 2200,
-      "price": 150,
+      "price": 140,
       "description": "A popular Indo-Chinese dish of chicken cooked in a spicy and tangy gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1827,7 +1770,7 @@
       "image": "https://media.istockphoto.com/id/1091602054/photo/szechuan-chicken-which-is-a-popular-indo-chinese-non-vegetarian-recipe-served-in-a-plate-with.jpg?s=2048x2048&w=is&k=20&c=nMfN3otQO4tUKsCfhhKaSkCDvngaJBndB47oLaxbSwk=",
       "rating": 4.6,
       "reviews": 2200,
-      "price": 250,
+      "price": 220,
       "description": "A popular Indo-Chinese dish of chicken cooked in a spicy and tangy gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1841,7 +1784,7 @@
       "image": "https://media.istockphoto.com/id/1091602054/photo/szechuan-chicken-which-is-a-popular-indo-chinese-non-vegetarian-recipe-served-in-a-plate-with.jpg?s=2048x2048&w=is&k=20&c=nMfN3otQO4tUKsCfhhKaSkCDvngaJBndB47oLaxbSwk=",
       "rating": 4.6,
       "reviews": 2200,
-      "price": 470,
+      "price": 410,
       "description": "A popular Indo-Chinese dish of chicken cooked in a spicy and tangy gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1911,7 +1854,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 150,
+      "price": 80,
       "description": "A flavorful dish made with chicken cooked in a creamy spinach gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -1925,7 +1868,7 @@
       "image": "https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=2048x2048&w=is&k=20&c=QmfPyGz4cozkWMImodu5rn9ErTBRUYl5PCYqFCllXt8=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 250,
+      "price": 150,
       "description": "A flavorful dish made with chicken cooked in a creamy spinach gravy.",
       "categories": [
         "Main Course Non-Veg",
@@ -2037,7 +1980,7 @@
       "image": "https://media.istockphoto.com/id/1150376593/photo/bread-tandoori-indian-cuisine.jpg?s=2048x2048&w=is&k=20&c=a_9iG1cj2767aNt6v_sNMYSe-4YkKzp3BeHe9m9NYOA=",
       "rating": 4.7,
       "reviews": 1800,
-      "price": 12,
+      "price": 10,
       "description": "A traditional Indian flatbread cooked in a tandoor (clay oven).",
       "categories": [
         "Breads",
@@ -2093,7 +2036,7 @@
       "image": "https://media.istockphoto.com/id/1213259784/photo/aallu-parantha.jpg?s=2048x2048&w=is&k=20&c=f2KPwWftX96eu7kwxmQfFoz26N2LRFs9Y37bGSbC75A=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 45,
+      "price": 40,
       "description": "A savory flatbread stuffed with a spiced onion filling.",
       "categories": [
         "Breads",
@@ -2121,7 +2064,7 @@
       "image": "https://media.istockphoto.com/id/1213259784/photo/aallu-parantha.jpg?s=2048x2048&w=is&k=20&c=f2KPwWftX96eu7kwxmQfFoz26N2LRFs9Y37bGSbC75A=",
       "rating": 4.7,
       "reviews": 1900,
-      "price": 45,
+      "price": 50,
       "description": "A delicious flatbread stuffed with a spiced paneer filling.",
       "categories": [
         "Breads",
@@ -2149,7 +2092,7 @@
       "image": "https://media.istockphoto.com/id/1388250623/photo/indian-tandoori-naan-bread-also-called-amritsari-tanduri-nan-kulcha-bread-cooked-in-hot-oven.jpg?s=2048x2048&w=is&k=20&c=0pCOW6GeBomgFsf0StG-pYkNfLkxjgl_H50lyj9Qnic=",
       "rating": 4.8,
       "reviews": 2200,
-      "price": 40,
+      "price": 35,
       "description": "Plain naan brushed with a generous amount of butter.",
       "categories": [
         "Breads",
@@ -2163,7 +2106,7 @@
       "image": "https://media.istockphoto.com/id/893029766/photo/garlic-and-coriander-naan-served-in-a-plate-its-a-type-of-indian-bread-or-roti-flavoured-with.jpg?s=2048x2048&w=is&k=20&c=30WpXj9rY6rthkyP3S2ZxsZcmXgx7Rk3UEOcB5eSGsE=",
       "rating": 4.8,
       "reviews": 2300,
-      "price": 50,
+      "price": 40,
       "description": "Naan bread flavored with fresh garlic and herbs.",
       "categories": [
         "Breads",
@@ -2177,7 +2120,7 @@
       "image": "https://media.istockphoto.com/id/1292707959/photo/indian-bread.jpg?s=2048x2048&w=is&k=20&c=yeJVoFoRs9-awoVuxK66jxgO5claqgeUp-bzl3VV_CU=",
       "rating": 4.7,
       "reviews": 2000,
-      "price": 50,
+      "price": 40,
       "description": "Naan bread garnished with fresh coriander leaves.",
       "categories": [
         "Breads",
@@ -2191,7 +2134,7 @@
       "image": "https://media.istockphoto.com/id/1213259784/photo/aallu-parantha.jpg?s=2048x2048&w=is&k=20&c=f2KPwWftX96eu7kwxmQfFoz26N2LRFs9Y37bGSbC75A=",
       "rating": 4.8,
       "reviews": 2100,
-      "price": 60,
+      "price": 50,
       "description": "A delicious naan bread stuffed with a spiced paneer filling.",
       "categories": [
         "Breads",
@@ -2219,7 +2162,7 @@
       "image": "https://media.istockphoto.com/id/638303490/photo/tasty-pancakes.jpg?s=2048x2048&w=is&k=20&c=A_8seCHfy1TVLVFbmsdyeH6wPF5zRxv0xFCFoqZF2Zs=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 60,
+      "price": 50,
       "description": "A naan bread with a mixed stuffing of vegetables and spices.",
       "categories": [
         "Breads",
@@ -2275,7 +2218,7 @@
       "image": "https://media.istockphoto.com/id/2008143481/photo/veg-biryani-or-veg-pulav-fried-rice-indian-food-vegetable-biryani.jpg?s=2048x2048&w=is&k=20&c=hCGDNt_H0NrkXNne0P16tCsnz-BztlhvMc-o4lDLGmA=",
       "rating": 4.5,
       "reviews": 1500,
-      "price": 90,
+      "price": 80,
       "description": "A simple and delicious rice dish made with peas and aromatic spices.",
       "categories": [
         "Rice Dishes",
@@ -2345,7 +2288,7 @@
       "image": "https://media.istockphoto.com/id/1292618430/photo/healthy-and-tasty-veg-fried-rice-made-of-mixed-veggies-served-in-bowl-over-a-rustic-wooden.jpg?s=2048x2048&w=is&k=20&c=8WW6ky4VjSDr6pqscXLTgJfgVLCpPs3a9fxtOBuOpKA=",
       "rating": 4.5,
       "reviews": 1500,
-      "price": 100,
+      "price": 80,
       "description": "A classic Indo-Chinese dish of stir-fried rice with assorted vegetables.",
       "categories": [
         "Rice Dishes",
@@ -2359,7 +2302,7 @@
       "image": "https://media.istockphoto.com/id/1292617686/photo/healthy-and-tasty-paneer-fried-rice-made-of-rice-mixed-veggies-and-paneer-served-in-bowl-over.jpg?s=2048x2048&w=is&k=20&c=jV_jbJWsR-N42h1j6mQJtsDlbQbBwAVSLSj1Qj_IBrM=",
       "rating": 4.6,
       "reviews": 1700,
-      "price": 110,
+      "price": 100,
       "description": "A delicious twist to the classic fried rice with the addition of paneer.",
       "categories": [
         "Rice Dishes",
@@ -2401,7 +2344,7 @@
       "image": "https://media.istockphoto.com/id/1469654615/photo/panner-baby-corn-manchurian-a-crispy-and-crunchy-indo-chinese-vegetarian-dish-in-a-smooth.jpg?s=2048x2048&w=is&k=20&c=2GT23l8y9kLrUhD0-CoWZgR-SUvxPJdjJvWrJMJgEPk=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 110,
+      "price": 100,
       "description": "A tasty and wholesome fried rice with paneer and sweet corn.",
       "categories": [
         "Rice Dishes",
@@ -2435,7 +2378,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "6pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 175,
@@ -2463,7 +2406,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "6pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 177,
@@ -2491,7 +2434,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "6pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 179,
@@ -2547,21 +2490,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 183,
-      "name": "Mushroom Tikka",
-      "image": "https://media.istockphoto.com/id/678431492/photo/mushroom-tikka-served-in-a-platter-on-white-background.jpg?s=2048x2048&w=is&k=20&c=P5N6QxkguFQyni_DdmJ8uGUXtcbF0j0qrpQ2pEZ68Nc=",
-      "rating": 4.6,
-      "reviews": 1800,
-      "price": 300,
-      "description": "Mushrooms marinated in a spicy yogurt mixture and grilled.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 184,
@@ -2575,7 +2504,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "6pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 185,
@@ -2603,7 +2532,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 187,
@@ -2611,13 +2540,13 @@
       "image": "https://media.istockphoto.com/id/2043767125/photo/lemon-being-squeezed-over-shrimp-tandoori.jpg?s=2048x2048&w=is&k=20&c=un2XOqcoOgjJG8alyP3SAhXfww2nZNLsxCwSPg68JIk=",
       "rating": 4.7,
       "reviews": 2300,
-      "price": 480,
+      "price": 460,
       "description": "Boneless chicken pieces marinated in yogurt and spices, then grilled.",
       "categories": [
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "16pc"
+      "plateQuantity": "10pc"
     },
     {
       "id": 188,
@@ -2659,21 +2588,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 191,
-      "name": "Tandoori Chaap",
-      "image": "https://media.istockphoto.com/id/1805264406/photo/malai-chaap-and-achari-chaap.jpg?s=2048x2048&w=is&k=20&c=lBxhksrAm27ys0FTrb2nzEO0eLMUMmKDK3WsebTcdIk=",
-      "rating": 4.6,
-      "reviews": 1700,
-      "price": 220,
-      "description": "Soya chaap marinated in tandoori spices and grilled.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 192,
@@ -2687,21 +2602,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 193,
-      "name": "Irani Chaap",
-      "image": "https://media.istockphoto.com/id/523499050/photo/tandoori-snacks.jpg?s=2048x2048&w=is&k=20&c=2ZF0QWo6gOyYqSHwQ35jUq8-qBYA6ckdDXurbDKuDyg=",
-      "rating": 4.5,
-      "reviews": 1600,
-      "price": 220,
-      "description": "Soya chaap with a distinct Iranian flavor profile.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 194,
@@ -2715,21 +2616,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 195,
-      "name": "Pudina Chaap",
-      "image": "https://media.istockphoto.com/id/1256834469/photo/malabari-beef.jpg?s=2048x2048&w=is&k=20&c=s9i2ySw1gH3tvkf4fW6EMJdjAvNbGFK0oF_OwDl2n-A=",
-      "rating": 4.6,
-      "reviews": 1700,
-      "price": 220,
-      "description": "Soya chaap marinated in a refreshing mint and coriander marinade.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 196,
@@ -2743,21 +2630,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 197,
-      "name": "Afghani Chaap",
-      "image": "https://media.istockphoto.com/id/469134710/photo/indian-food.jpg?s=2048x2048&w=is&k=20&c=ha3NLpMGHy91FMdNGHP14XH82TVlissmR-LLbFlQe-M=",
-      "rating": 4.7,
-      "reviews": 1900,
-      "price": 260,
-      "description": "Creamy and mildly spiced soya chaap marinated in a rich blend of cream, cashews, and spices.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 198,
@@ -2771,21 +2644,7 @@
         "Tandoori Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 199,
-      "name": "Achari Chaap",
-      "image": "https://media.istockphoto.com/id/1094431136/photo/soya-chaap-curry-served-in-a-bowl-healthy-recipe-popular-in-india-and-pakistan.jpg?s=2048x2048&w=is&k=20&c=FTCV9U4kWoP17__kDrFLfx1dEb4EDd99tdzC5jp3Y2A=",
-      "rating": 4.6,
-      "reviews": 1800,
-      "price": 260,
-      "description": "Soya chaap with a tangy and spicy pickle-flavored marinade.",
-      "categories": [
-        "Tandoori Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 200,
@@ -2799,21 +2658,7 @@
         "Tandoori Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Half"
-    },
-    {
-      "id": 201,
-      "name": "Fish Tikka",
-      "image": "https://media.istockphoto.com/id/940154440/photo/cooked-pumfret-fish-on-a-plate.jpg?s=2048x2048&w=is&k=20&c=aR9UAird0fYv1g98j70EgQHlep9ZG52vbx-WIcXo32k=",
-      "rating": 4.7,
-      "reviews": 1900,
-      "price": 500,
-      "description": "Boneless fish pieces marinated in yogurt and spices, then grilled.",
-      "categories": [
-        "Tandoori Snacks",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "Full"
+      "plateQuantity": "N/A"
     },
     {
       "id": 202,
@@ -2827,7 +2672,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Half"
+      "plateQuantity": "Small"
     },
     {
       "id": 203,
@@ -2841,7 +2686,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Full"
+      "plateQuantity": "Large"
     },
     {
       "id": 204,
@@ -2855,7 +2700,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Half"
+      "plateQuantity": "Small"
     },
     {
       "id": 205,
@@ -2869,7 +2714,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Full"
+      "plateQuantity": "Large"
     },
     {
       "id": 206,
@@ -2883,7 +2728,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Half"
+      "plateQuantity": "Small"
     },
     {
       "id": 207,
@@ -2897,7 +2742,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "Full"
+      "plateQuantity": "Large"
     },
     {
       "id": 208,
@@ -2911,7 +2756,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "2pc"
+      "plateQuantity": "1pc"
     },
     {
       "id": 209,
@@ -2925,7 +2770,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "3pc"
+      "plateQuantity": "2pc"
     },
     {
       "id": 210,
@@ -2939,7 +2784,7 @@
         "Biryani",
         "Vegetarian"
       ],
-      "plateQuantity": "Half"
+      "plateQuantity": "Small"
     },
     {
       "id": 211,
@@ -2953,11 +2798,11 @@
         "Biryani",
         "Vegetarian"
       ],
-      "plateQuantity": "Full"
+      "plateQuantity": "Large"
     },
     {
       "id": 212,
-      "name": "Chicken Lolipop Biryani (4pc)",
+      "name": "Chicken Lollipop Biryani",
       "image": "https://media.istockphoto.com/id/1251515728/photo/this-is-a-picture-of-a-plate-filled-with-biriyani-and-two-pieces-of-fried-chicken.jpg?s=2048x2048&w=is&k=20&c=VNGEk99ZEbedFK8PtDBd2xFbOgFWr3_MAvsZpngopgA=",
       "rating": 4.8,
       "reviews": 2400,
@@ -2967,7 +2812,7 @@
         "Biryani",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "N/A"
+      "plateQuantity": "4pc"
     },
     {
       "id": 213,
@@ -3023,7 +2868,7 @@
         "Chinese Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 217,
@@ -3037,7 +2882,7 @@
         "Chinese Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 218,
@@ -3045,13 +2890,13 @@
       "image": "https://media.istockphoto.com/id/1091602054/photo/szechuan-chicken-which-is-a-popular-indo-chinese-non-vegetarian-recipe-served-in-a-plate-with.jpg?s=2048x2048&w=is&k=20&c=nMfN3otQO4tUKsCfhhKaSkCDvngaJBndB47oLaxbSwk=",
       "rating": 4.7,
       "reviews": 2100,
-      "price": 250,
+      "price": 220,
       "description": "A popular Indo-Chinese appetizer of crispy chicken tossed in a spicy and tangy sauce.",
       "categories": [
         "Chinese Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 219,
@@ -3059,13 +2904,13 @@
       "image": "https://media.istockphoto.com/id/1466531469/photo/special-chicken-dishes.jpg?s=2048x2048&w=is&k=20&c=9TyRETwUhIfoziiWbEwHp6AByVKDa1figvGD4v-MO0I=",
       "rating": 4.6,
       "reviews": 1900,
-      "price": 250,
+      "price": 300,
       "description": "A sweet and tangy chicken dish with the flavors of honey and lemon.",
       "categories": [
         "Chinese Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 220,
@@ -3073,7 +2918,7 @@
       "image": "https://media.istockphoto.com/id/1638296596/photo/jali-kabab-or-shami-kebab-tikki-served-in-dish-isolated-on-background-top-view-of-bangladesh.jpg?s=2048x2048&w=is&k=20&c=-G8OW33Rl4q0PeKR4rjuOYi5a1QvXQ9aYrIBw1TKYzo=",
       "rating": 4.7,
       "reviews": 2000,
-      "price": 250,
+      "price": 300,
       "description": "Flavorful minced chicken patties, a popular snack from the Indian subcontinent.",
       "categories": [
         "Chinese Snacks",
@@ -3107,7 +2952,7 @@
         "Chinese Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "12PC"
+      "plateQuantity": "12pc"
     },
     {
       "id": 223,
@@ -3121,21 +2966,7 @@
         "Chinese Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "8pc"
-    },
-    {
-      "id": 224,
-      "name": "Chilli Mushroom",
-      "image": "https://media.istockphoto.com/id/1389160681/photo/chilli-mushroom-indian-snack-food.jpg?s=2048x2048&w=is&k=20&c=XKJ2rCrF8-I5GeAGMAX1I_p5Mt00uR7-Z8j3AXnbBCw=",
-      "rating": 4.6,
-      "reviews": 1900,
-      "price": 250,
-      "description": "An Indo-Chinese appetizer of crispy mushrooms tossed in a spicy and tangy sauce.",
-      "categories": [
-        "Chinese Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "12PC"
+      "plateQuantity": "N/A"
     },
     {
       "id": 225,
@@ -3149,7 +2980,7 @@
         "Chinese Snacks",
         "Non-Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 226,
@@ -3163,7 +2994,7 @@
         "Chinese Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "8pc"
+      "plateQuantity": "5pc"
     },
     {
       "id": 227,
@@ -3171,13 +3002,13 @@
       "image": "https://media.istockphoto.com/id/2156606746/photo/image-of-veg-manchurian-momos-garnished-in-a-disposable-plate.jpg?s=2048x2048&w=is&k=20&c=jGF3P8C8qprxTsB0CG_XQXcGbSumHNkMmnO5SiaZB4g=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 240,
+      "price": 260,
       "description": "A popular Indo-Chinese dish of vegetable balls in a savory and tangy Manchurian sauce.",
       "categories": [
         "Chinese Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "12PC"
+      "plateQuantity": "10pc"
     },
     {
       "id": 228,
@@ -3241,7 +3072,7 @@
       "image": "https://media.istockphoto.com/id/1144505561/photo/chicken-hakka-schezwan-noodles-served-in-a-bowl-with-chopsticks-selective-focus.jpg?s=2048x2048&w=is&k=20&c=ILfDuAMPAzNSaM--wr_An13dTA7KD44bul_izbdAvlE=",
       "rating": 4.5,
       "reviews": 1600,
-      "price": 100,
+      "price": 90,
       "description": "Stir-fried noodles with scrambled eggs and vegetables.",
       "categories": [
         "Chinese Snacks",
@@ -3255,7 +3086,7 @@
       "image": "https://media.istockphoto.com/id/503155474/photo/asian-chicken-noodles-stir-fry.jpg?s=2048x2048&w=is&k=20&c=uzKIxH0gOMrk9qVPo5YRo8_JgSBMWTgfvX4cv6oGP-g=",
       "rating": 4.7,
       "reviews": 1900,
-      "price": 110,
+      "price": 120,
       "description": "Stir-fried noodles with chicken and vegetables.",
       "categories": [
         "Chinese Snacks",
@@ -3283,7 +3114,7 @@
       "image": "https://media.istockphoto.com/id/1961826859/photo/pad-thai-with-chicken-nuggets-and-rice-noodles-in-peanut-and-tamarind-sauce-on-wooden-table.jpg?s=2048x2048&w=is&k=20&c=GevbRefNNsEJLaRClUmKDsotxJHyEIY5fBJyuc6zUOg=",
       "rating": 4.7,
       "reviews": 2000,
-      "price": 110,
+      "price": 120,
       "description": "A popular Indo-Chinese dish of stir-fried noodles with chicken and vegetables.",
       "categories": [
         "Chinese Snacks",
@@ -3297,7 +3128,7 @@
       "image": "https://media.istockphoto.com/id/1693364461/photo/non-veg-platter.jpg?s=2048x2048&w=is&k=20&c=EyNpNRm7IGHf8M1BESOBV_hSV7EgT0szy9ttrnfoYHA=",
       "rating": 4.5,
       "reviews": 1500,
-      "price": 140,
+      "price": 180,
       "description": "Assorted vegetables batter-fried until crispy.",
       "categories": [
         "Snacks",
@@ -3325,13 +3156,13 @@
       "image": "https://media.istockphoto.com/id/1362521039/photo/mixed-veg-pakora.jpg?s=2048x2048&w=is&k=20&c=IXDLRRnmEqSecjc-u98BlsxCOOCkGYaw61nAtH-MAbY=",
       "rating": 4.4,
       "reviews": 1400,
-      "price": 130,
+      "price": 150,
       "description": "Mixed vegetables dipped in a spiced gram flour batter and deep-fried.",
       "categories": [
         "Snacks",
         "Vegetarian"
       ],
-      "plateQuantity": "12pc"
+      "plateQuantity": "10pc"
     },
     {
       "id": 239,
@@ -3339,7 +3170,7 @@
       "image": "https://media.istockphoto.com/id/1511077926/photo/indian-chicken-pakora-with-lemon-and-onion-close-up-photo.jpg?s=2048x2048&w=is&k=20&c=k3Qj96pcHUTRexdQESYnxpq9_15OUPG5iutwCFaRSWE=",
       "rating": 4.6,
       "reviews": 1800,
-      "price": 200,
+      "price": 150,
       "description": "Chicken pieces dipped in a spiced gram flour batter and deep-fried.",
       "categories": [
         "Snacks",
@@ -3368,488 +3199,488 @@
       "rating": 4.8,
       "reviews": 2100,
       "price": 250,
-      "description": "Frenched chicken winglets, marinated and then batter fried or baked.",
+      "description": "Frenched chicken wings, marinated and fried to perfection.",
       "categories": [
-        "Snacks",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "6pc"
-    },
-    {
-      "id": 242,
-      "name": "Honey Chilli Potato",
-      "image": "https://media.istockphoto.com/id/1155838446/photo/honey-chilli-potatoes-is-an-indo-chinese-dish-where-deep-fried-potato-fingers-are-tossed-in.jpg?s=2048x2048&w=is&k=20&c=vJm25LBKVM5yLqe4tl4AnKvI3rhjDCh3G7biOU03Bs0=",
-      "rating": 4.6,
-      "reviews": 1800,
-      "price": 140,
-      "description": "A sweet and spicy Indo-Chinese snack of fried potato fingers tossed in a honey-chilli sauce.",
-      "categories": [
-        "Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 243,
-      "name": "Chilli Potato",
-      "image": "https://media.istockphoto.com/id/1251682341/photo/crispy-honey-chilli-potatoes-are-a-super-addictive-snack-from-indian-chinese-cuisine.jpg?s=2048x2048&w=is&k=20&c=VrSmZ1l4JFUwmoH4wQRIUfZ-0yhjJ7c3YbP28VH-kt0=",
-      "rating": 4.5,
-      "reviews": 1600,
-      "price": 120,
-      "description": "A spicy Indo-Chinese snack of fried potato fingers tossed in a chilli sauce.",
-      "categories": [
-        "Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 244,
-      "name": "French Fry",
-      "image": "https://media.istockphoto.com/id/148349643/photo/plate-of-delicious-looking-french-fries.jpg?s=2048x2048&w=is&k=20&c=XVATn86k4EF7KZibi-kp7BRoZAqc8zcZzxutedGzNV4=",
-      "rating": 4.3,
-      "reviews": 1300,
-      "price": 120,
-      "description": "Classic deep-fried potato strips.",
-      "categories": [
-        "Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 245,
-      "name": "Crispy Corn",
-      "image": "https://media.istockphoto.com/id/1132064062/photo/crispy-sweet-corn-popular-indian-snack-street-food.jpg?s=2048x2048&w=is&k=20&c=e7tCwzh9AwQJYrN_42VSjGt5ye5TNXnv7HXjjxmKOsM=",
-      "rating": 4.5,
-      "reviews": 1500,
-      "price": 120,
-      "description": "A crunchy and flavorful snack made with corn kernels.",
-      "categories": [
-        "Snacks",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 246,
-      "name": "Butter Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/1407172147/photo/indian-spicy-butter-chicken-biryani-served-in-a-dish-isolated-on-wooden-board-side-view-on.jpg?s=2048x2048&w=is&k=20&c=kTWCPtcdEvtVoF37CTWUqgQfnJcZoui69SfxSw_YWLY=",
-      "rating": 4.8,
-      "reviews": 2200,
-      "price": 140,
-      "description": "A delicious combination of butter chicken and fragrant pulao rice.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 247,
-      "name": "Kadhai Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/1086974196/photo/keema-or-kheema-biryani-fragrant-and-spicy-minced-lamb-or-goat-or-chicken-cooked-in-range-of.jpg?s=2048x2048&w=is&k=20&c=gKm_RtaDvA3YjXboCWSUiwT8WBtfHAf-iDB7l9D7LFE=",
-      "rating": 4.7,
-      "reviews": 2000,
-      "price": 140,
-      "description": "A flavorful combo of kadhai chicken and aromatic pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 248,
-      "name": "Chicken Masala Pulao",
-      "image": "https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?s=2048x2048&w=is&k=20&c=bnRYyLyD2gDhsQWaIhrFrh5VZvIR85WK9rCfhIM0shg=",
-      "rating": 4.7,
-      "reviews": 2100,
-      "price": 140,
-      "description": "A delightful meal of chicken masala served with fragrant pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 249,
-      "name": "Chicken Korma Pulao",
-      "image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
-      "rating": 4.6,
-      "reviews": 1900,
-      "price": 140,
-      "description": "A rich and creamy combo of chicken korma and aromatic pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 250,
-      "name": "Chicken Keema Pulao",
-      "image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
-      "rating": 4.6,
-      "reviews": 1800,
-      "price": 140,
-      "description": "A savory meal of chicken keema served with fragrant pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 251,
-      "name": "Tawa Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/1332533458/photo/homemade-chicken-fried-rice-at-the-top-views.jpg?s=2048x2048&w=is&k=20&c=LkOj6r802pmRe29fOw9twKD2E2muqsPiqitCfv1-2Do=",
-      "rating": 4.7,
-      "reviews": 1900,
-      "price": 140,
-      "description": "A tasty combination of tawa chicken and aromatic pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 252,
-      "name": "Handi Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/1246401760/photo/nasi-goreng-indonesian-chicken-fried-rice-on-black-plate-indonesian-cuisine-dish-balinese.jpg?s=2048x2048&w=is&k=20&c=ljXTzZ-AJYksLNUC1R3oNwo6LXjuUh4aMha7wDO8wc0=",
-      "rating": 4.8,
-      "reviews": 2100,
-      "price": 160,
-      "description": "A rich and aromatic combo of handi chicken and fragrant pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 253,
-      "name": "Chilli Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/941715954/photo/spicy-indian-chicken-biriyani-rice-with-sliced-eggs-and-garnished-with-vegetables.jpg?s=2048x2048&w=is&k=20&c=y7hI9W-RFkcWxeCGfuBNemnPcB2w3F_dghI_WKxzCII=",
-      "rating": 4.7,
-      "reviews": 2000,
-      "price": 160,
-      "description": "A spicy and flavorful combination of chilli chicken and aromatic pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 254,
-      "name": "Chicken Do Pyaza Pulao",
-      "image": "https://media.istockphoto.com/id/913213974/photo/chicken.jpg?s=2048x2048&w=is&k=20&c=uuzYdEyZY-eRho6Do-BF-zOnlCMrYhwa2yanodqd4qk=",
-      "rating": 4.6,
-      "reviews": 1900,
-      "price": 140,
-      "description": "A delicious meal of chicken do pyaza served with fragrant pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 255,
-      "name": "Rara Chicken Pulao",
-      "image": "https://media.istockphoto.com/id/925172814/photo/korean-fried-chicken.jpg?s=2048x2048&w=is&k=20&c=7jx6OXAV_DqwlfdOOtsMUtKU_fKdvkwBk2Dg4O3jjtA=",
-      "rating": 4.8,
-      "reviews": 2200,
-      "price": 150,
-      "description": "A unique and flavorful combo of rara chicken and aromatic pulao.",
-      "categories": [
-        "Non-Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "3pcs"
-    },
-    {
-      "id": 256,
-      "name": "Mattar Paneer Pulao",
-      "image": "https://media.istockphoto.com/id/1809042464/photo/veg-paneer-biryani-with-mixed-veggies-like-paneer-potato-carrots-peas-cooked-along-rice-and.jpg?s=2048x2048&w=is&k=20&c=ejSx2a4vfJYk8qmAP28GErp4V2wzwd8yxHOd_dOlKqo=",
-      "rating": 4.6,
-      "reviews": 1700,
-      "price": 120,
-      "description": "A delicious combination of mutter paneer and fragrant pulao rice.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 257,
-      "name": "Paneer Do Pyaza Pulao",
-      "image": "https://media.istockphoto.com/id/1624342358/photo/closeup-of-veg-biryani-texture-garnish-with-mint.jpg?s=2048x2048&w=is&k=20&c=xlAY4AzubhE79uNWBmwk6gkSleijvYEIlKJRdj98-60=",
-      "rating": 4.7,
-      "reviews": 1800,
-      "price": 120,
-      "description": "A delightful meal of paneer do pyaza served with fragrant pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 258,
-      "name": "Kadhai Paneer Pulao",
-      "image": "https://media.istockphoto.com/id/1471483932/photo/close-up-of-vegetarian-biryani-texture-background.jpg?s=2048x2048&w=is&k=20&c=DEn2hWl95a8EIT-saAToG-BFZo27jFMks9ED-BKt6DI=",
-      "rating": 4.7,
-      "reviews": 1900,
-      "price": 120,
-      "description": "A flavorful combo of kadhai paneer and aromatic pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 259,
-      "name": "Handi Paneer Pulao",
-      "image": "https://media.istockphoto.com/id/1091692740/photo/schezwan-paneer-fried-rice-with-szechuan-sauce-and-cottage-cheese-cubes-served-in-a-bowl-or.jpg?s=2048x2048&w=is&k=20&c=fQOYbZaRbsZyJBJO4uHYIncoXTT59Iz4nttZpN-32EE=",
-      "rating": 4.8,
-      "reviews": 2000,
-      "price": 120,
-      "description": "A rich and aromatic combo of handi paneer and fragrant pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 260,
-      "name": "Shahi Paneer Pulao",
-      "image": "https://media.istockphoto.com/id/1833079093/photo/closeup-of-matar-paneer-pulao-with-onion.jpg?s=2048x2048&w=is&k=20&c=hQ3RK3tVzoB9V5UaXr0b1AuVvbrh9RX-R_MLLdTT9LQ=",
-      "rating": 4.7,
-      "reviews": 1900,
-      "price": 120,
-      "description": "A royal combination of shahi paneer and aromatic pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 261,
-      "name": "Mattar Mushroom Pulao",
-      "image": "https://media.istockphoto.com/id/1437666416/photo/food-photography.jpg?s=2048x2048&w=is&k=20&c=ZmSWZcYbezAhUGvXYGg_fdF9gcFJh_t6sGZQ4yEVcCE=",
-      "rating": 4.6,
-      "reviews": 1700,
-      "price": 120,
-      "description": "A delicious and wholesome meal of mutter mushroom served with fragrant pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 262,
-      "name": "Mushroom Do Pyaza Pulao",
-      "image": "https://media.istockphoto.com/id/1437666416/photo/food-photography.jpg?s=2048x2048&w=is&k=20&c=ZmSWZcYbezAhUGvXYGg_fdF9gcFJh_t6sGZQ4yEVcCE=",
-      "rating": 4.7,
-      "reviews": 1800,
-      "price": 120,
-      "description": "A flavorful combo of mushroom do pyaza and aromatic pulao.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 263,
-      "name": "Egg Masala Pulao",
-      "image": "https://media.istockphoto.com/id/534334870/photo/egg-biryani-or-anda-biryani-using-basmati-rice-and-spices.jpg?s=2048x2048&w=is&k=20&c=lRVtpqna0AU8CRhE1uxTFlT6va4uu33Ry1cIbOlFCf4=",
-      "rating": 4.6,
-      "reviews": 1700,
-      "price": 110,
-      "description": "A delightful meal of egg masala served with fragrant pulao.",
-      "categories": [
-        "Veg Combo",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 264,
-      "name": "Dal Khichdi",
-      "image": "https://media.istockphoto.com/id/1331483518/photo/khichdi-is-a-famous-south-asian-dish-made-of-rice-lentils-and-vegetables.jpg?s=2048x2048&w=is&k=20&c=azHyTi8fBZHDpGXsoCcJnIhoH7fjoVesFPW6RuVwmVk=",
-      "rating": 4.4,
-      "reviews": 1400,
-      "price": 110,
-      "description": "A wholesome and comforting one-pot meal of rice and lentils.",
-      "categories": [
-        "Veg Combo",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 265,
-      "name": "Veg Clear Soup",
-      "image": "https://media.istockphoto.com/id/973423208/photo/top-view-of-a-delicious-dietary-vegetable-soup-with-parsley-leaves.jpg?s=2048x2048&w=is&k=20&c=6wWLWzdjDumlxmRV1X6Ej7O9ac_F3hhOpAiEZFuXpck=",
-      "rating": 4.3,
-      "reviews": 1000,
-      "price": 60,
-      "description": "A light and healthy soup with a clear vegetable broth.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 266,
-      "name": "Veg Hot & Sour Soup",
-      "image": "https://media.istockphoto.com/id/1257506024/photo/lemon-coriander-soup-veg-lemon-coriander-soup-chinese-indian-style-vegetarian-lemon-coriander.jpg?s=2048x2048&w=is&k=20&c=Wi_u4-BmLR2yJXhgbiZm24FU1R5Fj-wuizLvIpfhUdE=",
-      "rating": 4.5,
-      "reviews": 1400,
-      "price": 80,
-      "description": "A spicy and tangy soup, a popular choice in Indo-Chinese cuisine.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 267,
-      "name": "Veg Manchow Soup",
-      "image": "https://media.istockphoto.com/id/1494080616/photo/veg-manchow-soup-in-black-bowl-on-wooden-background.jpg?s=2048x2048&w=is&k=20&c=vVj3Wtzz0qKJjgUo27ma4Q3GpZU_bhjP6mQ-tV23JdM=",
-      "rating": 4.6,
-      "reviews": 1500,
-      "price": 80,
-      "description": "A popular Indo-Chinese soup with a mix of vegetables, often served with fried noodles.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 268,
-      "name": "Sweet Corn Soup",
-      "image": "https://media.istockphoto.com/id/505442817/photo/chinese-corn-soup-closeup.jpg?s=2048x2048&w=is&k=20&c=M3KL-YhDW1MaNorJrHdZpWVG30y0ewZAokknvLcYLOg=",
-      "rating": 4.4,
-      "reviews": 1300,
-      "price": 60,
-      "description": "A creamy and comforting soup made with sweet corn.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 269,
-      "name": "Paneer Corn Soup",
-      "image": "https://media.istockphoto.com/id/1143475087/photo/sweat-corn-soup.jpg?s=2048x2048&w=is&k=20&c=RDN9RDOG8lo0Zf-Vii0hyCjcGs_6CmQ7eq3jOEEfOb4=",
-      "rating": 4.5,
-      "reviews": 1400,
-      "price": 70,
-      "description": "A delicious and wholesome soup with paneer and sweet corn.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 270,
-      "name": "Tomato Soup",
-      "image": "https://media.istockphoto.com/id/1323137584/photo/close-up-of-indian-homemade-fresh-and-healthy-tomato-soup-garnished-with-fresh-coriander.jpg?s=2048x2048&w=is&k=20&c=IgwxihnN4aMUJp8lroOE4Xt5lAQaDmeMYrtivQUEKQA=",
-      "rating": 4.3,
-      "reviews": 1200,
-      "price": 60,
-      "description": "A classic and comforting soup made from fresh tomatoes.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 271,
-      "name": "Tomato Cream Soup",
-      "image": "https://media.istockphoto.com/id/459984789/photo/tomato-soup.jpg?s=2048x2048&w=is&k=20&c=ILNeDEPhDaeBqXacXzPsAFB6mzQ1jk4zBKNIZ2rKDQk=",
-      "rating": 4.5,
-      "reviews": 1400,
-      "price": 80,
-      "description": "A rich and creamy version of the classic tomato soup.",
-      "categories": [
-        "Soup",
-        "Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 272,
-      "name": "Chicken Clear Soup",
-      "image": "https://media.istockphoto.com/id/171572829/photo/broth.jpg?s=2048x2048&w=is&k=20&c=jOOWYBV32Yit1M4n174rR5f0M6SnKLNGVOnO58pmwpE=",
-      "rating": 4.4,
-      "reviews": 1300,
-      "price": 130,
-      "description": "A light and flavorful soup with a clear chicken broth.",
-      "categories": [
-        "Soup",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 273,
-      "name": "Chicken Manchow Soup",
-      "image": "https://media.istockphoto.com/id/1336895099/photo/spicy-manchow-soup-momo.jpg?s=2048x2048&w=is&k=20&c=2fWreTsf5XUMQ0bgFSP67f7V25nHEa-ZHPkba6Iaqys=",
-      "rating": 4.6,
-      "reviews": 1600,
-      "price": 130,
-      "description": "A popular Indo-Chinese soup with chicken, often served with fried noodles.",
-      "categories": [
-        "Soup",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 274,
-      "name": "Chicken Hot & Sour Soup",
-      "image": "https://media.istockphoto.com/id/1333237441/photo/hot-and-sour-soup.jpg?s=2048x2048&w=is&k=20&c=8waewJjG9gckEO6mpL55UZppLT2PTu-SHGh4H4G9gh0=",
-      "rating": 4.5,
-      "reviews": 1500,
-      "price": 130,
-      "description": "A spicy and tangy soup with chicken, a popular choice in Indo-Chinese cuisine.",
-      "categories": [
-        "Soup",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    },
-    {
-      "id": 275,
-      "name": "Chicken Sweet Corn Soup",
-      "image": "https://media.istockphoto.com/id/1802024063/photo/sancocho-stew-soup-or-broth.jpg?s=2048x2048&w=is&k=20&c=S5hsNmPDzhc7XguDgFWGeP_frBGauDw3M54_kxWpxKE=",
-      "rating": 4.5,
-      "reviews": 1400,
-      "price": 130,
-      "description": "A creamy and comforting soup made with chicken and sweet corn.",
-      "categories": [
-        "Soup",
-        "Non-Vegetarian"
-      ],
-      "plateQuantity": "N/A"
-    }
-  ]
+"Snacks",
+"Non-Vegetarian"
+],
+"plateQuantity": "6pc"
+},
+{
+"id": 242,
+"name": "Honey Chilli Potato",
+"image": "https://media.istockphoto.com/id/1155838446/photo/honey-chilli-potatoes-is-an-indo-chinese-dish-where-deep-fried-potato-fingers-are-tossed-in.jpg?s=2048x2048&w=is&k=20&c=vJm25LBKVM5yLqe4tl4AnKvI3rhjDCh3G7biOU03Bs0=",
+"rating": 4.6,
+"reviews": 1800,
+"price": 140,
+"description": "A sweet and spicy Indo-Chinese snack of fried potato fingers tossed in a honey-chilli sauce.",
+"categories": [
+"Snacks",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 243,
+"name": "Chilli Potato",
+"image": "https://media.istockphoto.com/id/1251682341/photo/crispy-honey-chilli-potatoes-are-a-super-addictive-snack-from-indian-chinese-cuisine.jpg?s=2048x2048&w=is&k=20&c=VrSmZ1l4JFUwmoH4wQRIUfZ-0yhjJ7c3YbP28VH-kt0=",
+"rating": 4.5,
+"reviews": 1600,
+"price": 130,
+"description": "A spicy Indo-Chinese snack of fried potato fingers tossed in a chilli sauce.",
+"categories": [
+"Snacks",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 244,
+"name": "French Fry",
+"image": "https://media.istockphoto.com/id/148349643/photo/plate-of-delicious-looking-french-fries.jpg?s=2048x2048&w=is&k=20&c=XVATn86k4EF7KZibi-kp7BRoZAqc8zcZzxutedGzNV4=",
+"rating": 4.3,
+"reviews": 1300,
+"price": 120,
+"description": "Classic deep-fried potato strips.",
+"categories": [
+"Snacks",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 245,
+"name": "Crispy Corn",
+"image": "https://media.istockphoto.com/id/1132064062/photo/crispy-sweet-corn-popular-indian-snack-street-food.jpg?s=2048x2048&w=is&k=20&c=e7tCwzh9AwQJYrN_42VSjGt5ye5TNXnv7HXjjxmKOsM=",
+"rating": 4.5,
+"reviews": 1500,
+"price": 120,
+"description": "A crunchy and flavorful snack made with corn kernels.",
+"categories": [
+"Snacks",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 246,
+"name": "Butter Chicken Pulao",
+"image": "https://media.istockphoto.com/id/1407172147/photo/indian-spicy-butter-chicken-biryani-served-in-a-dish-isolated-on-wooden-board-side-view-on.jpg?s=2048x2048&w=is&k=20&c=kTWCPtcdEvtVoF37CTWUqgQfnJcZoui69SfxSw_YWLY=",
+"rating": 4.8,
+"reviews": 2200,
+"price": 140,
+"description": "A delicious combination of butter chicken and fragrant pulao rice.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 247,
+"name": "Kadhai Chicken Pulao",
+"image": "https://media.istockphoto.com/id/1086974196/photo/keema-or-kheema-biryani-fragrant-and-spicy-minced-lamb-or-goat-or-chicken-cooked-in-range-of.jpg?s=2048x2048&w=is&k=20&c=gKm_RtaDvA3YjXboCWSUiwT8WBtfHAf-iDB7l9D7LFE=",
+"rating": 4.7,
+"reviews": 2000,
+"price": 140,
+"description": "A flavorful combo of kadhai chicken and aromatic pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 248,
+"name": "Chicken Masala Pulao",
+"image": "https://media.istockphoto.com/id/1430345748/photo/biryani-overhead-view.jpg?s=2048x2048&w=is&k=20&c=bnRYyLyD2gDhsQWaIhrFrh5VZvIR85WK9rCfhIM0shg=",
+"rating": 4.7,
+"reviews": 2100,
+"price": 140,
+"description": "A delightful meal of chicken masala served with fragrant pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 249,
+"name": "Chicken Korma Pulao",
+"image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
+"rating": 4.6,
+"reviews": 1900,
+"price": 140,
+"description": "A rich and creamy combo of chicken korma and aromatic pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 250,
+"name": "Chicken Keema Pulao",
+"image": "https://media.istockphoto.com/id/1480424453/photo/shahi-khashir-kacchi-biryani-or-beef-pulao-and-beef-biriyani-with-potato-chicken-korma-karahi.jpg?s=2048x2048&w=is&k=20&c=92uwDQy4UvOg0p3O0Qwng65gIWt4SF6ZtMfZxEE-8B4=",
+"rating": 4.6,
+"reviews": 1800,
+"price": 140,
+"description": "A savory meal of chicken keema served with fragrant pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 251,
+"name": "Tawa Chicken Pulao",
+"image": "https://media.istockphoto.com/id/1332533458/photo/homemade-chicken-fried-rice-at-the-top-views.jpg?s=2048x2048&w=is&k=20&c=LkOj6r802pmRe29fOw9twKD2E2muqsPiqitCfv1-2Do=",
+"rating": 4.7,
+"reviews": 1900,
+"price": 140,
+"description": "A tasty combination of tawa chicken and aromatic pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 252,
+"name": "Handi Chicken Pulao",
+"image": "https://media.istockphoto.com/id/1246401760/photo/nasi-goreng-indonesian-chicken-fried-rice-on-black-plate-indonesian-cuisine-dish-balinese.jpg?s=2048x2048&w=is&k=20&c=ljXTzZ-AJYksLNUC1R3oNwo6LXjuUh4aMha7wDO8wc0=",
+"rating": 4.8,
+"reviews": 2100,
+"price": 140,
+"description": "A rich and aromatic combo of handi chicken and fragrant pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 253,
+"name": "Chilli Chicken Pulao",
+"image": "https://media.istockphoto.com/id/941715954/photo/spicy-indian-chicken-biriyani-rice-with-sliced-eggs-and-garnished-with-vegetables.jpg?s=2048x2048&w=is&k=20&c=y7hI9W-RFkcWxeCGfuBNemnPcB2w3F_dghI_WKxzCII=",
+"rating": 4.7,
+"reviews": 2000,
+"price": 140,
+"description": "A spicy and flavorful combination of chilli chicken and aromatic pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 254,
+"name": "Chicken Do Pyaza Pulao",
+"image": "https://media.istockphoto.com/id/913213974/photo/chicken.jpg?s=2048x2048&w=is&k=20&c=uuzYdEyZY-eRho6Do-BF-zOnlCMrYhwa2yanodqd4qk=",
+"rating": 4.6,
+"reviews": 1900,
+"price": 140,
+"description": "A delicious meal of chicken do pyaza served with fragrant pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 255,
+"name": "Rara Chicken Pulao",
+"image": "https://media.istockphoto.com/id/925172814/photo/korean-fried-chicken.jpg?s=2048x2048&w=is&k=20&c=7jx6OXAV_DqwlfdOOtsMUtKU_fKdvkwBk2Dg4O3jjtA=",
+"rating": 4.8,
+"reviews": 2200,
+"price": 150,
+"description": "A unique and flavorful combo of rara chicken and aromatic pulao.",
+"categories": [
+"Non-Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "3pcs"
+},
+{
+"id": 256,
+"name": "Mattar Paneer Pulao",
+"image": "https://media.istockphoto.com/id/1809042464/photo/veg-paneer-biryani-with-mixed-veggies-like-paneer-potato-carrots-peas-cooked-along-rice-and.jpg?s=2048x2048&w=is&k=20&c=ejSx2a4vfJYk8qmAP28GErp4V2wzwd8yxHOd_dOlKqo=",
+"rating": 4.6,
+"reviews": 1700,
+"price": 120,
+"description": "A delicious combination of mutter paneer and fragrant pulao rice.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 257,
+"name": "Paneer Do Pyaza Pulao",
+"image": "https://media.istockphoto.com/id/1624342358/photo/closeup-of-veg-biryani-texture-garnish-with-mint.jpg?s=2048x2048&w=is&k=20&c=xlAY4AzubhE79uNWBmwk6gkSleijvYEIlKJRdj98-60=",
+"rating": 4.7,
+"reviews": 1800,
+"price": 120,
+"description": "A delightful meal of paneer do pyaza served with fragrant pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 258,
+"name": "Kadhai Paneer Pulao",
+"image": "https://media.istockphoto.com/id/1471483932/photo/close-up-of-vegetarian-biryani-texture-background.jpg?s=2048x2048&w=is&k=20&c=DEn2hWl95a8EIT-saAToG-BFZo27jFMks9ED-BKt6DI=",
+"rating": 4.7,
+"reviews": 1900,
+"price": 120,
+"description": "A flavorful combo of kadhai paneer and aromatic pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 259,
+"name": "Handi Paneer Pulao",
+"image": "https://media.istockphoto.com/id/1091692740/photo/schezwan-paneer-fried-rice-with-szechuan-sauce-and-cottage-cheese-cubes-served-in-a-bowl-or.jpg?s=2048x2048&w=is&k=20&c=fQOYbZaRbsZyJBJO4uHYIncoXTT59Iz4nttZpN-32EE=",
+"rating": 4.8,
+"reviews": 2000,
+"price": 120,
+"description": "A rich and aromatic combo of handi paneer and fragrant pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 260,
+"name": "Shahi Paneer Pulao",
+"image": "https://media.istockphoto.com/id/1833079093/photo/closeup-of-matar-paneer-pulao-with-onion.jpg?s=2048x2048&w=is&k=20&c=hQ3RK3tVzoB9V5UaXr0b1AuVvbrh9RX-R_MLLdTT9LQ=",
+"rating": 4.7,
+"reviews": 1900,
+"price": 120,
+"description": "A royal combination of shahi paneer and aromatic pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 261,
+"name": "Mattar Mushroom Pulao",
+"image": "https://media.istockphoto.com/id/1437666416/photo/food-photography.jpg?s=2048x2048&w=is&k=20&c=ZmSWZcYbezAhUGvXYGg_fdF9gcFJh_t6sGZQ4yEVcCE=",
+"rating": 4.6,
+"reviews": 1700,
+"price": 110,
+"description": "A delicious and wholesome meal of mutter mushroom served with fragrant pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 262,
+"name": "Mushroom Do Pyaza Pulao",
+"image": "https://media.istockphoto.com/id/1437666416/photo/food-photography.jpg?s=2048x2048&w=is&k=20&c=ZmSWZcYbezAhUGvXYGg_fdF9gcFJh_t6sGZQ4yEVcCE=",
+"rating": 4.7,
+"reviews": 1800,
+"price": 120,
+"description": "A flavorful combo of mushroom do pyaza and aromatic pulao.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 263,
+"name": "Egg Masala Pulao",
+"image": "https://media.istockphoto.com/id/534334870/photo/egg-biryani-or-anda-biryani-using-basmati-rice-and-spices.jpg?s=2048x2048&w=is&k=20&c=lRVtpqna0AU8CRhE1uxTFlT6va4uu33Ry1cIbOlFCf4=",
+"rating": 4.6,
+"reviews": 1700,
+"price": 110,
+"description": "A delightful meal of egg masala served with fragrant pulao.",
+"categories": [
+"Veg Combo",
+"Non-Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 264,
+"name": "Dal Khichri",
+"image": "https://media.istockphoto.com/id/1331483518/photo/khichdi-is-a-famous-south-asian-dish-made-of-rice-lentils-and-vegetables.jpg?s=2048x2048&w=is&k=20&c=azHyTi8fBZHDpGXsoCcJnIhoH7fjoVesFPW6RuVwmVk=",
+"rating": 4.4,
+"reviews": 1400,
+"price": 110,
+"description": "A wholesome and comforting one-pot meal of rice and lentils.",
+"categories": [
+"Veg Combo",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 265,
+"name": "Veg Clear Soup",
+"image": "https://media.istockphoto.com/id/973423208/photo/top-view-of-a-delicious-dietary-vegetable-soup-with-parsley-leaves.jpg?s=2048x2048&w=is&k=20&c=6wWLWzdjDumlxmRV1X6Ej7O9ac_F3hhOpAiEZFuXpck=",
+"rating": 4.3,
+"reviews": 1000,
+"price": 60,
+"description": "A light and healthy soup with a clear vegetable broth.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 266,
+"name": "Chota's Soup",
+"image": "https://media.istockphoto.com/id/1257506024/photo/lemon-coriander-soup-veg-lemon-coriander-soup-chinese-indian-style-vegetarian-lemon-coriander.jpg?s=2048x2048&w=is&k=20&c=Wi_u4-BmLR2yJXhgbiZm24FU1R5Fj-wuizLvIpfhUdE=",
+"rating": 4.5,
+"reviews": 1400,
+"price": 80,
+"description": "A spicy and tangy soup, a popular choice in Indo-Chinese cuisine.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 267,
+"name": "Veg Manchow's Soup",
+"image": "https://media.istockphoto.com/id/1494080616/photo/veg-manchow-soup-in-black-bowl-on-wooden-background.jpg?s=2048x2048&w=is&k=20&c=vVj3Wtzz0qKJjgUo27ma4Q3GpZU_bhjP6mQ-tV23JdM=",
+"rating": 4.6,
+"reviews": 1500,
+"price": 80,
+"description": "A popular Indo-Chinese soup with a mix of vegetables, often served with fried noodles.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 268,
+"name": "Sweet Corn Soup",
+"image": "https://media.istockphoto.com/id/505442817/photo/chinese-corn-soup-closeup.jpg?s=2048x2048&w=is&k=20&c=M3KL-YhDW1MaNorJrHdZpWVG30y0ewZAokknvLcYLOg=",
+"rating": 4.4,
+"reviews": 1300,
+"price": 80,
+"description": "A creamy and comforting soup made with sweet corn.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 269,
+"name": "Paneer Corn Soup",
+"image": "https://media.istockphoto.com/id/1143475087/photo/sweat-corn-soup.jpg?s=2048x2048&w=is&k=20&c=RDN9RDOG8lo0Zf-Vii0hyCjcGs_6CmQ7eq3jOEEfOb4=",
+"rating": 4.5,
+"reviews": 1400,
+"price": 70,
+"description": "A delicious and wholesome soup with paneer and sweet corn.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 270,
+"name": "Tomato Soup",
+"image": "https://media.istockphoto.com/id/1323137584/photo/close-up-of-indian-homemade-fresh-and-healthy-tomato-soup-garnished-with-fresh-coriander.jpg?s=2048x2048&w=is&k=20&c=IgwxihnN4aMUJp8lroOE4Xt5lAQaDmeMYrtivQUEKQA=",
+"rating": 4.3,
+"reviews": 1200,
+"price": 70,
+"description": "A classic and comforting soup made from fresh tomatoes.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 271,
+"name": "Tomato Cream Soup",
+"image": "https://media.istockphoto.com/id/459984789/photo/tomato-soup.jpg?s=2048x2048&w=is&k=20&c=ILNeDEPhDaeBqXacXzPsAFB6mzQ1jk4zBKNIZ2rKDQk=",
+"rating": 4.5,
+"reviews": 1400,
+"price": 80,
+"description": "A rich and creamy version of the classic tomato soup.",
+"categories": [
+"Soup",
+"Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 272,
+"name": "Chicken Clear Soup",
+"image": "https://media.istockphoto.com/id/171572829/photo/broth.jpg?s=2048x2048&w=is&k=20&c=jOOWYBV32Yit1M4n174rR5f0M6SnKLNGVOnO58pmwpE=",
+"rating": 4.4,
+"reviews": 1300,
+"price": 120,
+"description": "A light and flavorful soup with a clear chicken broth.",
+"categories": [
+"Soup",
+"Non-Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 273,
+"name": "Chicken Manchow Soup",
+"image": "https://media.istockphoto.com/id/1336895099/photo/spicy-manchow-soup-momo.jpg?s=2048x2048&w=is&k=20&c=2fWreTsf5XUMQ0bgFSP67f7V25nHEa-ZHPkba6Iaqys=",
+"rating": 4.6,
+"reviews": 1600,
+"price": 130,
+"description": "A popular Indo-Chinese soup with chicken, often served with fried noodles.",
+"categories": [
+"Soup",
+"Non-Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 274,
+"name": "Chicken Hot & Sour Soup",
+"image": "https://media.istockphoto.com/id/1333237441/photo/hot-and-sour-soup.jpg?s=2048x2048&w=is&k=20&c=8waewJjG9gckEO6mpL55UZppLT2PTu-SHGh4H4G9gh0=",
+"rating": 4.5,
+"reviews": 1500,
+"price": 140,
+"description": "A spicy and tangy soup with chicken, a popular choice in Indo-Chinese cuisine.",
+"categories": [
+"Soup",
+"Non-Vegetarian"
+],
+"plateQuantity": "N/A"
+},
+{
+"id": 275,
+"name": "Chicken Sweet Corn Soup",
+"image": "https://media.istockphoto.com/id/1802024063/photo/sancocho-stew-soup-or-broth.jpg?s=2048x2048&w=is&k=20&c=S5hsNmPDzhc7XguDgFWGeP_frBGauDw3M54_kxWpxKE=",
+"rating": 4.5,
+"reviews": 1400,
+"price": 130,
+"description": "A creamy and comforting soup made with chicken and sweet corn.",
+"categories": [
+"Soup",
+"Non-Vegetarian"
+],
+"plateQuantity": "N/A"
+}
+]
 }
