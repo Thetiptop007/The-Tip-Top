@@ -50,14 +50,20 @@ function DishesCard({ dish }) {
       </div>
       <div className='text-center mt-5 md:mt-8 lg:mt-10'>
         <div className='text-lg md:text-xl lg:text-2xl poppins-medium'>{dish?.name}</div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center gap-2 mt-1'>
           {dish.quantity && 
           <div className='bg-red-200 px-3 py-1 rounded-md border border-red-400 poppins-regular'>{dish?.quantity}</div>
+          }
+          {dish?.plateQuantity && 
+          <div className='bg-green-200 px-3 py-1 rounded-md border border-green-400 poppins-regular text-sm'>{dish?.plateQuantity}</div>
           }
         </div>
         <div className='mt-2 md:mt-3 lg:mt-4 poppins-regular text-stone-500 text-xs md:text-sm lg:text-base'>{dish?.description}</div>
         <div className='flex justify-between items-center mt-3 md:mt-4 lg:mt-5 poppins-medium'>
-          <div className='text-xl md:text-2xl lg:text-3xl'>₹{dish?.price}</div>
+          <div className='flex flex-col items-start'>
+            <div className='text-xl md:text-2xl lg:text-3xl'>₹{dish?.price}</div>
+            {dish?.plateQuantity && <div className='text-xs text-stone-500'>({dish?.plateQuantity})</div>}
+          </div>
           {quantity === 0 ? (
             <div
               className='text-sm md:text-lg bg-red-400 text-white p-2 px-3 md:px-5 rounded-tl-lg rounded-bl-2xl md:rounded-bl-3xl rounded-br-lg rounded-tr-2xl md:rounded-tr-3xl cursor-pointer hover:bg-red-500 transition-all duration-300'
