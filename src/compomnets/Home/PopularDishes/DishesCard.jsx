@@ -7,6 +7,14 @@ function DishesCard({ dish }) {
   const dispatch = useDispatch();
   const storedDish = useSelector((state) => state.dishes.dishes.find((d) => d.id === dish.id));
   const [quantity, setQuantity] = useState(storedDish ? storedDish.quantity : 0);
+  const [imageSrc, setImageSrc] = useState(dish?.image);
+  
+  // Fallback image URL - using iStock brunch image
+  const fallbackImage = 'https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.jpg?s=1024x1024&w=is&k=20&c=QPHFTWoscwMSXOEGKoAKOjlCnMGszppFBrqQHdy4EGc=';
+  
+  const handleImageError = () => {
+    setImageSrc(fallbackImage);
+  };
 
   useEffect(() => {
     if (storedDish) {
@@ -15,6 +23,11 @@ function DishesCard({ dish }) {
       setQuantity(0);
     }
   }, [storedDish]);
+
+  // Reset image source when dish changes
+  useEffect(() => {
+    setImageSrc(dish?.image);
+  }, [dish?.image]);
 
   const handleAddToCart = (dish) => {
     setQuantity(1);
@@ -43,7 +56,12 @@ function DishesCard({ dish }) {
 {/*         <div>{dish?.rating}</div> */}
         <div className='relative'>
           <div className='w-24 md:w-32 lg:w-40 aspect-square rounded-full overflow-hidden shadow-xl shadow-stone-400 border-2 md:border-3 lg:border-4 border-stone-400'>
-            <img src={dish?.image} alt={dish?.name} className='w-full h-full object-cover' />
+            <img 
+              src={imageSrc || fallbackImage} 
+              alt={dish?.name} 
+              className='w-full h-full object-cover'
+              onError={handleImageError}
+            />
           </div>
         </div>
 {/*         <div>{dish?.reviews}K</div> */}
