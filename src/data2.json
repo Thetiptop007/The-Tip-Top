@@ -1765,7 +1765,7 @@
         "All",
         "Vegetarian",
         "Thali",
-        "Veg Combo",
+        "Non Veg Combo",
         "Egg Dishes"
       ],
       "plateQuantity": "Full"
@@ -2504,7 +2504,7 @@
       "categories": [
         "All",
         "Vegetarian",
-        "Main Course Veg",
+        "Main Course Non Veg",
         "Egg Dishes"
       ],
       "plateQuantity": "Half"
@@ -2520,7 +2520,7 @@
       "categories": [
         "All",
         "Vegetarian",
-        "Main Course Veg",
+        "Main Course Non Veg",
         "Egg Dishes"
       ],
       "plateQuantity": "Full"
@@ -3557,7 +3557,7 @@
         "All",
         "Vegetarian",
         "Egg Dishes",
-        "Main Course Veg"
+        "Main Course Non Veg"
       ],
       "plateQuantity": "2PCS"
     },
@@ -3573,7 +3573,7 @@
         "All",
         "Vegetarian",
         "Egg Dishes",
-        "Main Course Veg"
+        "Main Course Non Veg"
       ],
       "plateQuantity": "4PCS"
     },
@@ -3589,7 +3589,7 @@
         "All",
         "Vegetarian",
         "Egg Dishes",
-        "Main Course Veg"
+        "Main Course Non Veg"
       ],
       "plateQuantity": "2PCS"
     },
@@ -3605,7 +3605,7 @@
         "All",
         "Vegetarian",
         "Egg Dishes",
-        "Main Course Veg"
+        "Main Course Non Veg"
       ],
       "plateQuantity": "4PCS"
     },
@@ -4176,7 +4176,7 @@
       "description": "Indo-Chinese fried rice with scrambled egg.",
       "categories": [
         "All",
-        "Vegetarian",
+        "Non Vegetarian",
         "Rice Dishes",
         "Chinese Snacks",
         "Egg Dishes"
