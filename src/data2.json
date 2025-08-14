@@ -2503,8 +2503,8 @@
       "description": "Scrambled eggs cooked with onions, tomatoes, and spices.",
       "categories": [
         "All",
-        "Vegetarian",
-        "Main Course Non Veg",
+        "Non-Vegetarian",
+        "Main Course Non-Veg",
         "Egg Dishes"
       ],
       "plateQuantity": "Half"
@@ -2520,7 +2520,7 @@
       "categories": [
         "All",
         "Vegetarian",
-        "Main Course Non Veg",
+        "Main Course Non-Veg",
         "Egg Dishes"
       ],
       "plateQuantity": "Full"
@@ -3555,9 +3555,9 @@
       "description": "Boiled eggs in a flavorful onion-tomato gravy.",
       "categories": [
         "All",
-        "Vegetarian",
+        "Non-Vegetarian",
         "Egg Dishes",
-        "Main Course Non Veg"
+        "Main Course Non-Veg"
       ],
       "plateQuantity": "2PCS"
     },
@@ -3571,9 +3571,9 @@
       "description": "Boiled eggs in a flavorful onion-tomato gravy.",
       "categories": [
         "All",
-        "Vegetarian",
+        "Non-Vegetarian",
         "Egg Dishes",
-        "Main Course Non Veg"
+        "Main Course Non-Veg"
       ],
       "plateQuantity": "4PCS"
     },
@@ -3587,9 +3587,9 @@
       "description": "Spicy egg masala with a rich and tangy gravy.",
       "categories": [
         "All",
-        "Vegetarian",
+        "Non-Vegetarian",
         "Egg Dishes",
-        "Main Course Non Veg"
+        "Main Course Non-Veg"
       ],
       "plateQuantity": "2PCS"
     },
@@ -3603,9 +3603,9 @@
       "description": "Spicy egg masala with a rich and tangy gravy.",
       "categories": [
         "All",
-        "Vegetarian",
+        "Non-Vegetarian",
         "Egg Dishes",
-        "Main Course Non Veg"
+        "Main Course Non-Veg"
       ],
       "plateQuantity": "4PCS"
     },
