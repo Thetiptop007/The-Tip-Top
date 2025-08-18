@@ -1721,22 +1721,7 @@
       ],
       "plateQuantity": "Full"
     },
-    {
-      "id": 115,
-      "name": "VEG THALI",
-      "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
-      "rating": 4.2,
-      "reviews": 2100,
-      "price": 80,
-      "description": "A complete vegetarian meal with Sabzi, Dal Fry, 2 Tandoori Roti, Rice, and Salad.",
-      "categories": [
-        "All",
-        "Vegetarian",
-        "Thali",
-        "Veg Combo"
-      ],
-      "plateQuantity": "Full"
-    },
+    
     {
       "id": 116,
       "name": "PANEER THALI",
