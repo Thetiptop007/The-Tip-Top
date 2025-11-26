@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import DishesCard from '../compomnets/Home/PopularDishes/DishesCard';
-import data from '../data2.json';
+import data from '../data.json';
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState('All');

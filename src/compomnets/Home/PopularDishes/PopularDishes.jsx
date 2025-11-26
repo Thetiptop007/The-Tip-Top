@@ -1,6 +1,6 @@
 import React from 'react'
 import PopularDishesCard from './DishesCard'
-import data from '../../../data2.json'
+import data from '../../../data.json'
 import { Link } from 'react-router-dom'
 
 function PopularDishes() {
