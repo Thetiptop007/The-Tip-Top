@@ -53,58 +53,98 @@ function Menu() {
     return matrix[len1][len2];
   };
 
-  // Fuzzy search function
-  const fuzzyMatch = (dishName, query) => {
-    if (!query) return true;
+  // Calculate relevance score for search results
+  const calculateRelevanceScore = (dishName, query) => {
+    if (!query) return 0;
     
     const dishLower = dishName.toLowerCase();
     const queryLower = query.toLowerCase();
+    let score = 0;
     
-    // Exact match
-    if (dishLower.includes(queryLower)) return true;
+    // Exact full match - highest score
+    if (dishLower === queryLower) return 1000;
     
-    // Split dish name into words
+    // Contains exact query - very high score
+    if (dishLower.includes(queryLower)) return 900;
+    
     const dishWords = dishLower.split(/\s+/);
-    
-    // Check each word for fuzzy match
-    for (const word of dishWords) {
-      // Allow 1-2 character differences based on word length
-      const maxDistance = word.length <= 4 ? 1 : 2;
-      const distance = levenshteinDistance(word, queryLower);
-      
-      if (distance <= maxDistance) return true;
-      
-      // Check if query is a substring with typo
-      if (word.length >= 3 && queryLower.length >= 3) {
-        for (let i = 0; i <= word.length - queryLower.length; i++) {
-          const substring = word.substring(i, i + queryLower.length);
-          if (levenshteinDistance(substring, queryLower) <= 1) {
-            return true;
-          }
-        }
-      }
-    }
-    
-    // Check if query words match dish words
     const queryWords = queryLower.split(/\s+/);
-    for (const qWord of queryWords) {
-      if (qWord.length < 3) continue;
-      for (const dWord of dishWords) {
-        const maxDist = Math.min(2, Math.floor(qWord.length / 3));
-        if (levenshteinDistance(dWord, qWord) <= maxDist) {
-          return true;
+    
+    // Score for each query word matching dish words
+    queryWords.forEach(qWord => {
+      if (qWord.length < 2) return;
+      
+      dishWords.forEach((dWord, index) => {
+        // Exact word match - high score, bonus for earlier position
+        if (dWord === qWord) {
+          score += 500 - (index * 10);
+          return;
         }
-      }
+        
+        // Word starts with query word
+        if (dWord.startsWith(qWord)) {
+          score += 300 - (index * 10);
+          return;
+        }
+        
+        // Word contains query word
+        if (dWord.includes(qWord)) {
+          score += 200 - (index * 10);
+          return;
+        }
+        
+        // Fuzzy match based on Levenshtein distance
+        const maxDistance = qWord.length <= 4 ? 1 : 2;
+        const distance = levenshteinDistance(dWord, qWord);
+        
+        if (distance <= maxDistance) {
+          score += 100 - (distance * 20) - (index * 5);
+        }
+      });
+    });
+    
+    // Bonus for matching multiple query words
+    const matchingWords = queryWords.filter(qWord => 
+      dishWords.some(dWord => 
+        dWord === qWord || 
+        dWord.includes(qWord) || 
+        levenshteinDistance(dWord, qWord) <= (qWord.length <= 4 ? 1 : 2)
+      )
+    ).length;
+    
+    if (matchingWords > 1) {
+      score += matchingWords * 150;
     }
     
-    return false;
+    return score;
   };
 
-  const filteredDishes = data.dishes.filter(dish => {
-    const matchesCategory = selectedCategory === 'All' || dish.categories.includes(selectedCategory);
-    const matchesSearch = fuzzyMatch(dish.name, debouncedSearchQuery);
-    return matchesCategory && matchesSearch;
-  });
+  // Filter and sort dishes by relevance
+  const filteredDishes = data.dishes
+    .map(dish => ({
+      ...dish,
+      relevanceScore: debouncedSearchQuery 
+        ? calculateRelevanceScore(dish.name, debouncedSearchQuery)
+        : 0
+    }))
+    .filter(dish => {
+      const matchesCategory = selectedCategory === 'All' || dish.categories.includes(selectedCategory);
+      
+      // If no search query, just filter by category
+      if (!debouncedSearchQuery) return matchesCategory;
+      
+      // If search query exists, must have a relevance score > 0
+      const matchesSearch = dish.relevanceScore > 0;
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      // Sort by relevance score (highest first)
+      if (debouncedSearchQuery) {
+        return b.relevanceScore - a.relevanceScore;
+      }
+      // Default order when no search
+      return 0;
+    });
 
   return (
     <div className='px-4 md:px-20 lg:px-40 py-10 md:py-15 lg:py-20 flex flex-col items-center'>
