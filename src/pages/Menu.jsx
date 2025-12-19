@@ -40,6 +40,20 @@ function Menu() {
   return (
     <div className='px-4 md:px-20 lg:px-40 py-10 md:py-15 lg:py-20 flex flex-col items-center'>
       <div className='sigmar-regular text-3xl md:text-4xl lg:text-5xl'>Menu</div>
+      
+      {/* Tandoori Items Available Notice */}
+      <div className='mt-6 md:mt-8 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 p-4 md:p-5 rounded-lg shadow-md max-w-2xl w-full'>
+        <div className='flex items-center gap-3'>
+          <div className='text-2xl md:text-3xl'>🔥</div>
+          <div>
+            <h3 className='poppins-semibold text-red-600 text-lg md:text-xl'>Tandoori Items Now Available!</h3>
+            <p className='poppins-regular text-gray-700 text-sm md:text-base mt-1'>
+              Fresh tandoori chicken, paneer tikka, naans, and more are now being served hot from our kitchen!
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className='mt-10 md:mt-15 lg:mt-20'>
         <div className='flex flex-col md:flex-row justify-center gap-3 md:gap-5 lg:gap-8 poppins-medium'>
           <div className='hidden md:flex flex-wrap justify-center gap-3 md:gap-5 lg:gap-8'>
