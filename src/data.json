@@ -4004,6 +4004,211 @@
         "Main Course Veg"
       ],
       "plateQuantity": "Full"
+    },
+    {
+      "id": 298,
+      "name": "ROASTED BIRYANI",
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 850,
+      "price": 180,
+      "description": "Aromatic roasted biryani with perfectly cooked rice and spices.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Full"
+    },
+    {
+      "id": 299,
+      "name": "CHICKEN TIKKA BIRYANI",
+      "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 920,
+      "price": 200,
+      "description": "Flavorful biryani with succulent chicken tikka pieces.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Full"
+    },
+    {
+      "id": 300,
+      "name": "TANDOORI CHICKEN",
+      "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.8,
+      "reviews": 1100,
+      "price": 200,
+      "description": "Classic tandoori chicken - 6 pieces marinated in authentic spices and grilled to perfection.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "6 Pieces"
+    },
+    {
+      "id": 301,
+      "name": "AFGANI CHICKEN",
+      "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 780,
+      "price": 250,
+      "description": "Creamy and mild Afgani chicken - 6 pieces in rich marinade.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "6 Pieces"
+    },
+    {
+      "id": 302,
+      "name": "CHICKEN SEEKH KABAB",
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 950,
+      "price": 250,
+      "description": "Juicy chicken seekh kabab - 10 pieces grilled on skewers.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "10 Pieces"
+    },
+    {
+      "id": 303,
+      "name": "CHICKEN TIKKA",
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.8,
+      "reviews": 1250,
+      "price": 260,
+      "description": "Premium chicken tikka - 8 pieces marinated in special tikka masala.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "8 Pieces"
+    },
+    {
+      "id": 304,
+      "name": "CHICKEN TIKKA",
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.8,
+      "reviews": 1250,
+      "price": 500,
+      "description": "Premium chicken tikka - 16 pieces marinated in special tikka masala.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "16 Pieces"
+    },
+    {
+      "id": 305,
+      "name": "PANEER TIKKA",
+      "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 890,
+      "price": 240,
+      "description": "Tender paneer tikka - 4 pieces grilled with aromatic spices.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "4 Pieces"
+    },
+    {
+      "id": 306,
+      "name": "PANEER TIKKA",
+      "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 890,
+      "price": 460,
+      "description": "Tender paneer tikka - 8 pieces grilled with aromatic spices.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Tandoori Snacks"
+      ],
+      "plateQuantity": "8 Pieces"
+    },
+    {
+      "id": 307,
+      "name": "PLAIN NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.5,
+      "reviews": 650,
+      "price": 25,
+      "description": "Soft and fluffy plain naan bread.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 308,
+      "name": "BUTTER NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 720,
+      "price": 35,
+      "description": "Butter-brushed naan with rich flavor.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 309,
+      "name": "GARLIC NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.8,
+      "reviews": 980,
+      "price": 45,
+      "description": "Aromatic naan topped with fresh garlic and herbs.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 310,
+      "name": "TANDOORI PLAIN ROTI",
+      "image": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.4,
+      "reviews": 540,
+      "price": 10,
+      "description": "Traditional tandoori roti, light and wholesome.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 311,
+      "name": "TANDOORI BUTTER ROTI",
+      "image": "https://images.unsplash.com/photo-1617093727343-374698b1b08d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.5,
+      "reviews": 600,
+      "price": 12,
+      "description": "Tandoori roti brushed with butter for extra richness.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
     }
   ]
 }
