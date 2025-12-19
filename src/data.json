@@ -309,21 +309,6 @@
       "plateQuantity": "Full"
     },
     {
-      "id": 41,
-      "name": "PANEER BIRYANI",
-      "image": "https://images.unsplash.com/photo-1606757389667-45c2b7a48945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
-      "rating": 4.4,
-      "reviews": 1600,
-      "price": 130,
-      "description": "Aromatic biryani with cubes of paneer.",
-      "categories": [
-        "All",
-        "Biryani",
-        "Vegetarian"
-      ],
-      "plateQuantity": "Full"
-    },
-    {
       "id": 43,
       "name": "GARLIC CHICKEN",
       "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
@@ -3523,7 +3508,7 @@
       "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
       "rating": 4.2,
       "reviews": 320,
-      "price": 20,
+      "price": 15,
       "description": "A simple whole wheat paratha, plain and soft.",
       "categories": [
         "All",
@@ -4007,7 +3992,7 @@
     },
     {
       "id": 298,
-      "name": "ROASTED BIRYANI",
+      "name": "ROASTED CHICKEN BIRYANI",
       "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
       "rating": 4.6,
       "reviews": 850,
@@ -4204,6 +4189,153 @@
       "reviews": 600,
       "price": 12,
       "description": "Tandoori roti brushed with butter for extra richness.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 312,
+      "name": "PANEER TIKKA BIRYANI",
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 780,
+      "price": 100,
+      "description": "Delicious biryani with paneer tikka pieces and aromatic spices.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Half"
+    },
+    {
+      "id": 313,
+      "name": "PANEER TIKKA BIRYANI",
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 780,
+      "price": 130,
+      "description": "Delicious biryani with paneer tikka pieces and aromatic spices.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Full"
+    },
+    {
+      "id": 314,
+      "name": "PANEER BIRYANI MASALA",
+      "image": "https://images.unsplash.com/photo-1606757389667-45c2b7a48945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.5,
+      "reviews": 850,
+      "price": 120,
+      "description": "Spicy and flavorful paneer biryani with special masala blend.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Half"
+    },
+    {
+      "id": 315,
+      "name": "PANEER BIRYANI MASALA",
+      "image": "https://images.unsplash.com/photo-1606757389667-45c2b7a48945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.5,
+      "reviews": 850,
+      "price": 150,
+      "description": "Spicy and flavorful paneer biryani with special masala blend.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Biryani"
+      ],
+      "plateQuantity": "Full"
+    },
+    {
+      "id": 316,
+      "name": "ONION PARANTHA",
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 620,
+      "price": 40,
+      "description": "Crispy parantha stuffed with spiced onions.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 317,
+      "name": "PANEER PARANTHA",
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 750,
+      "price": 50,
+      "description": "Delicious parantha filled with spiced paneer.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 318,
+      "name": "CHICKEN NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.8,
+      "reviews": 890,
+      "price": 70,
+      "description": "Soft naan stuffed with spiced chicken keema.",
+      "categories": [
+        "All",
+        "Non-Vegetarian",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 319,
+      "name": "MIX NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 680,
+      "price": 60,
+      "description": "Special naan with mixed toppings and seasonings.",
+      "categories": [
+        "All",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 320,
+      "name": "PANEER NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.7,
+      "reviews": 730,
+      "price": 50,
+      "description": "Fluffy naan stuffed with spiced paneer filling.",
+      "categories": [
+        "All",
+        "Vegetarian",
+        "Breads"
+      ],
+      "plateQuantity": "1 Piece"
+    },
+    {
+      "id": 321,
+      "name": "CORIANDER NAAN",
+      "image": "https://images.unsplash.com/photo-1619871734758-e07f50062f72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
+      "rating": 4.6,
+      "reviews": 590,
+      "price": 40,
+      "description": "Aromatic naan topped with fresh coriander.",
       "categories": [
         "All",
         "Breads"
