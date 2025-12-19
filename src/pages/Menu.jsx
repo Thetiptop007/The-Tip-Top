@@ -20,7 +20,7 @@ function Menu() {
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedSearchQuery(searchQuery);
-    }, 800);
+    }, 300);
 
     return () => {
       clearTimeout(handler);
@@ -31,9 +31,78 @@ function Menu() {
     'All', 'Tandoori Snacks', 'Non-Vegetarian', 'Vegetarian', 'Biryani', 'Rice Dishes', 'Chinese Snacks', 'Thali', 'Main Course Veg', 'Main Course Non-Veg', 'Raita', 'Egg Dishes', 'Breads', 'Chaap Gravy Items', 'Veg Combo', 'Non-Veg Combo','Soup', 
   ];
 
+  // Levenshtein distance algorithm for fuzzy matching
+  const levenshteinDistance = (str1, str2) => {
+    const len1 = str1.length;
+    const len2 = str2.length;
+    const matrix = Array(len1 + 1).fill(null).map(() => Array(len2 + 1).fill(null));
+
+    for (let i = 0; i <= len1; i++) matrix[i][0] = i;
+    for (let j = 0; j <= len2; j++) matrix[0][j] = j;
+
+    for (let i = 1; i <= len1; i++) {
+      for (let j = 1; j <= len2; j++) {
+        const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j - 1] + cost
+        );
+      }
+    }
+    return matrix[len1][len2];
+  };
+
+  // Fuzzy search function
+  const fuzzyMatch = (dishName, query) => {
+    if (!query) return true;
+    
+    const dishLower = dishName.toLowerCase();
+    const queryLower = query.toLowerCase();
+    
+    // Exact match
+    if (dishLower.includes(queryLower)) return true;
+    
+    // Split dish name into words
+    const dishWords = dishLower.split(/\s+/);
+    
+    // Check each word for fuzzy match
+    for (const word of dishWords) {
+      // Allow 1-2 character differences based on word length
+      const maxDistance = word.length <= 4 ? 1 : 2;
+      const distance = levenshteinDistance(word, queryLower);
+      
+      if (distance <= maxDistance) return true;
+      
+      // Check if query is a substring with typo
+      if (word.length >= 3 && queryLower.length >= 3) {
+        for (let i = 0; i <= word.length - queryLower.length; i++) {
+          const substring = word.substring(i, i + queryLower.length);
+          if (levenshteinDistance(substring, queryLower) <= 1) {
+            return true;
+          }
+        }
+      }
+    }
+    
+    // Check if query words match dish words
+    const queryWords = queryLower.split(/\s+/);
+    for (const qWord of queryWords) {
+      if (qWord.length < 3) continue;
+      for (const dWord of dishWords) {
+        const maxDist = Math.min(2, Math.floor(qWord.length / 3));
+        if (levenshteinDistance(dWord, qWord) <= maxDist) {
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  };
+
   const filteredDishes = data.dishes.filter(dish => {
     const matchesCategory = selectedCategory === 'All' || dish.categories.includes(selectedCategory);
-    const matchesSearch = dish.name.toLowerCase().includes(debouncedSearchQuery.toLowerCase());
+    const matchesSearch = fuzzyMatch(dish.name, debouncedSearchQuery);
     return matchesCategory && matchesSearch;
   });
 
@@ -79,14 +148,44 @@ function Menu() {
             </select>
           </div>
         </div>
-        <div className='flex justify-center mt-5 md:mt-10 lg:mt-15'>
-          <input
-            type="text"
-            placeholder="Search dishes..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className='w-full md:w-1/2 p-3 rounded-2xl shadow-lg border border-stone-200 outline-none'
-          />
+        <div className='flex flex-col items-center mt-5 md:mt-10 lg:mt-15'>
+          <div className='relative w-full md:w-1/2'>
+            <input
+              type="text"
+              placeholder="Search dishes... (try 'nan', 'chiken', 'biryani')"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className='w-full p-3 pl-10 rounded-2xl shadow-lg border border-stone-200 outline-none focus:border-red-400 transition-colors'
+            />
+            <svg 
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600'
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+          {debouncedSearchQuery && filteredDishes.length === 0 && (
+            <div className='mt-4 text-gray-500 poppins-regular text-center'>
+              No dishes found for "{debouncedSearchQuery}". Try a different search term.
+            </div>
+          )}
+          {debouncedSearchQuery && filteredDishes.length > 0 && (
+            <div className='mt-3 text-sm text-gray-600 poppins-regular'>
+              Found {filteredDishes.length} dish{filteredDishes.length !== 1 ? 'es' : ''} matching "{debouncedSearchQuery}"
+            </div>
+          )}
         </div>
         <div className='flex flex-wrap justify-center gap-5 lg:gap-8 mt-5 md:mt-10 lg:mt-16'>
           {filteredDishes.map((dish, index) => (
