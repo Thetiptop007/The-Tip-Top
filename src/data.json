@@ -4257,33 +4257,18 @@
     },
     {
       "id": 316,
-      "name": "ONION PARANTHA",
+      "name": "ONION NAAN",
       "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
       "rating": 4.6,
       "reviews": 620,
       "price": 40,
-      "description": "Crispy parantha stuffed with spiced onions.",
+      "description": "Crispy naan stuffed with spiced onions.",
       "categories": [
         "All",
         "Breads"
       ],
       "plateQuantity": "1 Piece"
-    },
-    {
-      "id": 317,
-      "name": "PANEER PARANTHA",
-      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
-      "rating": 4.7,
-      "reviews": 750,
-      "price": 50,
-      "description": "Delicious parantha filled with spiced paneer.",
-      "categories": [
-        "All",
-        "Vegetarian",
-        "Breads"
-      ],
-      "plateQuantity": "1 Piece"
-    },
+    },    
     {
       "id": 318,
       "name": "CHICKEN NAAN",
