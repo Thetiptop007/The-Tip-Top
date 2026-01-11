@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import AppLayout from './layout/AppLayout';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import Orders from './pages/Admin/Orders';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='/menu' element={<Menu />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           </Route>
 
           {/* Admin Login Route */}
