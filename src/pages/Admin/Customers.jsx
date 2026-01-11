@@ -39,7 +39,7 @@ const Customers = () => {
           });
         }
       })
-      .catch(() => {}));
+      .catch(() => {});
     return () => { mounted = false; };
   }, []);
 
