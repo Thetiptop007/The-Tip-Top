@@ -32,7 +32,7 @@ const MenuItems = () => {
   // fetch categories
   useEffect(() => {
     let mounted = true;
-    fetch('/api/v1/menu/categories/all')
+    fetch(getApiUrl('api/v1/menu/categories/all'))
       .then((res) => res.json())
       .then((data) => {
         if (!mounted) return;
@@ -47,7 +47,7 @@ const MenuItems = () => {
   // fetch overall stats from backend stats endpoint
   useEffect(() => {
     let mounted = true;
-    fetch('/api/v1/menu/stats/overview')
+    fetch(getApiUrl('api/v1/menu/stats/overview'))
       .then((res) => res.json())
       .then((data) => {
         if (!mounted) return;
@@ -86,7 +86,7 @@ const MenuItems = () => {
         if (debouncedSearch) params.set('search', debouncedSearch);
         if (selectedCategory && selectedCategory !== 'All') params.set('category', selectedCategory);
 
-        const res = await fetch(`/api/v1/menu?${params.toString()}`, { signal: controller.signal });
+        const res = await fetch(getApiUrl(`api/v1/menu?${params.toString()}`), { signal: controller.signal });
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -137,14 +137,14 @@ const MenuItems = () => {
         rating: parseFloat(formData.rating) || 4.0
       };
 
-      const res = await fetch('/api/v1/menu', {
+      const res = await fetch(getApiUrl('api/v1/menu', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         },
         body: JSON.stringify(payload)
-      });
+      }));
 
       if (!res.ok) {
         const error = await res.json();
@@ -202,14 +202,14 @@ const MenuItems = () => {
         rating: parseFloat(formData.rating) || 4.0
       };
 
-      const res = await fetch(`/api/v1/menu/${editingItem._id}`, {
+      const res = await fetch(getApiUrl(`api/v1/menu/${editingItem._id}`, {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         },
         body: JSON.stringify(payload)
-      });
+      }));
 
       if (!res.ok) {
         const error = await res.json();
@@ -253,7 +253,7 @@ const MenuItems = () => {
 
   const handleDeleteItem = (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
-      fetch(`/api/v1/menu/${id}`, { 
+      fetch(getApiUrl(`api/v1/menu/${id}`, { 
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
@@ -263,14 +263,14 @@ const MenuItems = () => {
         .then(() => {
           setPage(1);
         })
-        .catch(() => {});
+        .catch(() => {}));
     }
   };
 
   const toggleAvailability = (id, current) => {
     const payload = { isAvailable: !current };
     
-    fetch(`/api/v1/menu/${id}/availability`, { 
+    fetch(getApiUrl(`api/v1/menu/${id}/availability`, { 
       method: 'PATCH', 
       headers: { 
         'Content-Type': 'application/json',
@@ -288,7 +288,7 @@ const MenuItems = () => {
       })
       .catch((err) => {
         alert('Error toggling availability: ' + err.message);
-      });
+      }));
   };
 
   const openEditModal = (item) => {

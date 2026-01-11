@@ -35,7 +35,7 @@ const Orders = () => {
       const token = localStorage.getItem('adminToken');
       console.log('🔑 Fetching orders with token:', token ? `${token.substring(0, 20)}...` : 'NO TOKEN');
       
-      const response = await fetch('/api/v1/orders', {
+      const response = await fetch(getApiUrl('api/v1/orders'), {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ const Orders = () => {
   const fetchDeliveryPartners = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/delivery/partners', {
+      const response = await fetch(getApiUrl('api/v1/delivery/partners'), {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -112,7 +112,7 @@ const Orders = () => {
     try {
       setAssigningPartner(true);
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/v1/orders/${orderId}/assign`, {
+      const response = await fetch(getApiUrl(`api/v1/orders/${orderId}/assign`), {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -141,14 +141,14 @@ const Orders = () => {
   const updatePaymentStatus = async (orderId, paymentStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/v1/orders/${orderId}`, {
+      const response = await fetch(getApiUrl(`api/v1/orders/${orderId}`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ paymentStatus })
-      });
+      }));
       
       if (response.ok) {
         alert('Payment status updated successfully!');

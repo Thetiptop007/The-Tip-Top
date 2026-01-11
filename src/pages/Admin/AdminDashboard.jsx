@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getApiUrl } from '../../config/api';
 
 const AdminDashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -22,11 +23,11 @@ const AdminDashboard = () => {
 
         // Fetch all stats in parallel
         const [ordersRes, usersRes, menuRes, recentOrdersRes, topItemsRes] = await Promise.all([
-          fetch('/api/v1/orders/stats/overview', { headers }),
-          fetch('/api/v1/users/stats/overview', { headers }),
-          fetch('/api/v1/menu/stats/overview', { headers }),
-          fetch('/api/v1/orders?limit=5&sort=-createdAt', { headers }),
-          fetch('/api/v1/menu/popular/items?limit=5', { headers })
+          fetch(getApiUrl('api/v1/orders/stats/overview'), { headers }),
+          fetch(getApiUrl('api/v1/users/stats/overview'), { headers }),
+          fetch(getApiUrl('api/v1/menu/stats/overview'), { headers }),
+          fetch(getApiUrl('api/v1/orders?limit=5&sort=-createdAt'), { headers }),
+          fetch(getApiUrl('api/v1/menu/popular/items?limit=5'), { headers })
         ]);
 
         const ordersData = await ordersRes.json();
