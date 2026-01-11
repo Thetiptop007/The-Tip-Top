@@ -86,7 +86,7 @@ const MenuItems = () => {
         if (debouncedSearch) params.set('search', debouncedSearch);
         if (selectedCategory && selectedCategory !== 'All') params.set('category', selectedCategory);
 
-        const res = await fetch(getApiUrl(`api/v1/menu?${params.toString()}`, { signal: controller.signal }));
+        const res = await fetch(getApiUrl(`api/v1/menu?${params.toString()}`), { signal: controller.signal });
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);

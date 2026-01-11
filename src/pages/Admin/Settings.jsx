@@ -26,11 +26,11 @@ function Settings() {
   const fetchSettings = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(getApiUrl('api/v1/settings', {
+      const response = await fetch(getApiUrl('api/v1/settings'), {
         headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }));
+          'Authorization': `Bearer ${token}`
+        }
+      });
       
       const data = await response.json();
       

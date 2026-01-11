@@ -35,7 +35,7 @@ const Orders = () => {
       const token = localStorage.getItem('adminToken');
       console.log('🔑 Fetching orders with token:', token ? `${token.substring(0, 20)}...` : 'NO TOKEN');
       
-      const response = await fetch(getApiUrl('api/v1/orders', {
+      const response = await fetch(getApiUrl('api/v1/orders'), {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
