@@ -39,7 +39,7 @@ const Customers = () => {
           });
         }
       })
-      .catch(() => {});
+      .catch(() => {}));
     return () => { mounted = false; };
   }, []);
 
@@ -59,7 +59,7 @@ const Customers = () => {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
           }
-        });
+        }));
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);

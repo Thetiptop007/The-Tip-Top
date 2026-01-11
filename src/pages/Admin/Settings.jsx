@@ -30,7 +30,7 @@ function Settings() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
+      }));
       
       const data = await response.json();
       
@@ -85,7 +85,7 @@ function Settings() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(settings),
-      });
+      }));
 
       const data = await response.json();
 

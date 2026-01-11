@@ -86,7 +86,7 @@ const MenuItems = () => {
         if (debouncedSearch) params.set('search', debouncedSearch);
         if (selectedCategory && selectedCategory !== 'All') params.set('category', selectedCategory);
 
-        const res = await fetch(getApiUrl(`api/v1/menu?${params.toString()}`, { signal: controller.signal });
+        const res = await fetch(getApiUrl(`api/v1/menu?${params.toString()}`, { signal: controller.signal }));
         
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -144,7 +144,7 @@ const MenuItems = () => {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         },
         body: JSON.stringify(payload)
-      });
+      }));
 
       if (!res.ok) {
         const error = await res.json();
@@ -209,7 +209,7 @@ const MenuItems = () => {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         },
         body: JSON.stringify(payload)
-      });
+      }));
 
       if (!res.ok) {
         const error = await res.json();
@@ -263,7 +263,7 @@ const MenuItems = () => {
         .then(() => {
           setPage(1);
         })
-        .catch(() => {});
+        .catch(() => {}));
     }
   };
 
@@ -288,7 +288,7 @@ const MenuItems = () => {
       })
       .catch((err) => {
         alert('Error toggling availability: ' + err.message);
-      });
+      }));
   };
 
   const openEditModal = (item) => {

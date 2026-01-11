@@ -44,7 +44,7 @@ const DeliveryAgents = () => {
         headers: {
           'Authorization': `Bearer ${token}`
         }
-      });
+      }));
 
       if (response.ok) {
         const data = await response.json();
@@ -67,7 +67,7 @@ const DeliveryAgents = () => {
         headers: {
           'Authorization': `Bearer ${token}`
         }
-      });
+      }));
 
       if (response.ok) {
         const data = await response.json();
@@ -116,7 +116,7 @@ const DeliveryAgents = () => {
           password: formData.password,
           vehicleType: formData.vehicleType
         })
-      });
+      }));
 
       if (response.ok) {
         alert('Delivery agent added successfully!');
@@ -155,7 +155,7 @@ const DeliveryAgents = () => {
         headers: {
           'Authorization': `Bearer ${token}`
         }
-      });
+      }));
 
       if (response.ok) {
         alert('Delivery agent removed successfully!');
@@ -219,7 +219,7 @@ const DeliveryAgents = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(updateData)
-      });
+      }));
 
       if (response.ok) {
         alert('Delivery agent updated successfully!');
