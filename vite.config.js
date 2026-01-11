@@ -8,4 +8,13 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://tiptopapp-backend.onrender.com',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
+  }
 })
