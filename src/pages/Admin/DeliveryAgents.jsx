@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getApiUrl } from '../../config/api';
 
 const DeliveryAgents = () => {
   const [agents, setAgents] = useState([]);
@@ -39,7 +40,7 @@ const DeliveryAgents = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/delivery/partners', {
+      const response = await fetch(getApiUrl('api/v1/delivery/partners', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -62,7 +63,7 @@ const DeliveryAgents = () => {
   const fetchStats = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/delivery/stats/overview', {
+      const response = await fetch(getApiUrl('api/v1/delivery/stats/overview', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -102,7 +103,7 @@ const DeliveryAgents = () => {
     try {
       setSubmitting(true);
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/delivery/register', {
+      const response = await fetch(getApiUrl('api/v1/delivery/register', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -149,7 +150,7 @@ const DeliveryAgents = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/v1/delivery/partner/${agentId}`, {
+      const response = await fetch(getApiUrl(`api/v1/delivery/partner/${agentId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -211,7 +212,7 @@ const DeliveryAgents = () => {
         updateData.password = editFormData.password;
       }
 
-      const response = await fetch(`/api/v1/delivery/partner/${selectedAgent._id}`, {
+      const response = await fetch(getApiUrl(`api/v1/delivery/partner/${selectedAgent._id}`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,

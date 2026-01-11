@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getApiUrl } from '../../config/api';
 
 function Settings() {
   const [settings, setSettings] = useState({
@@ -25,7 +26,7 @@ function Settings() {
   const fetchSettings = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/settings', {
+      const response = await fetch(getApiUrl('api/v1/settings', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -77,7 +78,7 @@ function Settings() {
     try {
       setSaving(true);
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/v1/settings', {
+      const response = await fetch(getApiUrl('api/v1/settings', {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,

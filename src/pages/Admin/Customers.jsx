@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getApiUrl } from '../../config/api';
 
 const Customers = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,7 +21,7 @@ const Customers = () => {
   // Fetch customer stats
   useEffect(() => {
     let mounted = true;
-    fetch('/api/v1/users/stats/overview', {
+    fetch(getApiUrl('api/v1/users/stats/overview', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
       }
@@ -54,7 +55,7 @@ const Customers = () => {
         params.set('limit', limit);
         if (searchQuery.trim()) params.set('search', searchQuery.trim());
 
-        const res = await fetch(`/api/v1/users/role/customer?${params.toString()}`, {
+        const res = await fetch(getApiUrl(`api/v1/users/role/customer?${params.toString()}`, {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
           }
