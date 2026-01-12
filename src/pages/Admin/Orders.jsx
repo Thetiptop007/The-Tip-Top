@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getApiUrl } from '../../config/api';
 
 const Orders = () => {
   const navigate = useNavigate();
