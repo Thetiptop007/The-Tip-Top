@@ -339,7 +339,7 @@ const Orders = () => {
           return;
       }
 
-      const response = await fetch(endpoint, {
+      const response = await fetch(getApiUrl(endpoint), {
         method: method,
         headers: {
           'Content-Type': 'application/json',
