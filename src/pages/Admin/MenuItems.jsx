@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { getApiUrl } from '../../config/api';
 
 const MenuItems = () => {
   const [searchQuery, setSearchQuery] = useState('');
