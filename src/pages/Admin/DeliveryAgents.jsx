@@ -446,13 +446,13 @@ const DeliveryAgents = () => {
 
       {/* Add Agent Modal */}
       {showAddModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-md w-full shadow-2xl">
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <h2 className="text-xl font-bold text-gray-900">Add New Delivery Agent</h2>
+        <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-auto" onClick={() => setShowAddModal(false)}>
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-red-50 to-white">
+              <h2 className="text-2xl font-bold text-gray-900">Add New Delivery Agent</h2>
               <button
                 onClick={() => setShowAddModal(false)}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer rounded-full p-1 hover:bg-gray-100"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -460,93 +460,102 @@ const DeliveryAgents = () => {
               </button>
             </div>
 
-            <form onSubmit={handleAddAgent} className="p-6 space-y-4">
+            <form onSubmit={handleAddAgent} className="p-6 space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     value={formData.firstName}
                     onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    placeholder="John"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     value={formData.lastName}
                     onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    placeholder="Doe"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
                 <input
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  placeholder="john.doe@example.com"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone <span className="text-red-500">*</span></label>
                 <input
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
-                  placeholder="+1234567890"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  placeholder="+1 234 567 8900"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Password *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Password <span className="text-red-500">*</span></label>
                 <input
                   type="password"
                   value={formData.password}
                   onChange={(e) => setFormData({...formData, password: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  placeholder="••••••••"
                   minLength={8}
                   required
                 />
-                <p className="text-xs text-gray-500 mt-1">Minimum 8 characters</p>
+                <p className="text-xs text-gray-500 mt-1.5 flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                  Minimum 8 characters
+                </p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Vehicle Type *</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Vehicle Type <span className="text-red-500">*</span></label>
                 <select
                   value={formData.vehicleType}
                   onChange={(e) => setFormData({...formData, vehicleType: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400 cursor-pointer bg-white"
                   required
                 >
-                  <option value="bike">Bike</option>
-                  <option value="scooter">Scooter</option>
-                  <option value="car">Car</option>
-                  <option value="bicycle">Bicycle</option>
+                  <option value="bike">🏍️ Bike</option>
+                  <option value="scooter">🛵 Scooter</option>
+                  <option value="car">🚗 Car</option>
+                  <option value="bicycle">🚲 Bicycle</option>
                 </select>
               </div>
 
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-3 pt-2">
                 <button
                   type="button"
                   onClick={() => setShowAddModal(false)}
-                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+                  className="flex-1 px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium disabled:opacity-50"
+                  className="flex-1 px-4 py-2.5 bg-gradient-to-r from-red-400 to-red-500 text-white rounded-lg hover:from-red-500 hover:to-red-600 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-red-200"
                 >
                   {submitting ? 'Adding...' : 'Add Agent'}
                 </button>
@@ -558,16 +567,16 @@ const DeliveryAgents = () => {
 
       {/* Edit Agent Modal */}
       {showEditModal && selectedAgent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-hidden shadow-2xl">
-            <div className="flex items-center justify-between p-6 border-b border-stone-200">
-              <h2 className="text-xl font-bold text-gray-900">Edit Delivery Agent</h2>
+        <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-auto" onClick={() => { setShowEditModal(false); setSelectedAgent(null); }}>
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-hidden shadow-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+              <h2 className="text-2xl font-bold text-gray-900">Edit Delivery Agent</h2>
               <button
                 onClick={() => {
                   setShowEditModal(false);
                   setSelectedAgent(null);
                 }}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer rounded-full p-1 hover:bg-gray-100"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -576,79 +585,84 @@ const DeliveryAgents = () => {
             </div>
 
             <form onSubmit={handleUpdateAgent} className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     value={editFormData.name}
                     onChange={(e) => setEditFormData({ ...editFormData, name: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
                     placeholder="John Doe"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
                     value={editFormData.email}
                     onChange={(e) => setEditFormData({ ...editFormData, email: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
                     placeholder="john@example.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Phone <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
                     value={editFormData.phone}
                     onChange={(e) => setEditFormData({ ...editFormData, phone: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
                     placeholder="+91 9876543210"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Vehicle Type <span className="text-red-500">*</span>
                   </label>
                   <select
                     value={editFormData.vehicleType}
                     onChange={(e) => setEditFormData({ ...editFormData, vehicleType: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400 cursor-pointer bg-white"
                     required
                   >
-                    <option value="bike">Bike</option>
-                    <option value="scooter">Scooter</option>
-                    <option value="bicycle">Bicycle</option>
-                    <option value="car">Car</option>
+                    <option value="bike">🏍️ Bike</option>
+                    <option value="scooter">🛵 Scooter</option>
+                    <option value="bicycle">🚲 Bicycle</option>
+                    <option value="car">🚗 Car</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    New Password <span className="text-gray-500 text-xs">(leave empty to keep current)</span>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    New Password <span className="text-gray-500 text-xs font-normal">(optional - leave empty to keep current)</span>
                   </label>
                   <input
                     type="password"
                     value={editFormData.password}
                     onChange={(e) => setEditFormData({ ...editFormData, password: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
                     placeholder="••••••••"
                     minLength={8}
                   />
-                  <p className="text-xs text-gray-500 mt-1">Minimum 8 characters</p>
+                  <p className="text-xs text-gray-500 mt-1.5 flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                    Minimum 8 characters
+                  </p>
                 </div>
               </div>
 
@@ -659,14 +673,14 @@ const DeliveryAgents = () => {
                     setShowEditModal(false);
                     setSelectedAgent(null);
                   }}
-                  className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium"
+                  className="flex-1 px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  className="flex-1 px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-blue-200"
                 >
                   {submitting ? 'Updating...' : 'Update Agent'}
                 </button>
