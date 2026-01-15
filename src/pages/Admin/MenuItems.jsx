@@ -23,12 +23,34 @@ const MenuItems = () => {
   const [loading, setLoading] = useState(false);
   const [stats, setStats] = useState({ total: 0, available: 0, unavailable: 0 });
 
-  // Pagination state
-  const [page, setPage] = useState(1);
+  // Pagination state with URL sync
+  const [page, setPage] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return parseInt(params.get('page')) || 1;
+  });
   const [limit, setLimit] = useState(12);
   const [totalPages, setTotalPages] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
   const abortRef = useRef(null);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (showAddModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showAddModal]);
+
+  // Sync page to URL query parameter
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('page', page);
+    window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`);
+  }, [page]);
 
   // fetch categories
   useEffect(() => {
@@ -173,7 +195,7 @@ const MenuItems = () => {
       alert('Menu item added successfully!');
       setShowAddModal(false);
       resetForm();
-      setPage(1); // Refresh list
+      setPage(1); // Reset to page 1 for new items
     } catch (err) {
       alert('Error: ' + err.message);
     }
@@ -203,14 +225,14 @@ const MenuItems = () => {
         rating: parseFloat(formData.rating) || 4.0
       };
 
-      const res = await fetch(getApiUrl(`api/v1/menu/${editingItem._id}`, {
+      const res = await fetch(getApiUrl(`api/v1/menu/${editingItem._id}`), {
         method: 'PATCH',
         headers: { 
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         },
         body: JSON.stringify(payload)
-      }));
+      });
 
       if (!res.ok) {
         const error = await res.json();
@@ -238,7 +260,14 @@ const MenuItems = () => {
       alert('Menu item updated successfully!');
       setShowAddModal(false);
       resetForm();
-      setPage(1); // Refresh list
+      
+      // Update local state immediately - don't reset page
+      setMenuItems(prevItems => 
+        prevItems.map(item => 
+          item._id === editingItem._id ? result.data.menuItem : item
+        )
+      );
+      setEditingItem(null);
     } catch (err) {
       alert('Error: ' + err.message);
     }
@@ -252,6 +281,14 @@ const MenuItems = () => {
     }
   };
 
+  // Handle Enter key press for form submission
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && e.target.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
+
   const handleDeleteItem = (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       fetch(getApiUrl(`api/v1/menu/${id}`, { 
@@ -262,7 +299,10 @@ const MenuItems = () => {
       })
         .then((res) => res.json())
         .then(() => {
-          setPage(1);
+          // Update local state - remove deleted item
+          setMenuItems(prevItems => prevItems.filter(item => item._id !== id));
+          // Update stats
+          setTotalItems(prev => Math.max(0, prev - 1));
         })
         .catch(() => {}));
     }
@@ -284,7 +324,12 @@ const MenuItems = () => {
         if (data.status !== 'success') {
           alert('Failed to toggle availability: ' + (data.message || 'Unknown error'));
         } else {
-          setPage(1);
+          // Update local state immediately
+          setMenuItems(prevItems => 
+            prevItems.map(item => 
+              item._id === id ? { ...item, isAvailable: !current } : item
+            )
+          );
         }
       })
       .catch((err) => {
@@ -364,7 +409,7 @@ const MenuItems = () => {
             resetForm();
             setShowAddModal(true);
           }}
-          className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors flex items-center gap-2 poppins-medium shadow-md"
+          className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors flex items-center gap-2 poppins-medium shadow-md cursor-pointer"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -398,7 +443,7 @@ const MenuItems = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer ${
                   selectedCategory === category
                     ? 'bg-red-400 text-white'
                     : 'bg-stone-100  text-gray-700  hover:bg-gray-200 '
@@ -491,7 +536,7 @@ const MenuItems = () => {
               <div className="flex gap-2">
                 <button
                   onClick={() => toggleAvailability(item._id || item.id, item.isAvailable)}
-                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
                     item.isAvailable 
                       ? 'bg-green-100 text-green-700 hover:bg-green-200  ' 
                       : 'bg-red-100 text-red-700 hover:bg-red-200  '
@@ -501,7 +546,7 @@ const MenuItems = () => {
                 </button>
                 <button
                   onClick={() => openEditModal(item)}
-                  className="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200   transition-colors"
+                  className="px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors cursor-pointer"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -509,7 +554,7 @@ const MenuItems = () => {
                 </button>
                 <button
                   onClick={() => handleDeleteItem(item._id || item.id)}
-                  className="px-3 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200   transition-colors"
+                  className="px-3 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors cursor-pointer"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -534,7 +579,7 @@ const MenuItems = () => {
               resetForm();
               setShowAddModal(true);
             }}
-            className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors"
+            className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors cursor-pointer"
           >
             Add Your First Item
           </button>
@@ -543,13 +588,13 @@ const MenuItems = () => {
 
       {/* Add/Edit Modal */}
       {showAddModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => { setShowAddModal(false); resetForm(); }}>
-          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-            <div className="sticky top-0 bg-white border-b border-stone-200  p-6 flex items-center justify-between">
+        <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-auto" onClick={() => { setShowAddModal(false); resetForm(); }}>
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()} onKeyDown={handleKeyDown}>
+            <div className="sticky top-0 bg-white border-b border-stone-200  p-6 flex items-center justify-between z-10">
               <h2 className="text-2xl font-bold text-gray-900 ">
                 {editingItem ? 'Edit Menu Item' : 'Add New Menu Item'}
               </h2>
-              <button onClick={() => { setShowAddModal(false); resetForm(); }} className="text-gray-400 hover:text-gray-600 ">
+              <button onClick={() => { setShowAddModal(false); resetForm(); }} className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -617,7 +662,7 @@ const MenuItems = () => {
                     {formData.priceVariants.length > 1 && (
                       <button
                         onClick={() => removePriceVariant(index)}
-                        className="px-3 py-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200"
+                        className="px-3 py-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 cursor-pointer"
                       >
                         ✕
                       </button>
@@ -626,7 +671,7 @@ const MenuItems = () => {
                 ))}
                 <button
                   onClick={addPriceVariant}
-                  className="text-sm text-red-500 hover:text-red-600 font-medium"
+                  className="text-sm text-red-500 hover:text-red-600 font-medium cursor-pointer"
                 >
                   + Add Price Variant
                 </button>
@@ -688,14 +733,16 @@ const MenuItems = () => {
 
               <div className="flex gap-3 pt-4">
                 <button
+                  type="button"
                   onClick={() => { setShowAddModal(false); resetForm(); }}
-                  className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium"
+                  className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
+                  type="button"
                   onClick={handleSubmit}
-                  className="flex-1 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium"
+                  className="flex-1 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium cursor-pointer"
                 >
                   {editingItem ? 'Update Item' : 'Add Item'}
                 </button>
@@ -709,18 +756,18 @@ const MenuItems = () => {
       <div className="flex items-center justify-between mt-6">
         <div className="text-sm text-gray-600">Showing page {page} of {totalPages} — {totalItems} items</div>
         <div className="flex items-center gap-2">
-          <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-2 bg-stone-100 rounded-md">Prev</button>
+          <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-2 bg-stone-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-stone-200 transition-colors">Prev</button>
           {/* simple page numbers */}
           {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
             const displayStart = Math.max(1, page - 3);
             const pNum = displayStart + i;
             if (pNum > totalPages) return null;
             return (
-              <button key={pNum} onClick={() => setPage(pNum)} className={`px-3 py-2 rounded-md ${pNum === page ? 'bg-red-400 text-white' : 'bg-stone-100'}`}>{pNum}</button>
+              <button key={pNum} onClick={() => setPage(pNum)} className={`px-3 py-2 rounded-md cursor-pointer transition-colors ${pNum === page ? 'bg-red-400 text-white' : 'bg-stone-100 hover:bg-stone-200'}`}>{pNum}</button>
             );
           })}
-          <button disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))} className="px-3 py-2 bg-stone-100 rounded-md">Next</button>
-          <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value, 10)); setPage(1); }} className="ml-2 px-2 py-1 border rounded-md">
+          <button disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))} className="px-3 py-2 bg-stone-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-stone-200 transition-colors">Next</button>
+          <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value, 10)); setPage(1); }} className="ml-2 px-2 py-1 border rounded-md cursor-pointer">
             {[6,12,24,48].map(n => (<option key={n} value={n}>{n} / page</option>))}
           </select>
         </div>
