@@ -25,6 +25,15 @@ const navItems = [
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+      </svg>
+    ),
+    name: "Place Order",
+    path: "/admin/place-order",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
       </svg>
     ),
@@ -65,7 +74,7 @@ const othersItems = [
 ];
 
 const AppSidebar = () => {
-  const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
+  const { isExpanded, isMobileOpen } = useSidebar();
   const location = useLocation();
 
   const isActive = useCallback(
@@ -83,10 +92,10 @@ const AppSidebar = () => {
               isActive(nav.path)
                 ? "bg-red-400 text-white shadow-md"
                 : "text-gray-700 hover:bg-stone-100"
-            } ${!isExpanded && !isHovered ? "lg:justify-center" : ""}`}
+            } ${!isExpanded ? "lg:justify-center" : ""}`}
           >
             <span className="flex-shrink-0">{nav.icon}</span>
-            {(isExpanded || isHovered || isMobileOpen) && (
+            {(isExpanded || isMobileOpen) && (
               <span className="font-medium">{nav.name}</span>
             )}
           </Link>
@@ -98,18 +107,16 @@ const AppSidebar = () => {
   return (
     <aside
       className={`fixed top-0 left-0 h-screen bg-white border-r border-stone-200 transition-all duration-300 ease-in-out z-50 
-        ${isExpanded || isMobileOpen ? "w-[280px]" : isHovered ? "w-[280px]" : "w-[80px]"}
+        ${isExpanded || isMobileOpen ? "w-[280px]" : "w-[80px]"}
         ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0`}
-      onMouseEnter={() => !isExpanded && setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`py-6 px-4 border-b border-stone-200 flex ${!isExpanded && !isHovered ? "lg:justify-center" : "justify-start"}`}>
+      <div className={`py-6 px-4 border-b border-stone-200 flex ${!isExpanded ? "lg:justify-center" : "justify-start"}`}>
         <Link to="/" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-red-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">
             T
           </div>
-          {(isExpanded || isHovered || isMobileOpen) && (
+          {(isExpanded || isMobileOpen) && (
             <span className="text-xl font-bold text-gray-800 sigmar-regular">
               The Tip Top
             </span>
@@ -121,15 +128,15 @@ const AppSidebar = () => {
         <nav>
           <div className="space-y-6">
             <div>
-              <h2 className={`mb-3 text-xs uppercase font-semibold text-gray-400 ${!isExpanded && !isHovered ? "lg:text-center" : ""}`}>
-                {isExpanded || isHovered || isMobileOpen ? "Main Menu" : "---"}
+              <h2 className={`mb-3 text-xs uppercase font-semibold text-gray-400 ${!isExpanded ? "lg:text-center" : ""}`}>
+                {isExpanded || isMobileOpen ? "Main Menu" : "---"}
               </h2>
               {renderMenuItems(navItems)}
             </div>
             
             <div>
-              <h2 className={`mb-3 text-xs uppercase font-semibold text-gray-400 ${!isExpanded && !isHovered ? "lg:text-center" : ""}`}>
-                {isExpanded || isHovered || isMobileOpen ? "Others" : "---"}
+              <h2 className={`mb-3 text-xs uppercase font-semibold text-gray-400 ${!isExpanded ? "lg:text-center" : ""}`}>
+                {isExpanded || isMobileOpen ? "Others" : "---"}
               </h2>
               {renderMenuItems(othersItems)}
             </div>

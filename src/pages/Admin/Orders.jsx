@@ -294,7 +294,7 @@ const Orders = () => {
     },
   ];
 
-  const statusOptions = ['PENDING', 'READY', 'OUT_FOR_DELIVERY', 'DELIVERED', 'CANCELLED', 'All'];
+  const statusOptions = ['PENDING', 'READY', 'OUT_FOR_DELIVERY', 'DELIVERED', 'COMPLETED', 'CANCELLED', 'All'];
 
   const filteredOrders = allOrders.filter(order => {
     const matchesStatus = selectedStatus === 'All' || order.status === selectedStatus;
@@ -307,6 +307,7 @@ const Orders = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case "DELIVERED": return "bg-green-100 text-green-800";
+      case "COMPLETED": return "bg-green-100 text-green-800";
       case "READY": return "bg-purple-100 text-purple-800";
       case "OUT_FOR_DELIVERY": return "bg-yellow-100 text-yellow-800";
       case "PENDING": return "bg-blue-100 text-blue-800";
@@ -321,6 +322,7 @@ const Orders = () => {
       case "PENDING": return "Pending";
       case "READY": return "Ready";
       case "DELIVERED": return "Delivered";
+      case "COMPLETED": return "Completed";
       case "CANCELLED": return "Cancelled";
       default: return status;
     }
@@ -457,6 +459,35 @@ const Orders = () => {
       }
       
       alert('Failed to update order status');
+    }
+  };
+
+  // Complete takeaway order
+  const completeTakeawayOrder = async (orderId, orderNumber) => {
+    if (!confirm(`Mark takeaway order ${orderNumber} as completed?`)) {
+      return;
+    }
+
+    try {
+      const token = localStorage.getItem('adminToken');
+      const response = await fetch(getApiUrl(`api/v1/orders/${orderId}/complete-takeaway`), {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alert(`Takeaway order ${orderNumber} completed!`);
+        fetchOrders(); // Refresh orders
+      } else {
+        const data = await response.json();
+        alert(data.message || 'Failed to complete takeaway order');
+      }
+    } catch (error) {
+      console.error('Error completing takeaway order:', error);
+      alert('Failed to complete takeaway order');
     }
   };
   
@@ -991,6 +1022,17 @@ const Orders = () => {
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-lg font-bold text-gray-900 ">#{order.orderNumber}</h3>
                 <div className="flex items-center gap-2">
+                  {/* Order Type Badge */}
+                  {order.orderType === 'TAKEAWAY' && (
+                    <span className="px-2 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-700">
+                      🥡 Takeaway
+                    </span>
+                  )}
+                  {order.placedBy === 'ADMIN' && (
+                    <span className="px-2 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-700">
+                      👤 Admin
+                    </span>
+                  )}
                   <span className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-500 ${getStatusColor(order.status)} ${isUpdating ? 'animate-pulse ring-2 ring-green-300' : ''}`}>
                     {getStatusLabel(order.status)}
                   </span>
@@ -1133,7 +1175,22 @@ const Orders = () => {
                   </svg>
                   Print
                 </button>
-                {!order.deliveryPartner && (order.status === 'PENDING' || order.status === 'READY') && (
+                
+                {/* Takeaway Complete Button */}
+                {order.orderType === 'TAKEAWAY' && order.status !== 'COMPLETED' && order.status !== 'CANCELLED' && (
+                  <button
+                    onClick={() => completeTakeawayOrder(order._id, order.orderNumber)}
+                    className="flex-1 px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-1"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Complete Takeaway
+                  </button>
+                )}
+                
+                {/* Assign Delivery Button (only for DELIVERY orders) */}
+                {order.orderType !== 'TAKEAWAY' && !order.deliveryPartner && (order.status === 'PENDING' || order.status === 'READY') && (
                   <button
                     onClick={() => {
                       setSelectedOrderForAssign(order);
@@ -1147,23 +1204,27 @@ const Orders = () => {
                     Assign Delivery
                   </button>
                 )}
-                <select
-                  onChange={(e) => {
-                    if (e.target.value !== order.status) {
-                      updateOrderStatus(order._id, e.target.value);
-                    }
-                  }}
-                  value={order.status}
-                  className="flex-1 px-3 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 text-sm font-semibold transition-colors cursor-pointer"
-                >
-                  <option value={order.status}>Change Status</option>
-                  {order.status === 'PENDING' && <option value="READY">✓ Mark as Ready</option>}
-                  {order.status === 'PENDING' && <option value="CANCELLED">✗ Cancel Order</option>}
-                  {order.status === 'READY' && <option value="CANCELLED">✗ Cancel Order</option>}
-                  {(order.status === 'PENDING' || order.status === 'READY') && order.deliveryPartner && (
-                    <option value="OUT_FOR_DELIVERY">🚚 Out for Delivery</option>
-                  )}
-                </select>
+                
+                {/* Status Change Dropdown (only for DELIVERY orders) */}
+                {order.orderType !== 'TAKEAWAY' && (
+                  <select
+                    onChange={(e) => {
+                      if (e.target.value !== order.status) {
+                        updateOrderStatus(order._id, e.target.value);
+                      }
+                    }}
+                    value={order.status}
+                    className="flex-1 px-3 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 text-sm font-semibold transition-colors cursor-pointer"
+                  >
+                    <option value={order.status}>Change Status</option>
+                    {order.status === 'PENDING' && <option value="READY">✓ Mark as Ready</option>}
+                    {order.status === 'PENDING' && <option value="CANCELLED">✗ Cancel Order</option>}
+                    {order.status === 'READY' && <option value="CANCELLED">✗ Cancel Order</option>}
+                    {(order.status === 'PENDING' || order.status === 'READY') && order.deliveryPartner && (
+                      <option value="OUT_FOR_DELIVERY">🚚 Out for Delivery</option>
+                    )}
+                  </select>
+                )}
               </div>
             </div>
           </div>
