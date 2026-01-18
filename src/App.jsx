@@ -7,6 +7,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import AppLayout from './layout/AppLayout';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import Orders from './pages/Admin/Orders';
+import PlaceOrder from './pages/Admin/PlaceOrder';
 import MenuItems from './pages/Admin/MenuItems';
 import Customers from './pages/Admin/Customers';
 import Settings from './pages/Admin/Settings';
@@ -38,6 +39,7 @@ function App() {
             <Route index element={<AdminDashboard />} />
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="place-order" element={<PlaceOrder />} />
             <Route path="menu-items" element={<MenuItems />} />
             <Route path="customers" element={<Customers />} />
             <Route path="delivery-agents" element={<DeliveryAgents />} />
