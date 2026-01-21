@@ -294,7 +294,7 @@ const Orders = () => {
     },
   ];
 
-  const statusOptions = ['PENDING', 'READY', 'OUT_FOR_DELIVERY', 'DELIVERED', 'COMPLETED', 'CANCELLED', 'All'];
+  const statusOptions = ['PENDING', 'ACCEPTED', 'READY', 'OUT_FOR_DELIVERY', 'All'];
 
   const filteredOrders = allOrders.filter(order => {
     const matchesStatus = selectedStatus === 'All' || order.status === selectedStatus;
@@ -308,9 +308,11 @@ const Orders = () => {
     switch (status) {
       case "DELIVERED": return "bg-green-100 text-green-800";
       case "COMPLETED": return "bg-green-100 text-green-800";
+      case "ACCEPTED": return "bg-blue-100 text-blue-800";
       case "READY": return "bg-purple-100 text-purple-800";
+      case "ASSIGNED": return "bg-indigo-100 text-indigo-800";
       case "OUT_FOR_DELIVERY": return "bg-yellow-100 text-yellow-800";
-      case "PENDING": return "bg-blue-100 text-blue-800";
+      case "PENDING": return "bg-gray-100 text-gray-800";
       case "CANCELLED": return "bg-red-100 text-red-800";
       default: return "bg-gray-100 text-gray-800";
     }
@@ -320,7 +322,9 @@ const Orders = () => {
     switch (status) {
       case "OUT_FOR_DELIVERY": return "Out for Delivery";
       case "PENDING": return "Pending";
+      case "ACCEPTED": return "Accepted";
       case "READY": return "Ready";
+      case "ASSIGNED": return "Assigned";
       case "DELIVERED": return "Delivered";
       case "COMPLETED": return "Completed";
       case "CANCELLED": return "Cancelled";
@@ -335,18 +339,22 @@ const Orders = () => {
       
       const oldStatus = order.status;
       
+      console.log('🔄 ===== ORDER STATUS UPDATE =====');
+      console.log('📦 Order ID:', orderId);
+      console.log('📋 Order Number:', order.orderNumber);
+      console.log('⏮️  Old Status:', oldStatus);
+      console.log('⏭️  New Status (Request):', newStatus);
+      console.log('================================');
+      
       // Handle special cases first
       if (newStatus === 'OUT_FOR_DELIVERY') {
-        if (order && !order.deliveryPartner) {
-          setSelectedOrderForAssign(order);
-          setShowAssignModal(true);
-        } else {
-          alert('Delivery partner already assigned or order not found.');
-        }
+        console.log('⚠️  OUT_FOR_DELIVERY blocked - agents claim orders directly');
+        alert('Delivery agents will now claim orders directly from the "Ready" state.');
         return;
       }
       
       if (newStatus === 'DELIVERED') {
+        console.log('⚠️  DELIVERED blocked - must be marked by delivery partner');
         alert('Order delivery should be marked by the delivery partner.');
         return;
       }
@@ -355,18 +363,36 @@ const Orders = () => {
       let method = 'PATCH';
       let body = {};
 
-      // Map status to backend endpoint
+      // Map status to backend endpoint - Simplified workflow
       switch (newStatus) {
+        case 'ACCEPT':
+          console.log('✅ ACCEPT flow initiated - Single API call');
+          console.log('   Calling /accept endpoint (PENDING → ACCEPTED)');
+          endpoint = `/api/v1/orders/${orderId}/accept`;
+          break;
         case 'READY':
+          console.log('🟣 READY flow initiated');
+          console.log('   Calling /ready endpoint (ACCEPTED → READY)');
           endpoint = `/api/v1/orders/${orderId}/ready`;
           break;
         case 'CANCELLED':
-          endpoint = `/api/v1/orders/${orderId}/admin-cancel`;
+          console.log('❌ CANCEL flow initiated');
+          endpoint = `/api/v1/orders/${orderId}/cancel`;
+          body = { reason: 'Cancelled by admin' };
           break;
+        case 'ASSIGN':
+          console.log('👤 Manual ASSIGN flow - opening modal');
+          setSelectedOrderForAssign(order);
+          setShowAssignModal(true);
+          return;
         default:
+          console.log('⚠️  Invalid status change:', newStatus);
           alert(`Cannot change status to ${getStatusLabel(newStatus)} from admin panel.`);
           return;
       }
+
+      console.log('🌐 API Call:', method, endpoint);
+      console.log('📤 Request Body:', JSON.stringify(body));
 
       // Immediately update UI with new status
       setAllOrders(prevOrders => 
@@ -390,7 +416,13 @@ const Orders = () => {
         body: JSON.stringify(body)
       });
 
+      console.log('📥 API Response Status:', response.status);
+      
       if (response.ok) {
+        const responseData = await response.json();
+        console.log('✅ API Response Data:', responseData);
+        console.log('🎉 Order status updated successfully');
+        
         // Show success toast with undo option
         setToast({
           message: `Order moved to ${getStatusLabel(newStatus)}`,
@@ -421,10 +453,15 @@ const Orders = () => {
               return newState;
             });
             // Refresh to get updated data
+            console.log('🔄 Refreshing orders list...');
             fetchOrders();
           }, 1000);
         }, 2000);
       } else {
+        const errorData = await response.json().catch(() => ({ message: 'Failed to update order status' }));
+        console.log('❌ API Error Response:', errorData);
+        console.log('🔙 Reverting UI to old status:', oldStatus);
+        
         // Revert on error
         setAllOrders(prevOrders => 
           prevOrders.map(o => 
@@ -437,15 +474,17 @@ const Orders = () => {
           return newState;
         });
         
-        const errorData = await response.json().catch(() => ({ message: 'Failed to update order status' }));
         alert(errorData.message || 'Failed to update order status');
       }
     } catch (error) {
-      console.error('Error updating order status:', error);
+      console.error('💥 Exception in updateOrderStatus:', error);
+      console.error('Error details:', error.message);
+      console.error('Stack trace:', error.stack);
       
       // Revert on error
       const order = allOrders.find(o => o._id === orderId);
       if (order && updatingOrders[orderId]) {
+        console.log('🔙 Reverting to old status due to exception');
         setAllOrders(prevOrders => 
           prevOrders.map(o => 
             o._id === orderId ? { ...o, status: updatingOrders[orderId].oldStatus } : o
@@ -458,6 +497,7 @@ const Orders = () => {
         });
       }
       
+      console.log('================================');
       alert('Failed to update order status');
     }
   };
@@ -802,12 +842,12 @@ const Orders = () => {
       {/* Page Header */}
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 poppins-bold">Orders Management</h1>
-          <p className="mt-2 text-gray-600 poppins-regular">Track and manage all restaurant orders in real-time</p>
+          <h1 className="text-xl font-bold text-gray-900 poppins-bold">Orders Management</h1>
+          <p className="mt-1 text-sm text-gray-600 poppins-regular">Track and manage all restaurant orders in real-time</p>
         </div>
-        <div className="flex items-center gap-3">
-          <button className="px-4 py-2 bg-white text-gray-700 rounded-lg border border-stone-300 hover:bg-stone-50 flex items-center gap-2 poppins-medium shadow-sm">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex items-center gap-2">
+          <button className="px-3 py-2 bg-white text-gray-700 rounded-lg border border-gray-200 hover:bg-gray-50 flex items-center gap-1.5 poppins-medium text-xs shadow-sm">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
             Export
@@ -815,9 +855,9 @@ const Orders = () => {
           <button 
             onClick={fetchOrders}
             disabled={loading}
-            className={`px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors flex items-center gap-2 poppins-medium shadow-md ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`px-3 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all flex items-center gap-1.5 poppins-medium text-xs shadow-sm ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
-            <svg className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
             {loading ? 'Refreshing...' : 'Refresh'}
@@ -827,13 +867,13 @@ const Orders = () => {
 
       {/* Error/Warning Banner */}
       {error && (
-        <div className={`rounded-lg p-4 flex items-start gap-3 ${
+        <div className={`rounded-lg p-3 flex items-start gap-2 ${
           isUsingFallbackData 
             ? 'bg-yellow-50 border border-yellow-200' 
             : 'bg-red-50 border border-red-200'
         }`}>
           <svg 
-            className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+            className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
               isUsingFallbackData ? 'text-yellow-600' : 'text-red-600'
             }`} 
             fill="none" 
@@ -848,12 +888,12 @@ const Orders = () => {
             />
           </svg>
           <div className="flex-1">
-            <h3 className={`font-semibold poppins-semibold ${
+            <h3 className={`text-xs font-semibold poppins-semibold ${
               isUsingFallbackData ? 'text-yellow-900' : 'text-red-900'
             }`}>
               {isUsingFallbackData ? 'Using Demo Data' : 'Connection Error'}
             </h3>
-            <p className={`text-sm mt-1 poppins-regular ${
+            <p className={`text-[10px] mt-0.5 poppins-regular ${
               isUsingFallbackData ? 'text-yellow-800' : 'text-red-800'
             }`}>
               {error}
@@ -861,7 +901,7 @@ const Orders = () => {
             {isUsingFallbackData && (
               <button
                 onClick={fetchOrders}
-                className="mt-2 text-sm font-medium text-yellow-900 hover:text-yellow-700 underline poppins-medium"
+                className="mt-1.5 text-[10px] font-medium text-yellow-900 hover:text-yellow-700 underline poppins-medium"
               >
                 Try connecting again
               </button>
@@ -873,7 +913,7 @@ const Orders = () => {
               isUsingFallbackData ? 'text-yellow-600 hover:text-yellow-800' : 'text-red-600 hover:text-red-800'
             }`}
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -882,13 +922,13 @@ const Orders = () => {
 
       {/* Loading State */}
       {loading && allOrders.length === 0 && (
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-12 text-center">
-          <div className="flex flex-col items-center gap-4">
-            <svg className="w-12 h-12 text-red-400 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
+          <div className="flex flex-col items-center gap-3">
+            <svg className="w-10 h-10 text-red-500 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
-            <h3 className="text-lg font-semibold text-gray-900 poppins-semibold">Loading Orders...</h3>
-            <p className="text-gray-600 poppins-regular">Please wait while we fetch the latest orders</p>
+            <h3 className="text-sm font-semibold text-gray-900 poppins-semibold">Loading Orders...</h3>
+            <p className="text-xs text-gray-600 poppins-regular">Please wait while we fetch the latest orders</p>
           </div>
         </div>
       )}
@@ -896,8 +936,8 @@ const Orders = () => {
       {/* Search and Filters - Only show when we have data or finished loading */}
       {!loading || allOrders.length > 0 ? (
         <>
-          <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-            <div className="flex flex-col lg:flex-row gap-4">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3">
+            <div className="flex flex-col lg:flex-row gap-3">
               {/* Search Bar */}
               <div className="flex-1">
                 <div className="relative">
@@ -906,24 +946,24 @@ const Orders = () => {
                     placeholder="Search by Order ID, Customer name, or Phone..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full pl-9 pr-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                   />
-                  <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
               </div>
               
               {/* Status Filter Buttons */}
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-1.5 flex-wrap">
                 {statusOptions.map(status => (
                   <button
                     key={status}
                     onClick={() => setSelectedStatus(status)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
                       selectedStatus === status
-                        ? 'bg-red-400 text-white'
-                        : 'bg-stone-100 text-gray-700 hover:bg-gray-200'
+                        ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-sm'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
                     {status}
@@ -936,27 +976,27 @@ const Orders = () => {
           {/* Orders Display - Grid or Table based on filter */}
           {selectedStatus === 'All' ? (
             /* Table View for All Orders */
-            <div className="bg-white rounded-lg shadow-md border border-stone-200 overflow-hidden">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gray-50 border-b border-stone-200">
+                  <thead className="bg-gray-50 border-b border-gray-200">
                     <tr>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Order ID</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Date & Time</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Customer</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Items</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Status</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">Payment</th>
-                      <th className="px-4 py-3 text-right text-xs font-semibold text-gray-700 uppercase">Total</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Order ID</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Date & Time</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Customer</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Items</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Status</th>
+                      <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Payment</th>
+                      <th className="px-4 py-2 text-right text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Total</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-stone-200">
+                  <tbody className="divide-y divide-gray-200">
                     {filteredOrders.map((order) => (
                       <tr key={order._id} className="hover:bg-gray-50 transition-colors">
-                        <td className="px-4 py-3">
-                          <span className="font-semibold text-gray-900">#{order.orderNumber}</span>
+                        <td className="px-4 py-2.5">
+                          <span className="text-xs font-semibold text-gray-900">#{order.orderNumber}</span>
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">
+                        <td className="px-4 py-2.5 text-xs text-gray-600">
                           {new Date(order.createdAt).toLocaleString('en-IN', { 
                             day: '2-digit', 
                             month: 'short',
@@ -965,28 +1005,28 @@ const Orders = () => {
                             hour12: true
                           })}
                         </td>
-                        <td className="px-4 py-3">
-                          <div className="text-sm font-medium text-gray-900">{order.customer.name}</div>
-                          <div className="text-xs text-gray-500">{order.customer.phone}</div>
+                        <td className="px-4 py-2.5">
+                          <div className="text-xs font-medium text-gray-900">{order.customer.name}</div>
+                          <div className="text-[10px] text-gray-500">{order.customer.phone}</div>
                         </td>
-                        <td className="px-4 py-3">
-                          <div className="text-sm text-gray-600">
+                        <td className="px-4 py-2.5">
+                          <div className="text-xs text-gray-600">
                             {order.items.length} item{order.items.length > 1 ? 's' : ''}
                           </div>
                         </td>
-                        <td className="px-4 py-3">
-                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(order.status)}`}>
+                        <td className="px-4 py-2.5">
+                          <span className={`px-1.5 py-0.5 text-[10px] font-semibold rounded-full ${getStatusColor(order.status)}`}>
                             {getStatusLabel(order.status)}
                           </span>
                         </td>
-                        <td className="px-4 py-3">
+                        <td className="px-4 py-2.5">
                           <div className="flex flex-col gap-1">
-                            <span className={`text-xs px-2 py-1 rounded-full font-semibold inline-block ${
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold inline-block ${
                               order.paymentMethod === 'COD' ? 'bg-orange-100 text-orange-700' : 'bg-green-100 text-green-700'
                             }`}>
                               {order.paymentMethod}
                             </span>
-                            <span className={`text-xs px-2 py-1 rounded-full font-semibold inline-block ${
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold inline-block ${
                               order.paymentStatus === 'PAID' ? 'bg-green-100 text-green-700' : 
                               order.paymentStatus === 'PENDING' ? 'bg-yellow-100 text-yellow-700' : 
                               'bg-blue-100 text-blue-700'
@@ -995,8 +1035,8 @@ const Orders = () => {
                             </span>
                           </div>
                         </td>
-                        <td className="px-4 py-3 text-right">
-                          <span className="text-lg font-bold text-red-500">₹{order.pricing.finalAmount}</span>
+                        <td className="px-4 py-2.5 text-right">
+                          <span className="text-base font-bold text-red-500">₹{order.pricing.finalAmount}</span>
                         </td>
                       </tr>
                     ))}
@@ -1014,35 +1054,35 @@ const Orders = () => {
               return (
               <div 
                 key={order._id} 
-                className={`bg-white rounded-lg shadow-md border border-stone-200 hover:shadow-lg transition-all duration-1000 ${
+                className={`bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-all duration-1000 ${
                   isFadingOut ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
                 } ${isUpdating ? 'ring-2 ring-green-400' : ''}`}
               >
-            <div className="p-4 border-b border-stone-200 ">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-lg font-bold text-gray-900 ">#{order.orderNumber}</h3>
-                <div className="flex items-center gap-2">
+            <div className="p-3 border-b border-gray-200">
+              <div className="flex items-center justify-between mb-1.5">
+                <h3 className="text-sm font-bold text-gray-900">#{order.orderNumber}</h3>
+                <div className="flex items-center gap-1.5">
                   {/* Order Type Badge */}
                   {order.orderType === 'TAKEAWAY' && (
-                    <span className="px-2 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-700">
+                    <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded-full bg-orange-100 text-orange-700">
                       🥡 Takeaway
                     </span>
                   )}
                   {order.placedBy === 'ADMIN' && (
-                    <span className="px-2 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-700">
+                    <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded-full bg-indigo-100 text-indigo-700">
                       👤 Admin
                     </span>
                   )}
-                  <span className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-500 ${getStatusColor(order.status)} ${isUpdating ? 'animate-pulse ring-2 ring-green-300' : ''}`}>
+                  <span className={`px-2 py-0.5 text-[10px] font-semibold rounded-full transition-all duration-500 ${getStatusColor(order.status)} ${isUpdating ? 'animate-pulse ring-2 ring-green-300' : ''}`}>
                     {getStatusLabel(order.status)}
                   </span>
                   {isUpdating && (
-                    <span className="text-xs text-green-600 font-semibold animate-pulse">✓ Updated</span>
+                    <span className="text-[10px] text-green-600 font-semibold animate-pulse">✓ Updated</span>
                   )}
                 </div>
               </div>
-              <div className="flex items-center text-sm text-gray-600 ">
-                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center text-xs text-gray-600">
+                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {new Date(order.createdAt).toLocaleString('en-IN', { 
@@ -1056,71 +1096,71 @@ const Orders = () => {
               </div>
             </div>
 
-            <div className="p-4 space-y-3">
+            <div className="p-3 space-y-2">
               {/* Customer Info */}
-              <div className="bg-gradient-to-r from-blue-50 to-white p-3 rounded-lg border border-blue-100">
-                <p className="text-xs font-semibold text-blue-700 mb-2 flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-r from-blue-50 to-white p-2 rounded-lg border border-blue-100">
+                <p className="text-[10px] font-semibold text-blue-700 mb-1 flex items-center gap-0.5">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                   Customer Details
                 </p>
-                <p className="text-sm font-semibold text-gray-900 ">{order.customer.name}</p>
-                <p className="text-xs text-gray-600 ">{order.customer.phone}</p>
+                <p className="text-xs font-semibold text-gray-900">{order.customer.name}</p>
+                <p className="text-[10px] text-gray-600">{order.customer.phone}</p>
                 {order.customer.email && (
-                  <p className="text-xs text-gray-600 ">{order.customer.email}</p>
+                  <p className="text-[10px] text-gray-600">{order.customer.email}</p>
                 )}
-                <div className="mt-2 pt-2 border-t border-blue-100">
-                  <p className="text-xs font-semibold text-blue-700 mb-1 flex items-center gap-1">
+                <div className="mt-1.5 pt-1.5 border-t border-blue-100">
+                  <p className="text-[10px] font-semibold text-blue-700 mb-0.5 flex items-center gap-0.5">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     Delivery Address
                   </p>
-                  <p className="text-xs text-gray-600 ">
+                  <p className="text-[10px] text-gray-600">
                     {order.deliveryAddress.street}, {order.deliveryAddress.city}, {order.deliveryAddress.state} {order.deliveryAddress.zipCode}
                   </p>
                 </div>
               </div>
 
               {/* Order Items */}
-              <div className="border-t border-stone-200  pt-3">
-                <p className="text-xs font-semibold text-gray-700  mb-2 flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="border-t border-gray-200 pt-2">
+                <p className="text-[10px] font-semibold text-gray-700 mb-1 flex items-center gap-0.5">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                   Order Items
                 </p>
                 {order.items.map((item, idx) => (
-                  <div key={idx} className="flex justify-between text-sm mb-1 pl-5">
-                    <span className="text-gray-600 ">{item.name} <span className="text-xs text-gray-500">×{item.quantity}</span></span>
-                    <span className="text-gray-900  font-medium">₹{item.subtotal}</span>
+                  <div key={idx} className="flex justify-between text-xs mb-0.5 pl-3.5">
+                    <span className="text-gray-600">{item.name} <span className="text-[10px] text-gray-500">×{item.quantity}</span></span>
+                    <span className="text-gray-900 font-medium">₹{item.subtotal}</span>
                   </div>
                 ))}
               </div>
 
               {/* Payment & Pricing */}
-              <div className="bg-gradient-to-r from-green-50 to-white p-3 rounded-lg border border-green-100">
-                <div className="flex justify-between text-xs text-gray-600 mb-1">
+              <div className="bg-gradient-to-r from-green-50 to-white p-2 rounded-lg border border-green-100">
+                <div className="flex justify-between text-[10px] text-gray-600 mb-0.5">
                   <span>Items Total:</span>
                   <span>₹{order.pricing.itemsTotal}</span>
                 </div>
-                <div className="flex justify-between text-xs text-gray-600 mb-1">
+                <div className="flex justify-between text-[10px] text-gray-600 mb-0.5">
                   <span>Delivery Fee:</span>
                   <span>₹{order.pricing.deliveryFee}</span>
                 </div>
-                <div className="flex justify-between text-xs text-gray-600 mb-2">
+                <div className="flex justify-between text-[10px] text-gray-600 mb-1.5">
                   <span>GST:</span>
                   <span>₹{order.pricing.gst}</span>
                 </div>
-                <div className="flex justify-between items-center pt-2 border-t border-green-200">
-                  <span className="text-sm font-bold text-gray-700 ">Total Amount:</span>
-                  <span className="text-lg font-bold text-red-500 ">₹{order.pricing.finalAmount}</span>
+                <div className="flex justify-between items-center pt-1.5 border-t border-green-200">
+                  <span className="text-xs font-bold text-gray-700">Total Amount:</span>
+                  <span className="text-base font-bold text-red-500">₹{order.pricing.finalAmount}</span>
                 </div>
-                <div className="flex items-center justify-between mt-2 pt-2 border-t border-green-100">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className={`text-xs px-2 py-1 rounded-full font-semibold ${
+                <div className="flex items-center justify-between mt-1.5 pt-1.5 border-t border-green-100">
+                  <div className="flex items-center gap-1 flex-wrap">
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${
                       order.paymentMethod === 'COD' ? 'bg-orange-100 text-orange-700' : 'bg-green-100 text-green-700'
                     }`}>
                       {order.paymentMethod}
@@ -1128,7 +1168,7 @@ const Orders = () => {
                     <select
                       value={order.paymentStatus}
                       onChange={(e) => updatePaymentStatus(order._id, e.target.value)}
-                      className={`text-xs px-2 py-1 rounded-full font-semibold cursor-pointer border-none outline-none transition-colors ${
+                      className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold cursor-pointer border-none outline-none transition-colors ${
                         order.paymentStatus === 'PAID' ? 'bg-green-100 text-green-700 hover:bg-green-200' : 
                         order.paymentStatus === 'PENDING' ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' : 
                         'bg-blue-100 text-blue-700 hover:bg-blue-200'
@@ -1139,7 +1179,7 @@ const Orders = () => {
                       <option value="COLLECTED">COLLECTED</option>
                     </select>
                   </div>
-                  <span className="text-xs text-gray-500 ">
+                  <span className="text-[10px] text-gray-500">
                     ETA: {new Date(order.estimatedDeliveryTime).toLocaleString('en-IN', { 
                       hour: '2-digit',
                       minute: '2-digit',
@@ -1151,26 +1191,26 @@ const Orders = () => {
 
               {/* Delivery Partner Info (if assigned) */}
               {order.deliveryPartner && (
-                <div className="bg-gradient-to-r from-purple-50 to-white p-3 rounded-lg border border-purple-100">
-                  <p className="text-xs font-semibold text-purple-700 mb-2 flex items-center gap-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-gradient-to-r from-purple-50 to-white p-2 rounded-lg border border-purple-100">
+                  <p className="text-[10px] font-semibold text-purple-700 mb-1 flex items-center gap-0.5">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
                     </svg>
                     Delivery Partner
                   </p>
-                  <p className="text-sm font-semibold text-gray-900">{order.deliveryPartner.name}</p>
-                  <p className="text-xs text-gray-600">{order.deliveryPartner.phone}</p>
+                  <p className="text-xs font-semibold text-gray-900">{order.deliveryPartner.name}</p>
+                  <p className="text-[10px] text-gray-600">{order.deliveryPartner.phone}</p>
                 </div>
               )}
 
               {/* Actions */}
-              <div className="flex gap-2 pt-2">
+              <div className="flex gap-1.5 pt-1.5">
                 <button
                   onClick={() => printReceipt(order)}
-                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 text-sm font-medium transition-colors cursor-pointer flex items-center gap-1"
+                  className="px-3 py-1.5 bg-green-500 text-white rounded-lg hover:bg-green-600 text-xs font-medium transition-colors cursor-pointer flex items-center gap-1"
                   title="Print Receipt"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                   </svg>
                   Print
@@ -1180,50 +1220,77 @@ const Orders = () => {
                 {order.orderType === 'TAKEAWAY' && order.status !== 'COMPLETED' && order.status !== 'CANCELLED' && (
                   <button
                     onClick={() => completeTakeawayOrder(order._id, order.orderNumber)}
-                    className="flex-1 px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-1"
+                    className="flex-1 px-3 py-1.5 bg-green-500 text-white rounded-lg hover:bg-green-600 text-xs font-medium transition-colors cursor-pointer flex items-center justify-center gap-1"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Complete Takeaway
                   </button>
                 )}
                 
-                {/* Assign Delivery Button (only for DELIVERY orders) */}
-                {order.orderType !== 'TAKEAWAY' && !order.deliveryPartner && (order.status === 'PENDING' || order.status === 'READY') && (
-                  <button
-                    onClick={() => {
-                      setSelectedOrderForAssign(order);
-                      setShowAssignModal(true);
-                    }}
-                    className="flex-1 px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-1"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                    </svg>
-                    Assign Delivery
-                  </button>
-                )}
-                
-                {/* Status Change Dropdown (only for DELIVERY orders) */}
+                {/* Simplified Action Buttons for DELIVERY orders */}
                 {order.orderType !== 'TAKEAWAY' && (
-                  <select
-                    onChange={(e) => {
-                      if (e.target.value !== order.status) {
-                        updateOrderStatus(order._id, e.target.value);
-                      }
-                    }}
-                    value={order.status}
-                    className="flex-1 px-3 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 text-sm font-semibold transition-colors cursor-pointer"
-                  >
-                    <option value={order.status}>Change Status</option>
-                    {order.status === 'PENDING' && <option value="READY">✓ Mark as Ready</option>}
-                    {order.status === 'PENDING' && <option value="CANCELLED">✗ Cancel Order</option>}
-                    {order.status === 'READY' && <option value="CANCELLED">✗ Cancel Order</option>}
-                    {(order.status === 'PENDING' || order.status === 'READY') && order.deliveryPartner && (
-                      <option value="OUT_FOR_DELIVERY">🚚 Out for Delivery</option>
+                  <div className="flex-1 flex gap-1.5">
+                    {/* Accept Order Button */}
+                    {order.status === 'PENDING' && (
+                      <button
+                        onClick={() => updateOrderStatus(order._id, 'ACCEPT')}
+                        className="flex-1 px-3 py-1.5 bg-green-500 text-white rounded-lg hover:bg-green-600 text-xs font-semibold transition-colors cursor-pointer flex items-center justify-center gap-1"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        Accept Order
+                      </button>
                     )}
-                  </select>
+                    
+                    {/* Mark Ready Button */}
+                    {(order.status === 'ACCEPTED' || order.status === 'PREPARING') && (
+                      <button
+                        onClick={() => updateOrderStatus(order._id, 'READY')}
+                        className="flex-1 px-3 py-1.5 bg-purple-500 text-white rounded-lg hover:bg-purple-600 text-xs font-semibold transition-colors cursor-pointer flex items-center justify-center gap-1"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Mark Ready
+                      </button>
+                    )}
+                    
+                    {/* Manual Assign Button (optional) */}
+                    {order.status === 'READY' && !order.deliveryPartner && (
+                      <button
+                        onClick={() => {
+                          setSelectedOrderForAssign(order);
+                          setShowAssignModal(true);
+                        }}
+                        className="flex-1 px-3 py-1.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 text-xs font-semibold transition-colors cursor-pointer flex items-center justify-center gap-1"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        Assign Agent
+                      </button>
+                    )}
+                    
+                    {/* Cancel Button */}
+                    {(order.status === 'PENDING' || order.status === 'ACCEPTED' || order.status === 'PREPARING' || order.status === 'READY') && (
+                      <button
+                        onClick={() => {
+                          if (confirm(`Are you sure you want to cancel order ${order.orderNumber}?`)) {
+                            updateOrderStatus(order._id, 'CANCELLED');
+                          }
+                        }}
+                        className="px-3 py-1.5 bg-red-500 text-white rounded-lg hover:bg-red-600 text-xs font-semibold transition-colors cursor-pointer flex items-center justify-center gap-1"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        Cancel
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
             </div>
@@ -1234,12 +1301,12 @@ const Orders = () => {
           )}
 
       {filteredOrders.length === 0 && !loading && (
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-12 text-center">
-          <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
+          <svg className="w-12 h-12 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
           </svg>
-          <h3 className="text-lg font-semibold text-gray-900  mb-2">No Orders Found</h3>
-          <p className="text-gray-600 ">Try adjusting your search or filter criteria</p>
+          <h3 className="text-sm font-semibold text-gray-900 mb-1.5">No Orders Found</h3>
+          <p className="text-xs text-gray-600">Try adjusting your search or filter criteria</p>
         </div>
       )}
       </> 

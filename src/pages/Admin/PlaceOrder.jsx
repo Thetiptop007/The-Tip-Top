@@ -338,49 +338,8 @@ const PlaceOrder = () => {
   const totals = calculateTotal();
 
   return (
-    <div className="min-h-screen bg-stone-50 p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-6 mb-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900 sigmar-regular">Place Order</h1>
-              <p className="text-gray-600 poppins-regular mt-1">Create order for walk-in or phone customers</p>
-            </div>
-            <button
-              onClick={() => navigate('/admin/orders')}
-              className="px-4 py-2 text-gray-600 hover:text-gray-800 poppins-medium"
-            >
-              ← Back to Orders
-            </button>
-          </div>
-
-          {/* Progress Steps */}
-          <div className="flex items-center justify-center mt-6 gap-4">
-            <div className="flex items-center">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                currentStep === 1 ? 'bg-red-400 text-white' : 'bg-green-500 text-white'
-              }`}>
-                {currentStep === 1 ? '1' : '✓'}
-              </div>
-              <span className={`ml-2 font-medium poppins-medium ${currentStep === 1 ? 'text-red-400' : 'text-green-500'}`}>
-                Select Items
-              </span>
-            </div>
-            <div className={`w-20 h-1 ${currentStep === 2 ? 'bg-red-400' : 'bg-gray-300'}`}></div>
-            <div className="flex items-center">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                currentStep === 2 ? 'bg-red-400 text-white' : 'bg-gray-300 text-gray-600'
-              }`}>
-                2
-              </div>
-              <span className={`ml-2 font-medium poppins-medium ${currentStep === 2 ? 'text-red-400' : 'text-gray-600'}`}>
-                Customer Details
-              </span>
-            </div>
-          </div>
-        </div>
-
+    <div className="min-h-screen bg-stone-50">
+        
         {/* Step 1: Select Items */}
         {currentStep === 1 && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -414,7 +373,7 @@ const PlaceOrder = () => {
                       key={category}
                       type="button"
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium poppins-medium transition-all ${
+                      className={`px-4 py-2 rounded-lg text-sm font-medium poppins-medium transition-all cursor-pointer ${
                         selectedCategory === category
                           ? 'bg-red-400 text-white shadow-md'
                           : 'bg-stone-100 text-gray-700 hover:bg-stone-200'
@@ -439,7 +398,7 @@ const PlaceOrder = () => {
                           setSelectedCategory('All');
                           setPage(1);
                         }}
-                        className="mt-3 text-red-400 hover:text-red-500 text-sm poppins-medium"
+                        className="mt-3 text-red-400 hover:text-red-500 text-sm poppins-medium cursor-pointer"
                       >
                         Clear filters
                       </button>
@@ -448,86 +407,54 @@ const PlaceOrder = () => {
                     menuItems.map((item) => (
                       <div
                         key={item._id}
-                        className="bg-white rounded-lg shadow-md border border-stone-200 hover:shadow-lg transition-all overflow-hidden cursor-pointer"
-                        onClick={() => handleItemClick(item)}
+                        className={`bg-white rounded-lg shadow-md border border-stone-200 hover:shadow-lg transition-all p-4 ${
+                          loading ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'
+                        }`}
+                        onClick={() => !loading && handleItemClick(item)}
                       >
-                        {/* Image Section */}
-                        <div className="relative">
-                          <div className="h-32 bg-gradient-to-br from-red-400 to-red-500 overflow-hidden">
-                            {!failedImages.has(item._id) && item.image ? (
-                              <img 
-                                src={item.image} 
-                                alt={item.name} 
-                                className="w-full h-full object-cover"
-                                onError={() => handleImageError(item._id)}
-                              />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center">
-                                <span className="text-6xl">🍽️</span>
-                              </div>
-                            )}
+                        {/* Compact Item Display - Name and Price Only */}
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex-1">
+                            <h3 className="text-base font-bold text-gray-900 poppins-bold">{item.name}</h3>
                           </div>
                           
-                          {/* Badges */}
-                          <div className="absolute top-2 right-2 flex gap-2">
-                            {item.isVeg ? (
-                              <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">VEG</span>
-                            ) : (
-                              <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">NON-VEG</span>
-                            )}
-                          </div>
-                          
-                          {/* Add Button Overlay */}
-                          <div className="absolute inset-0 bg-opacity-0 hover:bg-opacity-10 transition-all flex items-center justify-center">
-                            <div className="opacity-0 hover:opacity-100 transition-opacity">
-                              <div className="w-12 h-12 bg-red-400 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                                +
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Content Section */}
-                        <div className="p-4">
-                          <div className="mb-2">
-                            <h3 className="text-base font-bold text-gray-900 poppins-bold line-clamp-1">{item.name}</h3>
-                            <span className="text-xs text-gray-500 poppins-regular">
-                              {item.categories?.[0] || 'Uncategorized'}
-                            </span>
-                          </div>
-                          
-                          {item.description && (
-                            <p className="text-sm text-gray-600 poppins-regular line-clamp-2 mb-3">
-                              {item.description}
-                            </p>
-                          )}
-                          
-                          {/* Price Variants */}
-                          {item.priceVariants && item.priceVariants.length > 0 && (
-                            <div className="flex flex-wrap gap-1 mb-2">
-                              {item.priceVariants.slice(0, 3).map((variant, idx) => (
-                                <span key={idx} className="text-xs bg-red-50 text-red-700 px-2 py-1 rounded poppins-regular">
-                                  {variant.quantity}: ₹{variant.price}
-                                </span>
-                              ))}
+                          {/* Veg/Non-Veg Badge */}
+                          {item.isVeg !== undefined && (
+                            <div className="ml-2">
+                              {item.isVeg ? (
+                                <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-medium">VEG</span>
+                              ) : (
+                                <span className="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full font-medium">NON-VEG</span>
+                              )}
                             </div>
                           )}
-                          
-                          {/* Price and Rating */}
-                          <div className="flex items-center justify-between mt-2">
-                            <span className="text-lg font-bold text-red-500 poppins-bold">
-                              ₹{item.priceVariants?.[0]?.price || 'N/A'}
-                            </span>
-                            {item.rating && (
-                              <div className="flex items-center gap-1 text-sm">
-                                <svg className="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                                <span className="text-gray-700 poppins-regular">{item.rating.toFixed(1)}</span>
-                              </div>
-                            )}
-                          </div>
                         </div>
+                        
+                        {/* Price Variants */}
+                        {item.priceVariants && item.priceVariants.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {item.priceVariants.map((variant, idx) => (
+                              <div key={idx} className="flex items-center gap-1 bg-stone-50 px-3 py-1.5 rounded-lg">
+                                <span className="text-xs text-gray-600 poppins-medium">{variant.quantity}:</span>
+                                <span className="text-sm font-bold text-red-500 poppins-bold">₹{variant.price}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        
+                        {/* Add Button */}
+                        <button
+                          type="button"
+                          disabled={loading}
+                          className="w-full bg-red-400 hover:bg-red-500 text-white py-2 rounded-lg font-medium poppins-medium transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleItemClick(item);
+                          }}
+                        >
+                          <span className="text-lg">+</span>
+                          Add to Order
+                        </button>
                       </div>
                     ))
                   )}
@@ -599,7 +526,7 @@ const PlaceOrder = () => {
                           <button
                             type="button"
                             onClick={() => updateQuantity(index, item.quantity - 1)}
-                            className="w-7 h-7 flex items-center justify-center bg-white border border-stone-300 rounded text-sm hover:bg-stone-100"
+                            className="w-7 h-7 flex items-center justify-center bg-white border border-stone-300 rounded text-sm hover:bg-stone-100 cursor-pointer"
                           >
                             -
                           </button>
@@ -607,14 +534,14 @@ const PlaceOrder = () => {
                           <button
                             type="button"
                             onClick={() => updateQuantity(index, item.quantity + 1)}
-                            className="w-7 h-7 flex items-center justify-center bg-white border border-stone-300 rounded text-sm hover:bg-stone-100"
+                            className="w-7 h-7 flex items-center justify-center bg-white border border-stone-300 rounded text-sm hover:bg-stone-100 cursor-pointer"
                           >
                             +
                           </button>
                           <button
                             type="button"
                             onClick={() => removeItem(index)}
-                            className="w-7 h-7 flex items-center justify-center text-red-500 hover:bg-red-50 rounded"
+                            className="w-7 h-7 flex items-center justify-center text-red-500 hover:bg-red-50 rounded cursor-pointer"
                           >
                             ×
                           </button>
@@ -636,7 +563,8 @@ const PlaceOrder = () => {
                     <button
                       type="button"
                       onClick={goToNextStep}
-                      className="w-full bg-red-400 text-white py-3 rounded-lg hover:bg-red-500 transition-colors font-medium poppins-medium shadow-md"
+                      disabled={loading}
+                      className="w-full bg-red-400 text-white py-3 rounded-lg hover:bg-red-500 transition-colors font-medium poppins-medium shadow-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Continue to Customer Details →
                     </button>
@@ -707,7 +635,8 @@ const PlaceOrder = () => {
                 <button
                   type="button"
                   onClick={() => setOrderType('TAKEAWAY')}
-                  className={`p-4 rounded-lg border-2 transition-all ${
+                  disabled={loading}
+                  className={`p-4 rounded-lg border-2 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${
                     orderType === 'TAKEAWAY'
                       ? 'border-red-400 bg-red-50 text-red-600'
                       : 'border-stone-200 bg-white text-gray-700 hover:border-stone-300'
@@ -722,7 +651,8 @@ const PlaceOrder = () => {
                 <button
                   type="button"
                   onClick={() => setOrderType('DELIVERY')}
-                  className={`p-4 rounded-lg border-2 transition-all ${
+                  disabled={loading}
+                  className={`p-4 rounded-lg border-2 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${
                     orderType === 'DELIVERY'
                       ? 'border-red-400 bg-red-50 text-red-600'
                       : 'border-stone-200 bg-white text-gray-700 hover:border-stone-300'
@@ -898,7 +828,8 @@ const PlaceOrder = () => {
                 <button
                   type="button"
                   onClick={goToPreviousStep}
-                  className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium poppins-medium"
+                  disabled={loading}
+                  className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium poppins-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   ← Back to Items
                 </button>
@@ -925,7 +856,7 @@ const PlaceOrder = () => {
                 </h3>
                 <button
                   onClick={() => setShowVariantModal(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -965,7 +896,7 @@ const PlaceOrder = () => {
                     key={idx}
                     type="button"
                     onClick={() => setSelectedVariant(variant)}
-                    className={`w-full flex items-center justify-between p-4 rounded-lg border-2 transition-all ${
+                    className={`w-full flex items-center justify-between p-4 rounded-lg border-2 transition-all cursor-pointer ${
                       selectedVariant === variant
                         ? 'border-red-400 bg-red-50'
                         : 'border-stone-200 hover:border-stone-300'
@@ -997,14 +928,15 @@ const PlaceOrder = () => {
                 <button
                   type="button"
                   onClick={() => setShowVariantModal(false)}
-                  className="flex-1 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors poppins-medium"
+                  className="flex-1 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors poppins-medium cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="button"
                   onClick={handleAddVariant}
-                  className="flex-1 px-4 py-3 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors poppins-medium shadow-md"
+                  disabled={!selectedVariant}
+                  className="flex-1 px-4 py-3 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors poppins-medium shadow-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Add to Cart
                 </button>
@@ -1012,7 +944,6 @@ const PlaceOrder = () => {
             </div>
           </div>
         )}
-      </div>
     </div>
   );
 };
