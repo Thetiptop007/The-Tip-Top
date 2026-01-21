@@ -401,17 +401,17 @@ const MenuItems = () => {
       {/* Page Header */}
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 poppins-bold">Menu Items</h1>
-          <p className="mt-2 text-gray-600 poppins-regular">Manage your restaurant menu items and categories</p>
+          <h1 className="text-xl font-bold text-gray-900 poppins-bold">Menu Items</h1>
+          <p className="mt-1 text-sm text-gray-600 poppins-regular">Manage your restaurant menu items and categories</p>
         </div>
         <button
           onClick={() => {
             resetForm();
             setShowAddModal(true);
           }}
-          className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors flex items-center gap-2 poppins-medium shadow-md cursor-pointer"
+          className="px-3 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all flex items-center gap-1.5 poppins-medium text-xs shadow-sm cursor-pointer"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
           Add New Item
@@ -419,8 +419,8 @@ const MenuItems = () => {
       </div>
 
       {/* Search and Filters */}
-      <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-        <div className="flex flex-col gap-4">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3">
+        <div className="flex flex-col gap-3">
           {/* Search Bar */}
           <div className="w-full">
             <div className="relative">
@@ -429,24 +429,24 @@ const MenuItems = () => {
                 placeholder="Search menu items..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-stone-300  rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent  "
+                className="w-full pl-9 pr-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
               />
-              <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
           </div>
           
           {/* Category Filters */}
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-1.5 flex-wrap">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                   selectedCategory === category
-                    ? 'bg-red-400 text-white'
-                    : 'bg-stone-100  text-gray-700  hover:bg-gray-200 '
+                    ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-sm'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {category}
@@ -457,49 +457,49 @@ const MenuItems = () => {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-          <p className="text-sm text-gray-600 ">Total Items</p>
-          <p className="text-2xl font-bold text-gray-900 ">{stats.total}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+          <p className="text-xs text-gray-600">Total Items</p>
+          <p className="mt-1.5 text-2xl font-bold text-gray-900">{stats.total}</p>
         </div>
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-          <p className="text-sm text-gray-600 ">Available</p>
-          <p className="text-2xl font-bold text-green-600">{stats.available}</p>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+          <p className="text-xs text-gray-600">Available</p>
+          <p className="mt-1.5 text-2xl font-bold text-green-600">{stats.available}</p>
         </div>
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-          <p className="text-sm text-gray-600 ">Unavailable</p>
-          <p className="text-2xl font-bold text-red-600">{stats.unavailable}</p>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+          <p className="text-xs text-gray-600">Unavailable</p>
+          <p className="mt-1.5 text-2xl font-bold text-red-600">{stats.unavailable}</p>
         </div>
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-4">
-          <p className="text-sm text-gray-600 ">Categories</p>
-          <p className="text-2xl font-bold text-blue-600">{categories.length - 1}</p>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+          <p className="text-xs text-gray-600">Categories</p>
+          <p className="mt-1.5 text-2xl font-bold text-blue-600">{categories.length - 1}</p>
         </div>
       </div>
 
       {/* Menu Items Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
         {loading ? (
-          <div className="col-span-full p-6 text-center">Loading...</div>
+          <div className="col-span-full p-6 text-center text-xs">Loading...</div>
         ) : (
           menuItems.map((item) => (
-            <div key={item._id || item.id} className="bg-white rounded-lg shadow-md border border-stone-200 hover:shadow-lg transition-shadow overflow-hidden">
+            <div key={item._id || item.id} className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
             <div className="relative">
-              <div className="h-32 bg-gradient-to-br from-red-400 to-red-500 flex items-center justify-center overflow-hidden">
-                <img src={item.image} alt={item.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = '<span class="text-6xl">🍽️</span>'; }} />
+              <div className="h-28 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center overflow-hidden">
+                <img src={item.image} alt={item.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.innerHTML = '<span class="text-5xl">🍽️</span>'; }} />
               </div>
-              <div className="absolute top-2 right-2 flex gap-2">
+              <div className="absolute top-1.5 right-1.5 flex gap-1">
                 {item.isVeg ? (
-                  <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium">VEG</span>
+                  <span className="bg-green-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-medium">VEG</span>
                 ) : (
-                  <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">NON-VEG</span>
+                  <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-medium">NON-VEG</span>
                 )}
                 {!item.isAvailable && (
-                  <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full font-medium">Out of Stock</span>
+                  <span className="bg-gray-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-medium">Out of Stock</span>
                 )}
               </div>
             </div>
 
-            <div className="p-4">
+            <div className="p-3">
               <div className="mb-2">
                 <h3 className="text-lg font-bold text-gray-900  line-clamp-1">{item.name}</h3>
                 <span className="text-xs text-gray-500 ">{item.categories?.[0] || 'Uncategorized'}</span>
@@ -568,18 +568,18 @@ const MenuItems = () => {
       </div>
 
       {(!loading && menuItems.length === 0) && (
-        <div className="bg-white rounded-lg shadow-md border border-stone-200 p-12 text-center">
-          <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
+          <svg className="w-12 h-12 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
-          <h3 className="text-lg font-semibold text-gray-900  mb-2">No Menu Items Found</h3>
-          <p className="text-gray-600  mb-4">Try adjusting your search or filter criteria</p>
+          <h3 className="text-sm font-semibold text-gray-900 mb-1.5">No Menu Items Found</h3>
+          <p className="text-xs text-gray-600 mb-3">Try adjusting your search or filter criteria</p>
           <button
             onClick={() => {
               resetForm();
               setShowAddModal(true);
             }}
-            className="px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors cursor-pointer"
+            className="px-3 py-2 text-xs bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all cursor-pointer"
           >
             Add Your First Item
           </button>
@@ -590,59 +590,59 @@ const MenuItems = () => {
       {showAddModal && (
         <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-auto" onClick={() => { setShowAddModal(false); resetForm(); }}>
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" onClick={(e) => e.stopPropagation()} onKeyDown={handleKeyDown}>
-            <div className="sticky top-0 bg-white border-b border-stone-200  p-6 flex items-center justify-between z-10">
-              <h2 className="text-2xl font-bold text-gray-900 ">
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between z-10">
+              <h2 className="text-base font-bold text-gray-900">
                 {editingItem ? 'Edit Menu Item' : 'Add New Menu Item'}
               </h2>
               <button onClick={() => { setShowAddModal(false); resetForm(); }} className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
-            <div className="p-6 space-y-4">
+            <div className="p-4 space-y-3">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Item Name *</label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Item Name *</label>
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                   placeholder="e.g., Margherita Pizza"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Description</label>
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  rows="3"
-                  className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  rows="2"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                   placeholder="Brief description of the item..."
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Image URL *</label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Image URL *</label>
                 <input
                   type="text"
                   value={formData.image}
                   onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                   placeholder="https://example.com/image.jpg"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Price Variants *</label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Price Variants *</label>
                 {formData.priceVariants.map((variant, index) => (
-                  <div key={index} className="flex gap-2 mb-2">
+                  <div key={index} className="flex gap-1.5 mb-1.5">
                     <select
                       value={variant.quantity}
                       onChange={(e) => updatePriceVariant(index, 'quantity', e.target.value)}
-                      className="px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                      className="px-2 py-1.5 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                     >
                       <option value="Quarter">Quarter</option>
                       <option value="Half">Half</option>
@@ -656,13 +656,13 @@ const MenuItems = () => {
                       type="number"
                       value={variant.price}
                       onChange={(e) => updatePriceVariant(index, 'price', parseFloat(e.target.value))}
-                      className="flex-1 px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                      className="flex-1 px-3 py-1.5 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                       placeholder="Price (₹)"
                     />
                     {formData.priceVariants.length > 1 && (
                       <button
                         onClick={() => removePriceVariant(index)}
-                        className="px-3 py-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 cursor-pointer"
+                        className="px-2 py-1.5 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 cursor-pointer text-xs"
                       >
                         ✕
                       </button>
@@ -671,24 +671,24 @@ const MenuItems = () => {
                 ))}
                 <button
                   onClick={addPriceVariant}
-                  className="text-sm text-red-500 hover:text-red-600 font-medium cursor-pointer"
+                  className="text-[10px] text-red-500 hover:text-red-600 font-medium cursor-pointer"
                 >
                   + Add Price Variant
                 </button>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Categories * (Select multiple)</label>
-                <div className="flex flex-wrap gap-2 p-3 border border-stone-300 rounded-lg max-h-40 overflow-y-auto">
+                <label className="block text-xs font-medium text-gray-700 mb-1">Categories * (Select multiple)</label>
+                <div className="flex flex-wrap gap-1.5 p-2 border border-gray-200 rounded-lg max-h-32 overflow-y-auto">
                   {categories.filter(c => c !== 'All').map(category => (
                     <button
                       key={category}
                       type="button"
                       onClick={() => toggleCategory(category)}
-                      className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
+                      className={`px-2 py-1 rounded-lg text-[10px] font-medium transition-colors ${
                         selectedCategories.includes(category)
-                          ? 'bg-red-400 text-white'
-                          : 'bg-stone-100 text-gray-700 hover:bg-stone-200'
+                          ? 'bg-gradient-to-r from-red-500 to-red-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
                       {category}
@@ -696,13 +696,13 @@ const MenuItems = () => {
                   ))}
                 </div>
                 {selectedCategories.length > 0 && (
-                  <p className="text-xs text-gray-500 mt-1">Selected: {selectedCategories.join(', ')}</p>
+                  <p className="text-[10px] text-gray-500 mt-1">Selected: {selectedCategories.join(', ')}</p>
                 )}
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">Rating</label>
                   <input
                     type="number"
                     step="0.1"
@@ -713,36 +713,36 @@ const MenuItems = () => {
                       const val = parseFloat(e.target.value);
                       setFormData({ ...formData, rating: isNaN(val) ? 4.0 : val });
                     }}
-                    className="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
                     placeholder="4.0"
                   />
                 </div>
 
                 <div className="flex items-end">
-                  <label className="flex items-center gap-2 cursor-pointer">
+                  <label className="flex items-center gap-1.5 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={formData.isAvailable}
                       onChange={(e) => setFormData({ ...formData, isAvailable: e.target.checked })}
-                      className="w-4 h-4 text-red-400 border-stone-300 rounded focus:ring-red-400"
+                      className="w-3 h-3 text-red-400 border-gray-200 rounded focus:ring-red-400"
                     />
-                    <span className="text-sm font-medium text-gray-700">Available</span>
+                    <span className="text-xs font-medium text-gray-700">Available</span>
                   </label>
                 </div>
               </div>
 
-              <div className="flex gap-3 pt-4">
+              <div className="flex gap-2 pt-3">
                 <button
                   type="button"
                   onClick={() => { setShowAddModal(false); resetForm(); }}
-                  className="flex-1 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium cursor-pointer"
+                  className="flex-1 px-3 py-2 text-xs bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="button"
                   onClick={handleSubmit}
-                  className="flex-1 px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium cursor-pointer"
+                  className="flex-1 px-3 py-2 text-xs bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all font-medium cursor-pointer"
                 >
                   {editingItem ? 'Update Item' : 'Add Item'}
                 </button>
@@ -753,21 +753,21 @@ const MenuItems = () => {
       )}
 
       {/* Pagination Controls */}
-      <div className="flex items-center justify-between mt-6">
-        <div className="text-sm text-gray-600">Showing page {page} of {totalPages} — {totalItems} items</div>
-        <div className="flex items-center gap-2">
-          <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-2 bg-stone-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-stone-200 transition-colors">Prev</button>
+      <div className="flex items-center justify-between mt-4">
+        <div className="text-xs text-gray-600">Showing page {page} of {totalPages} — {totalItems} items</div>
+        <div className="flex items-center gap-1.5">
+          <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-1.5 text-xs bg-gray-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200 transition-colors">Prev</button>
           {/* simple page numbers */}
           {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
             const displayStart = Math.max(1, page - 3);
             const pNum = displayStart + i;
             if (pNum > totalPages) return null;
             return (
-              <button key={pNum} onClick={() => setPage(pNum)} className={`px-3 py-2 rounded-md cursor-pointer transition-colors ${pNum === page ? 'bg-red-400 text-white' : 'bg-stone-100 hover:bg-stone-200'}`}>{pNum}</button>
+              <button key={pNum} onClick={() => setPage(pNum)} className={`px-3 py-1.5 text-xs rounded-md cursor-pointer transition-colors ${pNum === page ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-sm' : 'bg-gray-100 hover:bg-gray-200'}`}>{pNum}</button>
             );
           })}
-          <button disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))} className="px-3 py-2 bg-stone-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-stone-200 transition-colors">Next</button>
-          <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value, 10)); setPage(1); }} className="ml-2 px-2 py-1 border rounded-md cursor-pointer">
+          <button disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))} className="px-3 py-1.5 text-xs bg-gray-100 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200 transition-colors">Next</button>
+          <select value={limit} onChange={(e) => { setLimit(parseInt(e.target.value, 10)); setPage(1); }} className="ml-1.5 px-2 py-1 text-xs border border-gray-200 rounded-md cursor-pointer">
             {[6,12,24,48].map(n => (<option key={n} value={n}>{n} / page</option>))}
           </select>
         </div>

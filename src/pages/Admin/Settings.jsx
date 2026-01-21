@@ -12,6 +12,10 @@ function Settings() {
     minimumOrderAmount: 0,
     taxRate: 0,
     deliveryCharge: 0,
+    discountAmount: 0,
+    appUpdateAvailable: false,
+    appUpdateMessage: '',
+    appUpdateUrl: '',
     upiId: '',
   });
   
@@ -178,7 +182,7 @@ function Settings() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
+        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-orange-500"></div>
       </div>
     );
   }
@@ -186,17 +190,17 @@ function Settings() {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">Settings</h1>
-        <p className="text-gray-600 mt-2">Configure your restaurant and app settings</p>
+        <h1 className="text-xl font-bold text-gray-800">Settings</h1>
+        <p className="text-sm text-gray-600 mt-1">Configure your restaurant and app settings</p>
       </div>
 
       <div className="space-y-6">
         {/* General Settings */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">General Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <h2 className="text-sm font-semibold text-gray-800 mb-3">General Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Restaurant Name
               </label>
               <input
@@ -204,13 +208,13 @@ function Settings() {
                 name="siteName"
                 value={settings.siteName}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="ThéTipTop"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Contact Email
               </label>
               <input
@@ -218,13 +222,13 @@ function Settings() {
                 name="contactEmail"
                 value={settings.contactEmail}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="contact@restaurant.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Contact Phone
               </label>
               <input
@@ -232,13 +236,13 @@ function Settings() {
                 name="contactPhone"
                 value={settings.contactPhone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="+1 234 567 8900"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Website
               </label>
               <input
@@ -246,13 +250,13 @@ function Settings() {
                 name="website"
                 value={settings.website}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="www.restaurant.com"
               />
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Business Address
               </label>
               <input
@@ -260,7 +264,7 @@ function Settings() {
                 name="businessAddress"
                 value={settings.businessAddress}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="123 Restaurant Street, City, Country"
               />
             </div>
@@ -268,24 +272,24 @@ function Settings() {
         </div>
 
         {/* Notification Settings */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Notification Emails</h2>
-          <p className="text-sm text-gray-600 mb-4">
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <h2 className="text-sm font-semibold text-gray-800 mb-3">Notification Emails</h2>
+          <p className="text-xs text-gray-600 mb-3">
             Add email addresses that will receive order notifications
           </p>
           
-          <div className="flex gap-2 mb-4">
+          <div className="flex gap-2 mb-3">
             <input
               type="email"
               value={notificationEmail}
               onChange={(e) => setNotificationEmail(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleAddEmail()}
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="flex-1 px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               placeholder="admin@restaurant.com"
             />
             <button
               onClick={handleAddEmail}
-              className="px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors"
+              className="px-3 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all text-xs font-medium shadow-sm"
             >
               Add
             </button>
@@ -293,31 +297,31 @@ function Settings() {
 
           <div className="space-y-2">
             {settings.notificationEmails.map((email, index) => (
-              <div key={index} className="flex items-center justify-between bg-gray-50 px-4 py-2 rounded-lg">
-                <span className="text-gray-700">{email}</span>
+              <div key={index} className="flex items-center justify-between bg-gray-50 px-3 py-2 rounded-lg">
+                <span className="text-xs text-gray-700">{email}</span>
                 <button
                   onClick={() => handleRemoveEmail(email)}
                   className="text-red-500 hover:text-red-700"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
             ))}
             {settings.notificationEmails.length === 0 && (
-              <p className="text-gray-400 text-sm italic">No notification emails added</p>
+              <p className="text-gray-400 text-xs italic">No notification emails added</p>
             )}
           </div>
         </div>
 
         {/* Order & Pricing Settings */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Order & Pricing Configuration</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <h2 className="text-sm font-semibold text-gray-800 mb-3">Order & Pricing Configuration</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Minimum Order Amount ($)
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Minimum Order Amount (₹)
               </label>
               <input
                 type="number"
@@ -326,14 +330,14 @@ function Settings() {
                 onChange={handleChange}
                 min="0"
                 step="0.01"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="0.00"
               />
-              <p className="text-xs text-gray-500 mt-1">Minimum amount required to place an order</p>
+              <p className="text-[10px] text-gray-500 mt-1">Minimum amount required to place an order</p>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
                 Tax Rate (%)
               </label>
               <input
@@ -344,15 +348,15 @@ function Settings() {
                 min="0"
                 max="100"
                 step="0.01"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="0.00"
               />
-              <p className="text-xs text-gray-500 mt-1">Applied to all orders</p>
+              <p className="text-[10px] text-gray-500 mt-1">Applied to all orders</p>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Delivery Charge ($)
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Delivery Charge (₹)
               </label>
               <input
                 type="number"
@@ -361,19 +365,37 @@ function Settings() {
                 onChange={handleChange}
                 min="0"
                 step="0.01"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="0.00"
               />
-              <p className="text-xs text-gray-500 mt-1">Standard delivery fee</p>
+              <p className="text-[10px] text-gray-500 mt-1">Standard delivery fee</p>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Discount Amount (%)
+              </label>
+              <input
+                type="number"
+                name="discountAmount"
+                value={settings.discountAmount}
+                onChange={handleChange}
+                min="0"
+                max="100"
+                step="0.01"
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                placeholder="0.00"
+              />
+              <p className="text-[10px] text-gray-500 mt-1">Global discount percentage applied to all orders</p>
             </div>
           </div>
         </div>
 
         {/* Payment Settings */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">Payment Configuration</h2>
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <h2 className="text-sm font-semibold text-gray-800 mb-3">Payment Configuration</h2>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-xs font-medium text-gray-700 mb-1">
               UPI ID (for online payments)
             </label>
             <input
@@ -381,10 +403,86 @@ function Settings() {
               name="upiId"
               value={settings.upiId}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               placeholder="restaurant@upi"
             />
-            <p className="text-xs text-gray-500 mt-1">UPI ID for collecting online payments</p>
+            <p className="text-[10px] text-gray-500 mt-1">UPI ID for collecting online payments</p>
+          </div>
+        </div>
+
+        {/* App Update Notification */}
+        <div className="bg-white rounded-lg shadow-sm p-4">
+          <div className="bg-gradient-to-r from-blue-50 to-white px-4 py-3 -mx-4 -mt-4 mb-4 rounded-t-lg border-b border-blue-100">
+            <h2 className="text-sm font-bold text-gray-800 flex items-center gap-1.5">
+              📱 App Update Notification
+            </h2>
+            <p className="text-xs text-gray-600 mt-0.5">Control app update notifications for mobile users</p>
+          </div>
+          
+          <div className="space-y-3">
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div>
+                <h3 className="text-xs font-semibold text-gray-800">Show Update Banner</h3>
+                <p className="text-[10px] text-gray-600">Display update notification on user's home screen</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSettings({...settings, appUpdateAvailable: !settings.appUpdateAvailable})}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors cursor-pointer ${
+                  settings.appUpdateAvailable ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    settings.appUpdateAvailable ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Update Message
+              </label>
+              <textarea
+                name="appUpdateMessage"
+                value={settings.appUpdateMessage}
+                onChange={handleChange}
+                rows={2}
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                placeholder="Enter the message to show users..."
+              />
+              <p className="text-[10px] text-gray-500 mt-1">This message will appear in the update banner</p>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Update URL (App Store/Play Store Link)
+              </label>
+              <input
+                type="url"
+                name="appUpdateUrl"
+                value={settings.appUpdateUrl}
+                onChange={handleChange}
+                className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                placeholder="https://play.google.com/store/apps/details?id=com.tiptop"
+              />
+              <p className="text-[10px] text-gray-500 mt-1">Link users will be directed to when they click "Update"</p>
+            </div>
+
+            {settings.appUpdateAvailable && (
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                <div className="flex items-start gap-2">
+                  <div className="text-lg">ℹ️</div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-blue-900 mb-0.5">Preview</h4>
+                    <p className="text-[10px] text-blue-800">
+                      {settings.appUpdateMessage || 'Your update message will appear here'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -512,7 +610,7 @@ function Settings() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className={`px-8 py-3 bg-red-400 text-white font-semibold rounded-lg hover:bg-red-500 transition-colors cursor-pointer ${
+            className={`px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-medium rounded-lg hover:shadow-md transition-all shadow-sm cursor-pointer ${
               saving ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >

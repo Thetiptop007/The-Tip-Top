@@ -260,62 +260,62 @@ const DeliveryAgents = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">Delivery Agents</h1>
-        <p className="text-gray-600 mt-2">Manage your delivery team</p>
+        <h1 className="text-xl font-bold text-gray-800">Delivery Agents</h1>
+        <p className="text-sm text-gray-600 mt-1">Manage your delivery team</p>
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600">Total Agents</p>
-              <p className="text-2xl font-bold text-gray-900">{stats.totalPartners}</p>
+              <p className="text-xs text-gray-600">Total Agents</p>
+              <p className="mt-1.5 text-2xl font-bold text-gray-900">{stats.totalPartners}</p>
             </div>
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600">Active Now</p>
-              <p className="text-2xl font-bold text-green-600">{stats.activePartners}</p>
+              <p className="text-xs text-gray-600">Active Now</p>
+              <p className="mt-1.5 text-2xl font-bold text-green-600">{stats.activePartners}</p>
             </div>
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600">On Delivery</p>
-              <p className="text-2xl font-bold text-yellow-600">{stats.busyPartners}</p>
+              <p className="text-xs text-gray-600">On Delivery</p>
+              <p className="mt-1.5 text-2xl font-bold text-yellow-600">{stats.busyPartners}</p>
             </div>
-            <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600">Deliveries Today</p>
-              <p className="text-2xl font-bold text-purple-600">{stats.totalDeliveriesToday}</p>
+              <p className="text-xs text-gray-600">Deliveries Today</p>
+              <p className="mt-1.5 text-2xl font-bold text-purple-600">{stats.totalDeliveriesToday}</p>
             </div>
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
@@ -324,26 +324,26 @@ const DeliveryAgents = () => {
       </div>
 
       {/* Actions Bar */}
-      <div className="bg-white rounded-lg shadow-md p-4 mb-6">
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div className="bg-white rounded-lg shadow-sm p-3 mb-6">
+        <div className="flex flex-col md:flex-row gap-3 items-center justify-between">
           <div className="relative flex-1 w-full md:w-auto">
             <input
               type="text"
               placeholder="Search by name, email, or phone..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
+              className="w-full pl-9 pr-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent"
             />
-            <svg className="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
           
           <button
             onClick={() => setShowAddModal(true)}
-            className="px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors font-medium flex items-center gap-2 shadow-md"
+            className="px-3 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all text-xs font-medium flex items-center gap-1.5 shadow-sm"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
             Add New Agent
@@ -352,56 +352,56 @@ const DeliveryAgents = () => {
       </div>
 
       {/* Agents Table */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="bg-white rounded-lg shadow-sm overflow-hidden">
         {loading ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-red-500"></div>
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-red-500"></div>
           </div>
         ) : filteredAgents.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No delivery agents found</p>
+          <div className="text-center py-8">
+            <p className="text-xs text-gray-500">No delivery agents found</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Agent</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vehicle</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deliveries</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Agent</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Contact</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Vehicle</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Status</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Rating</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Deliveries</th>
+                  <th className="px-4 py-2 text-left text-[10px] font-semibold text-gray-600 uppercase tracking-wide">Actions</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {filteredAgents.map((agent) => (
                   <tr key={agent._id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-4 py-2.5 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 bg-red-400 rounded-full flex items-center justify-center text-white font-semibold">
+                        <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
                           {agent.name ? agent.name.charAt(0).toUpperCase() : 'A'}
                         </div>
-                        <div className="ml-3">
-                          <p className="text-sm font-medium text-gray-900">
+                        <div className="ml-2">
+                          <p className="text-xs font-medium text-gray-900">
                             {agent.name || 'N/A'}
                           </p>
-                          <p className="text-sm text-gray-500">ID: {agent._id ? agent._id.slice(-6) : 'N/A'}</p>
+                          <p className="text-[10px] text-gray-500">ID: {agent._id ? agent._id.slice(-6) : 'N/A'}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{agent.email || 'N/A'}</div>
-                      <div className="text-sm text-gray-500">{agent.phone || 'N/A'}</div>
+                    <td className="px-4 py-2.5 whitespace-nowrap">
+                      <div className="text-xs text-gray-900">{agent.email || 'N/A'}</div>
+                      <div className="text-[10px] text-gray-500">{agent.phone || 'N/A'}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                    <td className="px-4 py-2.5 whitespace-nowrap">
+                      <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded-full bg-blue-100 text-blue-800">
                         {agent.vehicleType || 'N/A'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
+                    <td className="px-4 py-2.5 whitespace-nowrap">
+                      <span className={`px-2 py-0.5 text-[10px] font-semibold rounded-full ${
                         agent.status === 'Active'
                           ? 'bg-green-100 text-green-800'
                           : 'bg-gray-100 text-gray-800'
@@ -409,19 +409,19 @@ const DeliveryAgents = () => {
                         {agent.status || 'Offline'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center text-sm text-gray-900">
-                        <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <td className="px-4 py-2.5 whitespace-nowrap">
+                      <div className="flex items-center text-xs text-gray-900">
+                        <svg className="w-3 h-3 text-yellow-400 mr-0.5" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                         {agent.rating ? agent.rating.toFixed(1) : 'N/A'}
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-4 py-2.5 whitespace-nowrap text-xs text-gray-900">
                       {agent.totalDeliveries || 0}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <div className="flex gap-3">
+                    <td className="px-4 py-2.5 whitespace-nowrap text-xs font-medium">
+                      <div className="flex gap-2">
                         <button
                           onClick={() => handleEditAgent(agent)}
                           className="text-blue-600 hover:text-blue-900"
@@ -447,39 +447,39 @@ const DeliveryAgents = () => {
       {/* Add Agent Modal */}
       {showAddModal && (
         <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-auto" onClick={() => setShowAddModal(false)}>
-          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-red-50 to-white">
-              <h2 className="text-2xl font-bold text-gray-900">Add New Delivery Agent</h2>
+          <div className="bg-white rounded-xl max-w-md w-full shadow-xl transform transition-all" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-red-50 to-white">
+              <h2 className="text-base font-bold text-gray-900">Add New Delivery Agent</h2>
               <button
                 onClick={() => setShowAddModal(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer rounded-full p-1 hover:bg-gray-100"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
-            <form onSubmit={handleAddAgent} className="p-6 space-y-5">
-              <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={handleAddAgent} className="p-4 space-y-3">
+              <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">First Name <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     value={formData.firstName}
                     onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="John"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name <span className="text-red-500">*</span></label>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">Last Name <span className="text-red-500">*</span></label>
                   <input
                     type="text"
                     value={formData.lastName}
                     onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="Doe"
                     required
                   />
@@ -487,41 +487,41 @@ const DeliveryAgents = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Email <span className="text-red-500">*</span></label>
                 <input
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                   placeholder="john.doe@example.com"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone <span className="text-red-500">*</span></label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Phone <span className="text-red-500">*</span></label>
                 <input
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                   placeholder="+1 234 567 8900"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Password <span className="text-red-500">*</span></label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Password <span className="text-red-500">*</span></label>
                 <input
                   type="password"
                   value={formData.password}
                   onChange={(e) => setFormData({...formData, password: e.target.value})}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                   placeholder="••••••••"
                   minLength={8}
                   required
                 />
-                <p className="text-xs text-gray-500 mt-1.5 flex items-center gap-1">
+                <p className="text-[10px] text-gray-500 mt-1 flex items-center gap-1">
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                   </svg>
@@ -530,11 +530,11 @@ const DeliveryAgents = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Vehicle Type <span className="text-red-500">*</span></label>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Vehicle Type <span className="text-red-500">*</span></label>
                 <select
                   value={formData.vehicleType}
                   onChange={(e) => setFormData({...formData, vehicleType: e.target.value})}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400 cursor-pointer bg-white"
+                  className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all cursor-pointer bg-white"
                   required
                 >
                   <option value="bike">🏍️ Bike</option>
@@ -544,18 +544,18 @@ const DeliveryAgents = () => {
                 </select>
               </div>
 
-              <div className="flex gap-3 pt-2">
+              <div className="flex gap-2 pt-2">
                 <button
                   type="button"
                   onClick={() => setShowAddModal(false)}
-                  className="flex-1 px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all font-semibold cursor-pointer"
+                  className="flex-1 px-3 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all text-xs font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 px-4 py-2.5 bg-gradient-to-r from-red-400 to-red-500 text-white rounded-lg hover:from-red-500 hover:to-red-600 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-red-200"
+                  className="flex-1 px-3 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:shadow-md transition-all text-xs font-medium disabled:opacity-50 shadow-sm"
                 >
                   {submitting ? 'Adding...' : 'Add Agent'}
                 </button>
@@ -568,9 +568,9 @@ const DeliveryAgents = () => {
       {/* Edit Agent Modal */}
       {showEditModal && selectedAgent && (
         <div className="fixed inset-0 w-full h-full bg-gray-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-auto" onClick={() => { setShowEditModal(false); setSelectedAgent(null); }}>
-          <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-hidden shadow-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
-              <h2 className="text-2xl font-bold text-gray-900">Edit Delivery Agent</h2>
+          <div className="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-hidden shadow-xl transform transition-all" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+              <h2 className="text-base font-bold text-gray-900">Edit Delivery Agent</h2>
               <button
                 onClick={() => {
                   setShowEditModal(false);
@@ -578,64 +578,64 @@ const DeliveryAgents = () => {
                 }}
                 className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer rounded-full p-1 hover:bg-gray-100"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
 
-            <form onSubmit={handleUpdateAgent} className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
-              <div className="space-y-5">
+            <form onSubmit={handleUpdateAgent} className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <div className="space-y-3">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     value={editFormData.name}
                     onChange={(e) => setEditFormData({ ...editFormData, name: e.target.value })}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="John Doe"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
                     value={editFormData.email}
                     onChange={(e) => setEditFormData({ ...editFormData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="john@example.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1">
                     Phone <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
                     value={editFormData.phone}
                     onChange={(e) => setEditFormData({ ...editFormData, phone: e.target.value })}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="+91 9876543210"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-gray-700 mb-1">
                     Vehicle Type <span className="text-red-500">*</span>
                   </label>
                   <select
                     value={editFormData.vehicleType}
                     onChange={(e) => setEditFormData({ ...editFormData, vehicleType: e.target.value })}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400 cursor-pointer bg-white"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all cursor-pointer bg-white"
                     required
                   >
                     <option value="bike">🏍️ Bike</option>
@@ -646,18 +646,18 @@ const DeliveryAgents = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    New Password <span className="text-gray-500 text-xs font-normal">(optional - leave empty to keep current)</span>
+                  <label className="block text-xs font-medium text-gray-700 mb-1">
+                    New Password <span className="text-gray-500 text-[10px] font-normal">(optional - leave empty to keep current)</span>
                   </label>
                   <input
                     type="password"
                     value={editFormData.password}
                     onChange={(e) => setEditFormData({ ...editFormData, password: e.target.value })}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all hover:border-gray-400"
+                    className="w-full px-3 py-2 text-xs border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all"
                     placeholder="••••••••"
                     minLength={8}
                   />
-                  <p className="text-xs text-gray-500 mt-1.5 flex items-center gap-1">
+                  <p className="text-[10px] text-gray-500 mt-1 flex items-center gap-1">
                     <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                     </svg>
@@ -666,21 +666,21 @@ const DeliveryAgents = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3 mt-6">
+              <div className="flex gap-2 mt-4">
                 <button
                   type="button"
                   onClick={() => {
                     setShowEditModal(false);
                     setSelectedAgent(null);
                   }}
-                  className="flex-1 px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all font-semibold cursor-pointer"
+                  className="flex-1 px-3 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all text-xs font-medium"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 px-4 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-blue-200"
+                  className="flex-1 px-3 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-md transition-all text-xs font-medium disabled:opacity-50 shadow-sm"
                 >
                   {submitting ? 'Updating...' : 'Update Agent'}
                 </button>
