@@ -81,7 +81,7 @@ function Footer() {
             <div className='py-5 flex justify-center items-center poppins-regular text-xs md:text-sm lg:text-base'> 
                 Powered By - &nbsp;
                 <a href="https://www.helmer.world" target="_blank" rel="noopener noreferrer" className='poppins-regular bg-stone-800 text-stone-50 px-2 rounded-md hover:bg-stone-700'> 
-                    HELMER
+                    NAITIK
                 </a>
             </div>
         </div>
